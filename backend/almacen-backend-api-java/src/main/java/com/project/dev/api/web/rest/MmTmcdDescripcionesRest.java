@@ -272,7 +272,7 @@ public class MmTmcdDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcdDescripciones/{query}/pages")
+    @GetMapping("/MmTmcdDescripciones/search/{query}/pages")
     public ResponseEntity<List<MmTmcdDescripcionesDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type MmTmcdDescripciones with the search : {}", query);
         Page<MmTmcdDescripcionesDTO> page = null;
@@ -281,7 +281,7 @@ public class MmTmcdDescripcionesRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmTmcdDescripciones/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmTmcdDescripciones/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

@@ -272,7 +272,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos/{query}/pages")
+    @GetMapping("/TiposDocumentosConceptos/search/{query}/pages")
     public ResponseEntity<List<TiposDocumentosConceptosDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TiposDocumentosConceptos with the search : {}", query);
         Page<TiposDocumentosConceptosDTO> page = null;
@@ -281,7 +281,7 @@ public class TiposDocumentosConceptosRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposDocumentosConceptos/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposDocumentosConceptos/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

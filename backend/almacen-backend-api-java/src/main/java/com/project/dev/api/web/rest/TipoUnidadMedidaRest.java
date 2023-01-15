@@ -272,7 +272,7 @@ public class TipoUnidadMedidaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoUnidadMedida/{query}/pages")
+    @GetMapping("/TipoUnidadMedida/search/{query}/pages")
     public ResponseEntity<List<TipoUnidadMedidaDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TipoUnidadMedida with the search : {}", query);
         Page<TipoUnidadMedidaDTO> page = null;
@@ -281,7 +281,7 @@ public class TipoUnidadMedidaRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoUnidadMedida/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoUnidadMedida/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

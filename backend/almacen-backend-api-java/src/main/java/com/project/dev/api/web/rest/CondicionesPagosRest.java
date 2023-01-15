@@ -272,7 +272,7 @@ public class CondicionesPagosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/CondicionesPagos/{query}/pages")
+    @GetMapping("/CondicionesPagos/search/{query}/pages")
     public ResponseEntity<List<CondicionesPagosDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type CondicionesPagos with the search : {}", query);
         Page<CondicionesPagosDTO> page = null;
@@ -281,7 +281,7 @@ public class CondicionesPagosRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/CondicionesPagos/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/CondicionesPagos/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

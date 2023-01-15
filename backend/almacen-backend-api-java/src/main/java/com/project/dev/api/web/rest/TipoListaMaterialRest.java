@@ -272,7 +272,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial/{query}/pages")
+    @GetMapping("/TipoListaMaterial/search/{query}/pages")
     public ResponseEntity<List<TipoListaMaterialDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TipoListaMaterial with the search : {}", query);
         Page<TipoListaMaterialDTO> page = null;
@@ -281,7 +281,7 @@ public class TipoListaMaterialRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoListaMaterial/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoListaMaterial/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

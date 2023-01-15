@@ -272,7 +272,7 @@ public class OrdenProduccionRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/OrdenProduccion/{query}/pages")
+    @GetMapping("/OrdenProduccion/search/{query}/pages")
     public ResponseEntity<List<OrdenProduccionDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type OrdenProduccion with the search : {}", query);
         Page<OrdenProduccionDTO> page = null;
@@ -281,7 +281,7 @@ public class OrdenProduccionRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/OrdenProduccion/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/OrdenProduccion/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

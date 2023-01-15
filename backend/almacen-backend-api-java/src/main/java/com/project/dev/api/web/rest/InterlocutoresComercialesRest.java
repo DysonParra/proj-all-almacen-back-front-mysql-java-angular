@@ -272,7 +272,7 @@ public class InterlocutoresComercialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresComerciales/{query}/pages")
+    @GetMapping("/InterlocutoresComerciales/search/{query}/pages")
     public ResponseEntity<List<InterlocutoresComercialesDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type InterlocutoresComerciales with the search : {}", query);
         Page<InterlocutoresComercialesDTO> page = null;
@@ -281,7 +281,7 @@ public class InterlocutoresComercialesRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/InterlocutoresComerciales/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/InterlocutoresComerciales/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

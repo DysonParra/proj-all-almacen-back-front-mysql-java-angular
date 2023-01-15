@@ -272,7 +272,7 @@ public class ListaDeMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/ListaDeMateriales/{query}/pages")
+    @GetMapping("/ListaDeMateriales/search/{query}/pages")
     public ResponseEntity<List<ListaDeMaterialesDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type ListaDeMateriales with the search : {}", query);
         Page<ListaDeMaterialesDTO> page = null;
@@ -281,7 +281,7 @@ public class ListaDeMaterialesRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/ListaDeMateriales/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/ListaDeMateriales/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

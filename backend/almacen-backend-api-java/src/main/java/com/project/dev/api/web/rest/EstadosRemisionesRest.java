@@ -272,7 +272,7 @@ public class EstadosRemisionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosRemisiones/{query}/pages")
+    @GetMapping("/EstadosRemisiones/search/{query}/pages")
     public ResponseEntity<List<EstadosRemisionesDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type EstadosRemisiones with the search : {}", query);
         Page<EstadosRemisionesDTO> page = null;
@@ -281,7 +281,7 @@ public class EstadosRemisionesRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/EstadosRemisiones/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/EstadosRemisiones/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

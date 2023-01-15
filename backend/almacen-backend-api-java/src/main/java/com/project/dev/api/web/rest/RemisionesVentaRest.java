@@ -272,7 +272,7 @@ public class RemisionesVentaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesVenta/{query}/pages")
+    @GetMapping("/RemisionesVenta/search/{query}/pages")
     public ResponseEntity<List<RemisionesVentaDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type RemisionesVenta with the search : {}", query);
         Page<RemisionesVentaDTO> page = null;
@@ -281,7 +281,7 @@ public class RemisionesVentaRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RemisionesVenta/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RemisionesVenta/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
