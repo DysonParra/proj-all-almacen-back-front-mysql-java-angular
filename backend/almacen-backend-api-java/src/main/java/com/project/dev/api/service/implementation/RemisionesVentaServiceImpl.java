@@ -1,0 +1,151 @@
+/*
+ * @fileoverview    {RemisionesVentaServiceImpl} se encarga de realizar tareas específicas.
+ *
+ * @version         2.0
+ *
+ * @author          Dyson Arley Parra Tilano <dysontilano@gmail.com>
+ *
+ * @copyright       Dyson Parra
+ * @see             github.com/DysonParra
+ *
+ * History
+ * @version 1.0     Implementación realizada.
+ * @version 2.0     Documentación agregada.
+ */
+package com.project.dev.api.service.implementation;
+
+import com.project.dev.api.domain.RemisionesVenta;
+import com.project.dev.api.dto.RemisionesVentaDTO;
+import com.project.dev.api.repository.RemisionesVentaRepository;
+import com.project.dev.api.service.RemisionesVentaService;
+import com.project.dev.api.service.exception.EntityNotFoundException;
+import com.project.dev.api.service.mapping.RemisionesVentaMapping;
+import java.util.List;
+import org.mapstruct.factory.Mappers;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * TODO: Definición de {@code RemisionesVentaServiceImpl}.
+ *
+ * @author Dyson Parra
+ * @since 1.8
+ */
+@Transactional
+@org.springframework.stereotype.Service
+public class RemisionesVentaServiceImpl implements RemisionesVentaService {
+
+    private final Logger log = LoggerFactory.getLogger(RemisionesVentaServiceImpl.class);
+    private final RemisionesVentaRepository entityRepository;
+    private final RemisionesVentaMapping entityMapping = Mappers.getMapper(RemisionesVentaMapping.class);
+
+    /**
+     * Constructor.
+     *
+     * @param entityRepository el repositorio de la entidad.
+     */
+    public RemisionesVentaServiceImpl(RemisionesVentaRepository entityRepository) {
+        this.entityRepository = entityRepository;
+    }
+
+    /**
+     * Obtiene todas las entidades existentes.
+     *
+     * @return lista de entidades almacenadas en la base de datos.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public List<RemisionesVentaDTO> getAllEntities() throws Exception {
+        log.debug("Solicitud para listar todas las Entidades tipo RemisionesVenta");
+        return entityMapping.obtenerDto(entityRepository.findAll());
+    }
+
+    /**
+     * Obtiene todas los registros según la paginación suministrada.
+     *
+     * @param pageable indica la manera en que se paginarán los registros obtenidos.
+     * @return entidades almacenadas en base de datos de forma paginada.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public Page<RemisionesVentaDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
+        log.debug("Solicitud para listar todas las Entidades tipo RemisionesVenta con paginacion");
+        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+    }
+
+    /**
+     * Guarda o actualiza los datos de una entidad.
+     *
+     * @param entityDTO entidad que va a ser almacenada.
+     * @return entidad almacenada en la base de datos.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public RemisionesVentaDTO saveUpdate(RemisionesVentaDTO entityDTO) throws Exception {
+        log.debug("Solicitud para guardar la entidad tipo RemisionesVenta: {}", entityDTO);
+
+        //TODO: agregar validacion especifica del servicio.
+        RemisionesVenta entity = entityMapping.getEntity(entityDTO);
+        entity = entityRepository.save(entity);
+
+        RemisionesVentaDTO actualEntity = entityMapping.obtenerDto(entity);
+        return actualEntity;
+    }
+
+    /**
+     * Obtiene la entidad según el id suministrado.
+     *
+     * @param id es el identificador de la entidad.
+     * @return entidad almacenada en la base de datos.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public RemisionesVentaDTO getEntity(String id) throws Exception {
+        log.debug("Solicitud para buscar la Entidad tipo RemisionesVenta: {}", id);
+        RemisionesVenta searchedEntity = entityRepository.findById(String.valueOf(id))
+                .orElseThrow(() -> new EntityNotFoundException(id));
+        return entityMapping.obtenerDto(searchedEntity);
+    }
+
+    /**
+     * Elimina los datos de una entidad.
+     *
+     * @param id identificador de la entidad que va a ser eliminada.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public void deleteEntity(String id) throws Exception {
+        log.debug("Solicitud para eliminar la entidad tipo RemisionesVenta: {}", id);
+        entityRepository.deleteById(String.valueOf(id));
+    }
+
+    /**
+     * Obtiene registros de la base de datos según la búsqueda suministrada.
+     *
+     * @param query indica la búsqueda que se hará en la base de datos.
+     * @return entidades almacenadas en base de datos encontradas.
+     * @throws Exception si ocurre algún error.
+     */
+    @Override
+    public List<RemisionesVentaDTO> searchEntities(String query) throws Exception {
+        log.debug("Solicitud para listar todas las Entidades tipo RemisionesVenta: {}", query);
+        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+    }
+
+    /**
+     * Obtiene registros de la base de datos según la búsqueda y paginación suministradas.
+     *
+     * @param query    indica la búsqueda que se hará en la base de datos.
+     * @param pageable indica la manera en que se paginarán los registros obtenidos.
+     * @return entidades almacenadas en base de datos encontradas.
+     */
+    @Transactional(readOnly = true)
+    @Override
+    public Page<RemisionesVentaDTO> searchEntitiesPaged(String query, Pageable pageable) {
+        log.debug("Solicitud para buscar una pagina de la entidad tipo RemisionesVenta para consulta {}", query);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+    }
+}

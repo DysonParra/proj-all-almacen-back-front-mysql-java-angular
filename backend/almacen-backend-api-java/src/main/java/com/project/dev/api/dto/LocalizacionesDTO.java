@@ -1,0 +1,53 @@
+/*
+ * @fileoverview    {LocalizacionesDTO} se encarga de realizar tareas específicas.
+ *
+ * @version         2.0
+ *
+ * @author          Dyson Arley Parra Tilano <dysontilano@gmail.com>
+ *
+ * @copyright       Dyson Parra
+ * @see             github.com/DysonParra
+ *
+ * History
+ * @version 1.0     Implementación realizada.
+ * @version 2.0     Documentación agregada.
+ */
+package com.project.dev.api.dto;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * TODO: Definición de {@code LocalizacionesDTO}.
+ *
+ * @author Dyson Parra
+ * @since 1.8
+ */
+@AllArgsConstructor
+@Builder
+@Data
+@NoArgsConstructor
+public class LocalizacionesDTO {
+
+    private Long intIdLocalizacion;
+    private String strNombreLocalizacion;
+    private String strDireccion;
+    private String strCodigoPostal;
+    private String strPoBox;
+    private String strCiudad;
+    private String strPais;
+    private String strRegion;
+    private String strTelefono;
+    private String strCelular;
+    private String strFax;
+    private String strEmail;
+    private String strUsuario;
+    private Date dtFecha;
+    private Long intIdInterlocutor;
+    private Long intIdBodega;
+
+}
