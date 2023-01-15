@@ -48,7 +48,7 @@ public interface EstadosMovimientosMapping extends GenericMapping<EstadosMovimie
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdEstadoMovimiento", target = "intIdEstadoMovimiento")
     @Override
-    public EstadosMovimientosDTO obtenerDto(EstadosMovimientos entity);
+    public EstadosMovimientosDTO getDto(EstadosMovimientos entity);
 
     /**
      * TODO: Definición de {@code withId}.

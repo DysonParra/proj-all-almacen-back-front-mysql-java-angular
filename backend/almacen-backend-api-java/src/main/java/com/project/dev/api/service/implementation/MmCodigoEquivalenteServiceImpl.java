@@ -60,7 +60,7 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
     @Override
     public List<MmCodigoEquivalenteDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmCodigoEquivalente");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
     @Override
     public Page<MmCodigoEquivalenteDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmCodigoEquivalente con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
         MmCodigoEquivalente entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmCodigoEquivalenteDTO actualEntity = entityMapping.obtenerDto(entity);
+        MmCodigoEquivalenteDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
         log.debug("Solicitud para buscar la Entidad tipo MmCodigoEquivalente: {}", id);
         MmCodigoEquivalente searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
     @Override
     public List<MmCodigoEquivalenteDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmCodigoEquivalente: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteServic
     @Override
     public Page<MmCodigoEquivalenteDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo MmCodigoEquivalente para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

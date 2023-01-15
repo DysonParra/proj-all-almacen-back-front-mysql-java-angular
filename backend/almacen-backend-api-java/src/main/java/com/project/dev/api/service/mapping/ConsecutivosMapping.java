@@ -48,7 +48,7 @@ public interface ConsecutivosMapping extends GenericMapping<ConsecutivosDTO, Con
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdConsecutivo", target = "intIdConsecutivo")
     @Override
-    public ConsecutivosDTO obtenerDto(Consecutivos entity);
+    public ConsecutivosDTO getDto(Consecutivos entity);
 
     /**
      * TODO: Definición de {@code withId}.

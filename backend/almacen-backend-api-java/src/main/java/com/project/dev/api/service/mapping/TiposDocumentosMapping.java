@@ -48,7 +48,7 @@ public interface TiposDocumentosMapping extends GenericMapping<TiposDocumentosDT
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdTipoDocumento", target = "intIdTipoDocumento")
     @Override
-    public TiposDocumentosDTO obtenerDto(TiposDocumentos entity);
+    public TiposDocumentosDTO getDto(TiposDocumentos entity);
 
     /**
      * TODO: Definición de {@code withId}.

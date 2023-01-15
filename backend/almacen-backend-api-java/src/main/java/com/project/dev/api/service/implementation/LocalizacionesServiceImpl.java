@@ -60,7 +60,7 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
     @Override
     public List<LocalizacionesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Localizaciones");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
     @Override
     public Page<LocalizacionesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Localizaciones con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
         Localizaciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        LocalizacionesDTO actualEntity = entityMapping.obtenerDto(entity);
+        LocalizacionesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
         log.debug("Solicitud para buscar la Entidad tipo Localizaciones: {}", id);
         Localizaciones searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
     @Override
     public List<LocalizacionesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Localizaciones: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class LocalizacionesServiceImpl implements LocalizacionesService {
     @Override
     public Page<LocalizacionesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Localizaciones para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

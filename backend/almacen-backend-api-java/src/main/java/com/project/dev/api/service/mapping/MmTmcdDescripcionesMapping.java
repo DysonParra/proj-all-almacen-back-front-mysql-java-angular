@@ -48,7 +48,7 @@ public interface MmTmcdDescripcionesMapping extends GenericMapping<MmTmcdDescrip
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdMmTmcdDescripciones", target = "intIdMmTmcdDescripciones")
     @Override
-    public MmTmcdDescripcionesDTO obtenerDto(MmTmcdDescripciones entity);
+    public MmTmcdDescripcionesDTO getDto(MmTmcdDescripciones entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -48,7 +48,7 @@ public interface GrupoInterlocutoresMapping extends GenericMapping<GrupoInterloc
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdGrupoInterlocutor", target = "intIdGrupoInterlocutor")
     @Override
-    public GrupoInterlocutoresDTO obtenerDto(GrupoInterlocutores entity);
+    public GrupoInterlocutoresDTO getDto(GrupoInterlocutores entity);
 
     /**
      * TODO: Definición de {@code withId}.

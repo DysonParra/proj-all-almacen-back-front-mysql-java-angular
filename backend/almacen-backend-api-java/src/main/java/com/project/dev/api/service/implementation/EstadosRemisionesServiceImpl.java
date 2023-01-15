@@ -60,7 +60,7 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
     @Override
     public List<EstadosRemisionesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo EstadosRemisiones");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
     @Override
     public Page<EstadosRemisionesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo EstadosRemisiones con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
         EstadosRemisiones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        EstadosRemisionesDTO actualEntity = entityMapping.obtenerDto(entity);
+        EstadosRemisionesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
         log.debug("Solicitud para buscar la Entidad tipo EstadosRemisiones: {}", id);
         EstadosRemisiones searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
     @Override
     public List<EstadosRemisionesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo EstadosRemisiones: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class EstadosRemisionesServiceImpl implements EstadosRemisionesService {
     @Override
     public Page<EstadosRemisionesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo EstadosRemisiones para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

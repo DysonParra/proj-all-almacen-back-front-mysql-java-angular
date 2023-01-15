@@ -60,7 +60,7 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
     @Override
     public List<OrdenDeTrabajoDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenDeTrabajo");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
     @Override
     public Page<OrdenDeTrabajoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenDeTrabajo con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
         OrdenDeTrabajo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        OrdenDeTrabajoDTO actualEntity = entityMapping.obtenerDto(entity);
+        OrdenDeTrabajoDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
         log.debug("Solicitud para buscar la Entidad tipo OrdenDeTrabajo: {}", id);
         OrdenDeTrabajo searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
     @Override
     public List<OrdenDeTrabajoDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenDeTrabajo: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class OrdenDeTrabajoServiceImpl implements OrdenDeTrabajoService {
     @Override
     public Page<OrdenDeTrabajoDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo OrdenDeTrabajo para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

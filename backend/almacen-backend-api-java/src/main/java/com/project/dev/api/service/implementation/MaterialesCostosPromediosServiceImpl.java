@@ -60,7 +60,7 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
     @Override
     public List<MaterialesCostosPromediosDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesCostosPromedios");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
     @Override
     public Page<MaterialesCostosPromediosDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesCostosPromedios con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
         MaterialesCostosPromedios entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesCostosPromediosDTO actualEntity = entityMapping.obtenerDto(entity);
+        MaterialesCostosPromediosDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
         log.debug("Solicitud para buscar la Entidad tipo MaterialesCostosPromedios: {}", id);
         MaterialesCostosPromedios searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
     @Override
     public List<MaterialesCostosPromediosDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesCostosPromedios: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPro
     @Override
     public Page<MaterialesCostosPromediosDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo MaterialesCostosPromedios para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

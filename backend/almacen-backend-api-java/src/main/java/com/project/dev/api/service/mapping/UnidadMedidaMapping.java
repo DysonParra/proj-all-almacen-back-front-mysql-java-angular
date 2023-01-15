@@ -48,7 +48,7 @@ public interface UnidadMedidaMapping extends GenericMapping<UnidadMedidaDTO, Uni
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdUnidadMedida", target = "intIdUnidadMedida")
     @Override
-    public UnidadMedidaDTO obtenerDto(UnidadMedida entity);
+    public UnidadMedidaDTO getDto(UnidadMedida entity);
 
     /**
      * TODO: Definición de {@code withId}.

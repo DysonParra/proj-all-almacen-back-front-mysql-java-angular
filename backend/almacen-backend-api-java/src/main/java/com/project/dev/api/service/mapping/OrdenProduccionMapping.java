@@ -48,7 +48,7 @@ public interface OrdenProduccionMapping extends GenericMapping<OrdenProduccionDT
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strNumeroOrden", target = "strNumeroOrden")
     @Override
-    public OrdenProduccionDTO obtenerDto(OrdenProduccion entity);
+    public OrdenProduccionDTO getDto(OrdenProduccion entity);
 
     /**
      * TODO: Definición de {@code withId}.

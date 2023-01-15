@@ -48,7 +48,7 @@ public interface SaldosMapping extends GenericMapping<SaldosDTO, Saldos> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdSaldo", target = "intIdSaldo")
     @Override
-    public SaldosDTO obtenerDto(Saldos entity);
+    public SaldosDTO getDto(Saldos entity);
 
     /**
      * TODO: Definición de {@code withId}.

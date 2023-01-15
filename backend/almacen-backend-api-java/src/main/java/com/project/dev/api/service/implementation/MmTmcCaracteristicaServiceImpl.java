@@ -60,7 +60,7 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
     @Override
     public List<MmTmcCaracteristicaDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmTmcCaracteristica");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
     @Override
     public Page<MmTmcCaracteristicaDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmTmcCaracteristica con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
         MmTmcCaracteristica entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmTmcCaracteristicaDTO actualEntity = entityMapping.obtenerDto(entity);
+        MmTmcCaracteristicaDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
         log.debug("Solicitud para buscar la Entidad tipo MmTmcCaracteristica: {}", id);
         MmTmcCaracteristica searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
     @Override
     public List<MmTmcCaracteristicaDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MmTmcCaracteristica: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaServic
     @Override
     public Page<MmTmcCaracteristicaDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo MmTmcCaracteristica para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

@@ -48,7 +48,7 @@ public interface MaterialesDatosCompraMapping extends GenericMapping<MaterialesD
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdMaterialDatoCompra", target = "intIdMaterialDatoCompra")
     @Override
-    public MaterialesDatosCompraDTO obtenerDto(MaterialesDatosCompra entity);
+    public MaterialesDatosCompraDTO getDto(MaterialesDatosCompra entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -48,7 +48,7 @@ public interface OrdenDeTrabajoMapping extends GenericMapping<OrdenDeTrabajoDTO,
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdOrdenTrabajo", target = "intIdOrdenTrabajo")
     @Override
-    public OrdenDeTrabajoDTO obtenerDto(OrdenDeTrabajo entity);
+    public OrdenDeTrabajoDTO getDto(OrdenDeTrabajo entity);
 
     /**
      * TODO: Definición de {@code withId}.

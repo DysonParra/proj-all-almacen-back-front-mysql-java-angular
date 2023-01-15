@@ -48,7 +48,7 @@ public interface PlanCompraMapping extends GenericMapping<PlanCompraDTO, PlanCom
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdPlanCompra", target = "intIdPlanCompra")
     @Override
-    public PlanCompraDTO obtenerDto(PlanCompra entity);
+    public PlanCompraDTO getDto(PlanCompra entity);
 
     /**
      * TODO: Definición de {@code withId}.

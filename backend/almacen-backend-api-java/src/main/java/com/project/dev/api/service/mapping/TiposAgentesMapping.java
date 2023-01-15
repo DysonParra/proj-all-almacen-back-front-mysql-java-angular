@@ -48,7 +48,7 @@ public interface TiposAgentesMapping extends GenericMapping<TiposAgentesDTO, Tip
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdTipoAgente", target = "intIdTipoAgente")
     @Override
-    public TiposAgentesDTO obtenerDto(TiposAgentes entity);
+    public TiposAgentesDTO getDto(TiposAgentes entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -60,7 +60,7 @@ public class CotizacionServiceImpl implements CotizacionService {
     @Override
     public List<CotizacionDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Cotizacion");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class CotizacionServiceImpl implements CotizacionService {
     @Override
     public Page<CotizacionDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Cotizacion con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class CotizacionServiceImpl implements CotizacionService {
         Cotizacion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        CotizacionDTO actualEntity = entityMapping.obtenerDto(entity);
+        CotizacionDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class CotizacionServiceImpl implements CotizacionService {
         log.debug("Solicitud para buscar la Entidad tipo Cotizacion: {}", id);
         Cotizacion searchedEntity = entityRepository.findById(Integer.parseInt(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class CotizacionServiceImpl implements CotizacionService {
     @Override
     public List<CotizacionDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Cotizacion: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class CotizacionServiceImpl implements CotizacionService {
     @Override
     public Page<CotizacionDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Cotizacion para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

@@ -48,7 +48,7 @@ public interface ZonasMapping extends GenericMapping<ZonasDTO, Zonas> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strCodigoZona", target = "strCodigoZona")
     @Override
-    public ZonasDTO obtenerDto(Zonas entity);
+    public ZonasDTO getDto(Zonas entity);
 
     /**
      * TODO: Definición de {@code withId}.

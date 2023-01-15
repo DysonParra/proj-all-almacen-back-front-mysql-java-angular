@@ -60,7 +60,7 @@ public class AgentesServiceImpl implements AgentesService {
     @Override
     public List<AgentesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Agentes");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class AgentesServiceImpl implements AgentesService {
     @Override
     public Page<AgentesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Agentes con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class AgentesServiceImpl implements AgentesService {
         Agentes entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        AgentesDTO actualEntity = entityMapping.obtenerDto(entity);
+        AgentesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class AgentesServiceImpl implements AgentesService {
         log.debug("Solicitud para buscar la Entidad tipo Agentes: {}", id);
         Agentes searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class AgentesServiceImpl implements AgentesService {
     @Override
     public List<AgentesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Agentes: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class AgentesServiceImpl implements AgentesService {
     @Override
     public Page<AgentesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Agentes para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

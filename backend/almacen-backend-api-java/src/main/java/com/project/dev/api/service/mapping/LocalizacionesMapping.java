@@ -48,7 +48,7 @@ public interface LocalizacionesMapping extends GenericMapping<LocalizacionesDTO,
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdLocalizacion", target = "intIdLocalizacion")
     @Override
-    public LocalizacionesDTO obtenerDto(Localizaciones entity);
+    public LocalizacionesDTO getDto(Localizaciones entity);
 
     /**
      * TODO: Definición de {@code withId}.

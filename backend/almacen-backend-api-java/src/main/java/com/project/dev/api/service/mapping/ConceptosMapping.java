@@ -48,7 +48,7 @@ public interface ConceptosMapping extends GenericMapping<ConceptosDTO, Conceptos
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdConcepto", target = "intIdConcepto")
     @Override
-    public ConceptosDTO obtenerDto(Conceptos entity);
+    public ConceptosDTO getDto(Conceptos entity);
 
     /**
      * TODO: Definición de {@code withId}.

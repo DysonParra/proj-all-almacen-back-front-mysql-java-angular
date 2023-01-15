@@ -60,7 +60,7 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
     @Override
     public List<TiposDocumentosDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposDocumentos");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
     @Override
     public Page<TiposDocumentosDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposDocumentos con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
         TiposDocumentos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TiposDocumentosDTO actualEntity = entityMapping.obtenerDto(entity);
+        TiposDocumentosDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
         log.debug("Solicitud para buscar la Entidad tipo TiposDocumentos: {}", id);
         TiposDocumentos searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
     @Override
     public List<TiposDocumentosDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposDocumentos: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class TiposDocumentosServiceImpl implements TiposDocumentosService {
     @Override
     public Page<TiposDocumentosDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo TiposDocumentos para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

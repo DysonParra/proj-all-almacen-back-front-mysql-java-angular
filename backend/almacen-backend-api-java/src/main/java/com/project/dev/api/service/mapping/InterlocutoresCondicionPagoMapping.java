@@ -48,7 +48,7 @@ public interface InterlocutoresCondicionPagoMapping extends GenericMapping<Inter
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdInterlocutorCondicionPago", target = "intIdInterlocutorCondicionPago")
     @Override
-    public InterlocutoresCondicionPagoDTO obtenerDto(InterlocutoresCondicionPago entity);
+    public InterlocutoresCondicionPagoDTO getDto(InterlocutoresCondicionPago entity);
 
     /**
      * TODO: Definición de {@code withId}.

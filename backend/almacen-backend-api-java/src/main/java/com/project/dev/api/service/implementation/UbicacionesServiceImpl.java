@@ -60,7 +60,7 @@ public class UbicacionesServiceImpl implements UbicacionesService {
     @Override
     public List<UbicacionesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Ubicaciones");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class UbicacionesServiceImpl implements UbicacionesService {
     @Override
     public Page<UbicacionesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Ubicaciones con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class UbicacionesServiceImpl implements UbicacionesService {
         Ubicaciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        UbicacionesDTO actualEntity = entityMapping.obtenerDto(entity);
+        UbicacionesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class UbicacionesServiceImpl implements UbicacionesService {
         log.debug("Solicitud para buscar la Entidad tipo Ubicaciones: {}", id);
         Ubicaciones searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class UbicacionesServiceImpl implements UbicacionesService {
     @Override
     public List<UbicacionesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Ubicaciones: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class UbicacionesServiceImpl implements UbicacionesService {
     @Override
     public Page<UbicacionesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Ubicaciones para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

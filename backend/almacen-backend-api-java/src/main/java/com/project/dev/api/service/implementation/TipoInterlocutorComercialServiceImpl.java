@@ -60,7 +60,7 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
     @Override
     public List<TipoInterlocutorComercialDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoInterlocutorComercial");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
     @Override
     public Page<TipoInterlocutorComercialDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoInterlocutorComercial con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
         TipoInterlocutorComercial entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TipoInterlocutorComercialDTO actualEntity = entityMapping.obtenerDto(entity);
+        TipoInterlocutorComercialDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
         log.debug("Solicitud para buscar la Entidad tipo TipoInterlocutorComercial: {}", id);
         TipoInterlocutorComercial searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
     @Override
     public List<TipoInterlocutorComercialDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoInterlocutorComercial: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorCom
     @Override
     public Page<TipoInterlocutorComercialDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo TipoInterlocutorComercial para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

@@ -48,7 +48,7 @@ public interface CentrosTrabajosMapping extends GenericMapping<CentrosTrabajosDT
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCentroDeTrabajo", target = "intIdCentroDeTrabajo")
     @Override
-    public CentrosTrabajosDTO obtenerDto(CentrosTrabajos entity);
+    public CentrosTrabajosDTO getDto(CentrosTrabajos entity);
 
     /**
      * TODO: Definición de {@code withId}.

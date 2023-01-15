@@ -48,7 +48,7 @@ public interface MmCodigoEquivalenteMapping extends GenericMapping<MmCodigoEquiv
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdMmCodigoEquivalente", target = "intIdMmCodigoEquivalente")
     @Override
-    public MmCodigoEquivalenteDTO obtenerDto(MmCodigoEquivalente entity);
+    public MmCodigoEquivalenteDTO getDto(MmCodigoEquivalente entity);
 
     /**
      * TODO: Definición de {@code withId}.

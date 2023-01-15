@@ -60,7 +60,7 @@ public class ComponentesServiceImpl implements ComponentesService {
     @Override
     public List<ComponentesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Componentes");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class ComponentesServiceImpl implements ComponentesService {
     @Override
     public Page<ComponentesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Componentes con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class ComponentesServiceImpl implements ComponentesService {
         Componentes entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ComponentesDTO actualEntity = entityMapping.obtenerDto(entity);
+        ComponentesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class ComponentesServiceImpl implements ComponentesService {
         log.debug("Solicitud para buscar la Entidad tipo Componentes: {}", id);
         Componentes searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class ComponentesServiceImpl implements ComponentesService {
     @Override
     public List<ComponentesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo Componentes: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class ComponentesServiceImpl implements ComponentesService {
     @Override
     public Page<ComponentesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo Componentes para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

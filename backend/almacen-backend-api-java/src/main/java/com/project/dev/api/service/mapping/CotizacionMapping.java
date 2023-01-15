@@ -48,7 +48,7 @@ public interface CotizacionMapping extends GenericMapping<CotizacionDTO, Cotizac
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCotizacion", target = "intIdCotizacion")
     @Override
-    public CotizacionDTO obtenerDto(Cotizacion entity);
+    public CotizacionDTO getDto(Cotizacion entity);
 
     /**
      * TODO: Definición de {@code withId}.

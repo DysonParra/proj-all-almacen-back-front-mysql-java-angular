@@ -48,7 +48,7 @@ public interface MovimientosMapping extends GenericMapping<MovimientosDTO, Movim
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdMovimiento", target = "intIdMovimiento")
     @Override
-    public MovimientosDTO obtenerDto(Movimientos entity);
+    public MovimientosDTO getDto(Movimientos entity);
 
     /**
      * TODO: Definición de {@code withId}.

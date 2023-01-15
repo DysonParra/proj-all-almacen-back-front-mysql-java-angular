@@ -60,7 +60,7 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
     @Override
     public List<MaterialesDatosCompraDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesDatosCompra");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
     @Override
     public Page<MaterialesDatosCompraDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesDatosCompra con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
         MaterialesDatosCompra entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesDatosCompraDTO actualEntity = entityMapping.obtenerDto(entity);
+        MaterialesDatosCompraDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
         log.debug("Solicitud para buscar la Entidad tipo MaterialesDatosCompra: {}", id);
         MaterialesDatosCompra searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
     @Override
     public List<MaterialesDatosCompraDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo MaterialesDatosCompra: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class MaterialesDatosCompraServiceImpl implements MaterialesDatosCompraSe
     @Override
     public Page<MaterialesDatosCompraDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo MaterialesDatosCompra para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

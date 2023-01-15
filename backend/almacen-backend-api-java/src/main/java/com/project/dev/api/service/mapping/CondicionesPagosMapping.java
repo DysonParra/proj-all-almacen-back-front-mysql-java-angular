@@ -48,7 +48,7 @@ public interface CondicionesPagosMapping extends GenericMapping<CondicionesPagos
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCondicionPago", target = "intIdCondicionPago")
     @Override
-    public CondicionesPagosDTO obtenerDto(CondicionesPagos entity);
+    public CondicionesPagosDTO getDto(CondicionesPagos entity);
 
     /**
      * TODO: Definición de {@code withId}.

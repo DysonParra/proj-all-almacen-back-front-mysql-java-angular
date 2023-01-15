@@ -60,7 +60,7 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
     @Override
     public List<TiposMaterialesDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposMateriales");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
     @Override
     public Page<TiposMaterialesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposMateriales con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
         TiposMateriales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TiposMaterialesDTO actualEntity = entityMapping.obtenerDto(entity);
+        TiposMaterialesDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
         log.debug("Solicitud para buscar la Entidad tipo TiposMateriales: {}", id);
         TiposMateriales searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
     @Override
     public List<TiposMaterialesDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TiposMateriales: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class TiposMaterialesServiceImpl implements TiposMaterialesService {
     @Override
     public Page<TiposMaterialesDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo TiposMateriales para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

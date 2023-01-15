@@ -48,7 +48,7 @@ public interface BodegasMapping extends GenericMapping<BodegasDTO, Bodegas> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdBodega", target = "intIdBodega")
     @Override
-    public BodegasDTO obtenerDto(Bodegas entity);
+    public BodegasDTO getDto(Bodegas entity);
 
     /**
      * TODO: Definición de {@code withId}.

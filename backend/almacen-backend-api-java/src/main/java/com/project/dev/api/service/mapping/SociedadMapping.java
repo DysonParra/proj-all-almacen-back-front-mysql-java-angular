@@ -48,7 +48,7 @@ public interface SociedadMapping extends GenericMapping<SociedadDTO, Sociedad> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdSociedad", target = "intIdSociedad")
     @Override
-    public SociedadDTO obtenerDto(Sociedad entity);
+    public SociedadDTO getDto(Sociedad entity);
 
     /**
      * TODO: Definición de {@code withId}.

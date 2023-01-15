@@ -48,7 +48,7 @@ public interface EstadosRemisionesMapping extends GenericMapping<EstadosRemision
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdEstadoRemision", target = "intIdEstadoRemision")
     @Override
-    public EstadosRemisionesDTO obtenerDto(EstadosRemisiones entity);
+    public EstadosRemisionesDTO getDto(EstadosRemisiones entity);
 
     /**
      * TODO: Definición de {@code withId}.

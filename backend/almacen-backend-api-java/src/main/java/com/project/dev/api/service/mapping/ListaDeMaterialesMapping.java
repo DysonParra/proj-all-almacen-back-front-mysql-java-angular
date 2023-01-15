@@ -48,7 +48,7 @@ public interface ListaDeMaterialesMapping extends GenericMapping<ListaDeMaterial
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdListaMaterial", target = "intIdListaMaterial")
     @Override
-    public ListaDeMaterialesDTO obtenerDto(ListaDeMateriales entity);
+    public ListaDeMaterialesDTO getDto(ListaDeMateriales entity);
 
     /**
      * TODO: Definición de {@code withId}.

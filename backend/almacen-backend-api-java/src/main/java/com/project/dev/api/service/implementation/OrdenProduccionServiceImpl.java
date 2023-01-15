@@ -60,7 +60,7 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
     @Override
     public List<OrdenProduccionDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenProduccion");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
     @Override
     public Page<OrdenProduccionDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenProduccion con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
         OrdenProduccion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        OrdenProduccionDTO actualEntity = entityMapping.obtenerDto(entity);
+        OrdenProduccionDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
         log.debug("Solicitud para buscar la Entidad tipo OrdenProduccion: {}", id);
         OrdenProduccion searchedEntity = entityRepository.findById(String.valueOf(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
     @Override
     public List<OrdenProduccionDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo OrdenProduccion: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class OrdenProduccionServiceImpl implements OrdenProduccionService {
     @Override
     public Page<OrdenProduccionDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo OrdenProduccion para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

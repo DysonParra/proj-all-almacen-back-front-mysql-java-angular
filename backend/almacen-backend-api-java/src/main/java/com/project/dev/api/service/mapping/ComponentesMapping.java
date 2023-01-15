@@ -48,7 +48,7 @@ public interface ComponentesMapping extends GenericMapping<ComponentesDTO, Compo
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdComponente", target = "intIdComponente")
     @Override
-    public ComponentesDTO obtenerDto(Componentes entity);
+    public ComponentesDTO getDto(Componentes entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -60,7 +60,7 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
     @Override
     public List<InterlocutoresCondicionPagoDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo InterlocutoresCondicionPago");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
     @Override
     public Page<InterlocutoresCondicionPagoDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo InterlocutoresCondicionPago con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
         InterlocutoresCondicionPago entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        InterlocutoresCondicionPagoDTO actualEntity = entityMapping.obtenerDto(entity);
+        InterlocutoresCondicionPagoDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
         log.debug("Solicitud para buscar la Entidad tipo InterlocutoresCondicionPago: {}", id);
         InterlocutoresCondicionPago searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
     @Override
     public List<InterlocutoresCondicionPagoDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo InterlocutoresCondicionPago: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCon
     @Override
     public Page<InterlocutoresCondicionPagoDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo InterlocutoresCondicionPago para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

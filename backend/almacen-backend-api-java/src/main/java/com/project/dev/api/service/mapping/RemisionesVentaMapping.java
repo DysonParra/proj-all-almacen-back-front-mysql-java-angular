@@ -48,7 +48,7 @@ public interface RemisionesVentaMapping extends GenericMapping<RemisionesVentaDT
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strNumeroDocumento", target = "strNumeroDocumento")
     @Override
-    public RemisionesVentaDTO obtenerDto(RemisionesVenta entity);
+    public RemisionesVentaDTO getDto(RemisionesVenta entity);
 
     /**
      * TODO: Definición de {@code withId}.
