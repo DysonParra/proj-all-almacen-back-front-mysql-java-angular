@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.ConsecutivosDTO;
-import com.project.dev.api.service.ConsecutivosService;
+import com.project.dev.api.service.implementation.ConsecutivosServiceImpl;
 import com.project.dev.api.web.rest.assembler.ConsecutivosRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class ConsecutivosRest {
 
     private final Logger log = LoggerFactory.getLogger(ConsecutivosRest.class);
-    private final ConsecutivosService entityService;
+    private final ConsecutivosServiceImpl entityService;
     private final ConsecutivosRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class ConsecutivosRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public ConsecutivosRest(ConsecutivosService entityService,
+    public ConsecutivosRest(ConsecutivosServiceImpl entityService,
             ConsecutivosRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

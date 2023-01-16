@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.ListasPrecios;
 import com.project.dev.api.dto.ListasPreciosDTO;
 import com.project.dev.api.repository.ListasPreciosRepository;
-import com.project.dev.api.service.ListasPreciosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.ListasPreciosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class ListasPreciosServiceImpl implements ListasPreciosService {
+public class ListasPreciosServiceImpl implements GenericService<ListasPreciosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(ListasPreciosServiceImpl.class);
     private final ListasPreciosRepository entityRepository;

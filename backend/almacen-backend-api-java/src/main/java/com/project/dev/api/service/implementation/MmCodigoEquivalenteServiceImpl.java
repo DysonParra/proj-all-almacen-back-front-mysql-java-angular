@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MmCodigoEquivalente;
 import com.project.dev.api.dto.MmCodigoEquivalenteDTO;
 import com.project.dev.api.repository.MmCodigoEquivalenteRepository;
-import com.project.dev.api.service.MmCodigoEquivalenteService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MmCodigoEquivalenteMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MmCodigoEquivalenteServiceImpl implements MmCodigoEquivalenteService {
+public class MmCodigoEquivalenteServiceImpl implements GenericService<MmCodigoEquivalenteDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MmCodigoEquivalenteServiceImpl.class);
     private final MmCodigoEquivalenteRepository entityRepository;

@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TipoListaMaterialDTO;
-import com.project.dev.api.service.TipoListaMaterialService;
+import com.project.dev.api.service.implementation.TipoListaMaterialServiceImpl;
 import com.project.dev.api.web.rest.assembler.TipoListaMaterialRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TipoListaMaterialRest {
 
     private final Logger log = LoggerFactory.getLogger(TipoListaMaterialRest.class);
-    private final TipoListaMaterialService entityService;
+    private final TipoListaMaterialServiceImpl entityService;
     private final TipoListaMaterialRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TipoListaMaterialRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TipoListaMaterialRest(TipoListaMaterialService entityService,
+    public TipoListaMaterialRest(TipoListaMaterialServiceImpl entityService,
             TipoListaMaterialRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

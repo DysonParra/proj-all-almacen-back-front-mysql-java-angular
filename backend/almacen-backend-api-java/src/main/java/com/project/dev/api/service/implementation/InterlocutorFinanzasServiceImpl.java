@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.InterlocutorFinanzas;
 import com.project.dev.api.dto.InterlocutorFinanzasDTO;
 import com.project.dev.api.repository.InterlocutorFinanzasRepository;
-import com.project.dev.api.service.InterlocutorFinanzasService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.InterlocutorFinanzasMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class InterlocutorFinanzasServiceImpl implements InterlocutorFinanzasService {
+public class InterlocutorFinanzasServiceImpl implements GenericService<InterlocutorFinanzasDTO> {
 
     private final Logger log = LoggerFactory.getLogger(InterlocutorFinanzasServiceImpl.class);
     private final InterlocutorFinanzasRepository entityRepository;

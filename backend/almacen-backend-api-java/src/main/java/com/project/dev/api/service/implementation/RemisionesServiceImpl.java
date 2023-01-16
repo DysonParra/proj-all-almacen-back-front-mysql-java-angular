@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Remisiones;
 import com.project.dev.api.dto.RemisionesDTO;
 import com.project.dev.api.repository.RemisionesRepository;
-import com.project.dev.api.service.RemisionesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.RemisionesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class RemisionesServiceImpl implements RemisionesService {
+public class RemisionesServiceImpl implements GenericService<RemisionesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(RemisionesServiceImpl.class);
     private final RemisionesRepository entityRepository;

@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TipoInterlocutorComercialDTO;
-import com.project.dev.api.service.TipoInterlocutorComercialService;
+import com.project.dev.api.service.implementation.TipoInterlocutorComercialServiceImpl;
 import com.project.dev.api.web.rest.assembler.TipoInterlocutorComercialRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TipoInterlocutorComercialRest {
 
     private final Logger log = LoggerFactory.getLogger(TipoInterlocutorComercialRest.class);
-    private final TipoInterlocutorComercialService entityService;
+    private final TipoInterlocutorComercialServiceImpl entityService;
     private final TipoInterlocutorComercialRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TipoInterlocutorComercialRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TipoInterlocutorComercialRest(TipoInterlocutorComercialService entityService,
+    public TipoInterlocutorComercialRest(TipoInterlocutorComercialServiceImpl entityService,
             TipoInterlocutorComercialRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

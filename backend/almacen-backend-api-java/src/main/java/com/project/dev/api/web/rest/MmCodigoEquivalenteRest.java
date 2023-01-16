@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MmCodigoEquivalenteDTO;
-import com.project.dev.api.service.MmCodigoEquivalenteService;
+import com.project.dev.api.service.implementation.MmCodigoEquivalenteServiceImpl;
 import com.project.dev.api.web.rest.assembler.MmCodigoEquivalenteRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MmCodigoEquivalenteRest {
 
     private final Logger log = LoggerFactory.getLogger(MmCodigoEquivalenteRest.class);
-    private final MmCodigoEquivalenteService entityService;
+    private final MmCodigoEquivalenteServiceImpl entityService;
     private final MmCodigoEquivalenteRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MmCodigoEquivalenteRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MmCodigoEquivalenteRest(MmCodigoEquivalenteService entityService,
+    public MmCodigoEquivalenteRest(MmCodigoEquivalenteServiceImpl entityService,
             MmCodigoEquivalenteRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

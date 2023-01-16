@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TipoUnidadMedidaDTO;
-import com.project.dev.api.service.TipoUnidadMedidaService;
+import com.project.dev.api.service.implementation.TipoUnidadMedidaServiceImpl;
 import com.project.dev.api.web.rest.assembler.TipoUnidadMedidaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TipoUnidadMedidaRest {
 
     private final Logger log = LoggerFactory.getLogger(TipoUnidadMedidaRest.class);
-    private final TipoUnidadMedidaService entityService;
+    private final TipoUnidadMedidaServiceImpl entityService;
     private final TipoUnidadMedidaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TipoUnidadMedidaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TipoUnidadMedidaRest(TipoUnidadMedidaService entityService,
+    public TipoUnidadMedidaRest(TipoUnidadMedidaServiceImpl entityService,
             TipoUnidadMedidaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

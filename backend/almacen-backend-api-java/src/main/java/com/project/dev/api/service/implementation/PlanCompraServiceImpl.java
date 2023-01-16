@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.PlanCompra;
 import com.project.dev.api.dto.PlanCompraDTO;
 import com.project.dev.api.repository.PlanCompraRepository;
-import com.project.dev.api.service.PlanCompraService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.PlanCompraMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class PlanCompraServiceImpl implements PlanCompraService {
+public class PlanCompraServiceImpl implements GenericService<PlanCompraDTO> {
 
     private final Logger log = LoggerFactory.getLogger(PlanCompraServiceImpl.class);
     private final PlanCompraRepository entityRepository;

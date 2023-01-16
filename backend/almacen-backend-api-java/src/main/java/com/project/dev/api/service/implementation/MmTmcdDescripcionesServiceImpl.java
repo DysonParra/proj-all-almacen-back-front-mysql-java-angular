@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MmTmcdDescripciones;
 import com.project.dev.api.dto.MmTmcdDescripcionesDTO;
 import com.project.dev.api.repository.MmTmcdDescripcionesRepository;
-import com.project.dev.api.service.MmTmcdDescripcionesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MmTmcdDescripcionesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MmTmcdDescripcionesServiceImpl implements MmTmcdDescripcionesService {
+public class MmTmcdDescripcionesServiceImpl implements GenericService<MmTmcdDescripcionesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MmTmcdDescripcionesServiceImpl.class);
     private final MmTmcdDescripcionesRepository entityRepository;

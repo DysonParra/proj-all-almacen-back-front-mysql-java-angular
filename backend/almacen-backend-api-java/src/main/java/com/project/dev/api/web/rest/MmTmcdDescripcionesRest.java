@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MmTmcdDescripcionesDTO;
-import com.project.dev.api.service.MmTmcdDescripcionesService;
+import com.project.dev.api.service.implementation.MmTmcdDescripcionesServiceImpl;
 import com.project.dev.api.web.rest.assembler.MmTmcdDescripcionesRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MmTmcdDescripcionesRest {
 
     private final Logger log = LoggerFactory.getLogger(MmTmcdDescripcionesRest.class);
-    private final MmTmcdDescripcionesService entityService;
+    private final MmTmcdDescripcionesServiceImpl entityService;
     private final MmTmcdDescripcionesRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MmTmcdDescripcionesRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MmTmcdDescripcionesRest(MmTmcdDescripcionesService entityService,
+    public MmTmcdDescripcionesRest(MmTmcdDescripcionesServiceImpl entityService,
             MmTmcdDescripcionesRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

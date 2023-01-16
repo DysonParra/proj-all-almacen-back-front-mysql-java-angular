@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.BodegasDTO;
-import com.project.dev.api.service.BodegasService;
+import com.project.dev.api.service.implementation.BodegasServiceImpl;
 import com.project.dev.api.web.rest.assembler.BodegasRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class BodegasRest {
 
     private final Logger log = LoggerFactory.getLogger(BodegasRest.class);
-    private final BodegasService entityService;
+    private final BodegasServiceImpl entityService;
     private final BodegasRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class BodegasRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public BodegasRest(BodegasService entityService,
+    public BodegasRest(BodegasServiceImpl entityService,
             BodegasRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

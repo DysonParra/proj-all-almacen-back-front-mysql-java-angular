@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Cotizacion;
 import com.project.dev.api.dto.CotizacionDTO;
 import com.project.dev.api.repository.CotizacionRepository;
-import com.project.dev.api.service.CotizacionService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.CotizacionMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class CotizacionServiceImpl implements CotizacionService {
+public class CotizacionServiceImpl implements GenericService<CotizacionDTO> {
 
     private final Logger log = LoggerFactory.getLogger(CotizacionServiceImpl.class);
     private final CotizacionRepository entityRepository;

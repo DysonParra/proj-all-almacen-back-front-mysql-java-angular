@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.ListasPreciosDTO;
-import com.project.dev.api.service.ListasPreciosService;
+import com.project.dev.api.service.implementation.ListasPreciosServiceImpl;
 import com.project.dev.api.web.rest.assembler.ListasPreciosRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class ListasPreciosRest {
 
     private final Logger log = LoggerFactory.getLogger(ListasPreciosRest.class);
-    private final ListasPreciosService entityService;
+    private final ListasPreciosServiceImpl entityService;
     private final ListasPreciosRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class ListasPreciosRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public ListasPreciosRest(ListasPreciosService entityService,
+    public ListasPreciosRest(ListasPreciosServiceImpl entityService,
             ListasPreciosRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

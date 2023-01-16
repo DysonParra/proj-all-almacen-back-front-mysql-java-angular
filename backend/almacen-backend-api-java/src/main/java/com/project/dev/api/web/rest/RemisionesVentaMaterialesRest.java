@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.RemisionesVentaMaterialesDTO;
-import com.project.dev.api.service.RemisionesVentaMaterialesService;
+import com.project.dev.api.service.implementation.RemisionesVentaMaterialesServiceImpl;
 import com.project.dev.api.web.rest.assembler.RemisionesVentaMaterialesRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class RemisionesVentaMaterialesRest {
 
     private final Logger log = LoggerFactory.getLogger(RemisionesVentaMaterialesRest.class);
-    private final RemisionesVentaMaterialesService entityService;
+    private final RemisionesVentaMaterialesServiceImpl entityService;
     private final RemisionesVentaMaterialesRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class RemisionesVentaMaterialesRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public RemisionesVentaMaterialesRest(RemisionesVentaMaterialesService entityService,
+    public RemisionesVentaMaterialesRest(RemisionesVentaMaterialesServiceImpl entityService,
             RemisionesVentaMaterialesRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

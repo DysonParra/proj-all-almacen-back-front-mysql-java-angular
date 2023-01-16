@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.CondicionesPagos;
 import com.project.dev.api.dto.CondicionesPagosDTO;
 import com.project.dev.api.repository.CondicionesPagosRepository;
-import com.project.dev.api.service.CondicionesPagosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.CondicionesPagosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class CondicionesPagosServiceImpl implements CondicionesPagosService {
+public class CondicionesPagosServiceImpl implements GenericService<CondicionesPagosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(CondicionesPagosServiceImpl.class);
     private final CondicionesPagosRepository entityRepository;

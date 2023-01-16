@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TipoInterlocutorComercial;
 import com.project.dev.api.dto.TipoInterlocutorComercialDTO;
 import com.project.dev.api.repository.TipoInterlocutorComercialRepository;
-import com.project.dev.api.service.TipoInterlocutorComercialService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TipoInterlocutorComercialMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TipoInterlocutorComercialServiceImpl implements TipoInterlocutorComercialService {
+public class TipoInterlocutorComercialServiceImpl implements GenericService<TipoInterlocutorComercialDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TipoInterlocutorComercialServiceImpl.class);
     private final TipoInterlocutorComercialRepository entityRepository;

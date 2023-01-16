@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Zonas;
 import com.project.dev.api.dto.ZonasDTO;
 import com.project.dev.api.repository.ZonasRepository;
-import com.project.dev.api.service.ZonasService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.ZonasMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class ZonasServiceImpl implements ZonasService {
+public class ZonasServiceImpl implements GenericService<ZonasDTO> {
 
     private final Logger log = LoggerFactory.getLogger(ZonasServiceImpl.class);
     private final ZonasRepository entityRepository;

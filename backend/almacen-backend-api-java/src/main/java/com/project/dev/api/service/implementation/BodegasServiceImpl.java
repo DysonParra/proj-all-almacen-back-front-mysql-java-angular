@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Bodegas;
 import com.project.dev.api.dto.BodegasDTO;
 import com.project.dev.api.repository.BodegasRepository;
-import com.project.dev.api.service.BodegasService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.BodegasMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class BodegasServiceImpl implements BodegasService {
+public class BodegasServiceImpl implements GenericService<BodegasDTO> {
 
     private final Logger log = LoggerFactory.getLogger(BodegasServiceImpl.class);
     private final BodegasRepository entityRepository;

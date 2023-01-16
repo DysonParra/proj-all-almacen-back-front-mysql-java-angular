@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.UbicacionesDTO;
-import com.project.dev.api.service.UbicacionesService;
+import com.project.dev.api.service.implementation.UbicacionesServiceImpl;
 import com.project.dev.api.web.rest.assembler.UbicacionesRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class UbicacionesRest {
 
     private final Logger log = LoggerFactory.getLogger(UbicacionesRest.class);
-    private final UbicacionesService entityService;
+    private final UbicacionesServiceImpl entityService;
     private final UbicacionesRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class UbicacionesRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public UbicacionesRest(UbicacionesService entityService,
+    public UbicacionesRest(UbicacionesServiceImpl entityService,
             UbicacionesRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

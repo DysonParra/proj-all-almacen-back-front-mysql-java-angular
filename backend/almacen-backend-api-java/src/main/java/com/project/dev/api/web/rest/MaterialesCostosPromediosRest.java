@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MaterialesCostosPromediosDTO;
-import com.project.dev.api.service.MaterialesCostosPromediosService;
+import com.project.dev.api.service.implementation.MaterialesCostosPromediosServiceImpl;
 import com.project.dev.api.web.rest.assembler.MaterialesCostosPromediosRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MaterialesCostosPromediosRest {
 
     private final Logger log = LoggerFactory.getLogger(MaterialesCostosPromediosRest.class);
-    private final MaterialesCostosPromediosService entityService;
+    private final MaterialesCostosPromediosServiceImpl entityService;
     private final MaterialesCostosPromediosRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MaterialesCostosPromediosRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MaterialesCostosPromediosRest(MaterialesCostosPromediosService entityService,
+    public MaterialesCostosPromediosRest(MaterialesCostosPromediosServiceImpl entityService,
             MaterialesCostosPromediosRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

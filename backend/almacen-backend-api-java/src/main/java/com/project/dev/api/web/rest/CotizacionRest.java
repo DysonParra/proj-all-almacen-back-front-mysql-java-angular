@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.CotizacionDTO;
-import com.project.dev.api.service.CotizacionService;
+import com.project.dev.api.service.implementation.CotizacionServiceImpl;
 import com.project.dev.api.web.rest.assembler.CotizacionRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class CotizacionRest {
 
     private final Logger log = LoggerFactory.getLogger(CotizacionRest.class);
-    private final CotizacionService entityService;
+    private final CotizacionServiceImpl entityService;
     private final CotizacionRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class CotizacionRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public CotizacionRest(CotizacionService entityService,
+    public CotizacionRest(CotizacionServiceImpl entityService,
             CotizacionRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

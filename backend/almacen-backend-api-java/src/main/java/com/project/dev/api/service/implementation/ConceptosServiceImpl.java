@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Conceptos;
 import com.project.dev.api.dto.ConceptosDTO;
 import com.project.dev.api.repository.ConceptosRepository;
-import com.project.dev.api.service.ConceptosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.ConceptosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class ConceptosServiceImpl implements ConceptosService {
+public class ConceptosServiceImpl implements GenericService<ConceptosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(ConceptosServiceImpl.class);
     private final ConceptosRepository entityRepository;

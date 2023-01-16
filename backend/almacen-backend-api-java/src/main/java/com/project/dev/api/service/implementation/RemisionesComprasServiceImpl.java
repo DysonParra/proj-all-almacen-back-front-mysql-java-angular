@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.RemisionesCompras;
 import com.project.dev.api.dto.RemisionesComprasDTO;
 import com.project.dev.api.repository.RemisionesComprasRepository;
-import com.project.dev.api.service.RemisionesComprasService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.RemisionesComprasMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class RemisionesComprasServiceImpl implements RemisionesComprasService {
+public class RemisionesComprasServiceImpl implements GenericService<RemisionesComprasDTO> {
 
     private final Logger log = LoggerFactory.getLogger(RemisionesComprasServiceImpl.class);
     private final RemisionesComprasRepository entityRepository;

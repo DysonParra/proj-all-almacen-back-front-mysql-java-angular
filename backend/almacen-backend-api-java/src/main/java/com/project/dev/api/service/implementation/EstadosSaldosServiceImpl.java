@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.EstadosSaldos;
 import com.project.dev.api.dto.EstadosSaldosDTO;
 import com.project.dev.api.repository.EstadosSaldosRepository;
-import com.project.dev.api.service.EstadosSaldosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.EstadosSaldosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class EstadosSaldosServiceImpl implements EstadosSaldosService {
+public class EstadosSaldosServiceImpl implements GenericService<EstadosSaldosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(EstadosSaldosServiceImpl.class);
     private final EstadosSaldosRepository entityRepository;

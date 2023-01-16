@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TiposDocumentosTiposAgentes;
 import com.project.dev.api.dto.TiposDocumentosTiposAgentesDTO;
 import com.project.dev.api.repository.TiposDocumentosTiposAgentesRepository;
-import com.project.dev.api.service.TiposDocumentosTiposAgentesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TiposDocumentosTiposAgentesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TiposDocumentosTiposAgentesServiceImpl implements TiposDocumentosTiposAgentesService {
+public class TiposDocumentosTiposAgentesServiceImpl implements GenericService<TiposDocumentosTiposAgentesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TiposDocumentosTiposAgentesServiceImpl.class);
     private final TiposDocumentosTiposAgentesRepository entityRepository;

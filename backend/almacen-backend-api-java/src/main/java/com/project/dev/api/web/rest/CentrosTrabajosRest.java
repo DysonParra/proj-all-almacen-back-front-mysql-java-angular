@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.CentrosTrabajosDTO;
-import com.project.dev.api.service.CentrosTrabajosService;
+import com.project.dev.api.service.implementation.CentrosTrabajosServiceImpl;
 import com.project.dev.api.web.rest.assembler.CentrosTrabajosRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class CentrosTrabajosRest {
 
     private final Logger log = LoggerFactory.getLogger(CentrosTrabajosRest.class);
-    private final CentrosTrabajosService entityService;
+    private final CentrosTrabajosServiceImpl entityService;
     private final CentrosTrabajosRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class CentrosTrabajosRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public CentrosTrabajosRest(CentrosTrabajosService entityService,
+    public CentrosTrabajosRest(CentrosTrabajosServiceImpl entityService,
             CentrosTrabajosRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

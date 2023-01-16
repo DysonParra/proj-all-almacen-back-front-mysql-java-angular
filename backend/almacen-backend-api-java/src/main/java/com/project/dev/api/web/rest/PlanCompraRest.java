@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.PlanCompraDTO;
-import com.project.dev.api.service.PlanCompraService;
+import com.project.dev.api.service.implementation.PlanCompraServiceImpl;
 import com.project.dev.api.web.rest.assembler.PlanCompraRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class PlanCompraRest {
 
     private final Logger log = LoggerFactory.getLogger(PlanCompraRest.class);
-    private final PlanCompraService entityService;
+    private final PlanCompraServiceImpl entityService;
     private final PlanCompraRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class PlanCompraRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public PlanCompraRest(PlanCompraService entityService,
+    public PlanCompraRest(PlanCompraServiceImpl entityService,
             PlanCompraRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

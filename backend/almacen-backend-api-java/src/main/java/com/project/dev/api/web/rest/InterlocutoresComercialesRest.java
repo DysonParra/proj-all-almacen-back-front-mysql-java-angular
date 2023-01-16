@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.InterlocutoresComercialesDTO;
-import com.project.dev.api.service.InterlocutoresComercialesService;
+import com.project.dev.api.service.implementation.InterlocutoresComercialesServiceImpl;
 import com.project.dev.api.web.rest.assembler.InterlocutoresComercialesRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class InterlocutoresComercialesRest {
 
     private final Logger log = LoggerFactory.getLogger(InterlocutoresComercialesRest.class);
-    private final InterlocutoresComercialesService entityService;
+    private final InterlocutoresComercialesServiceImpl entityService;
     private final InterlocutoresComercialesRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class InterlocutoresComercialesRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public InterlocutoresComercialesRest(InterlocutoresComercialesService entityService,
+    public InterlocutoresComercialesRest(InterlocutoresComercialesServiceImpl entityService,
             InterlocutoresComercialesRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

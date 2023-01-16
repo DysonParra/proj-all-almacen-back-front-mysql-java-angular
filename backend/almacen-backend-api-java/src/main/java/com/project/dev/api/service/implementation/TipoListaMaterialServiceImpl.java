@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TipoListaMaterial;
 import com.project.dev.api.dto.TipoListaMaterialDTO;
 import com.project.dev.api.repository.TipoListaMaterialRepository;
-import com.project.dev.api.service.TipoListaMaterialService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TipoListaMaterialMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TipoListaMaterialServiceImpl implements TipoListaMaterialService {
+public class TipoListaMaterialServiceImpl implements GenericService<TipoListaMaterialDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TipoListaMaterialServiceImpl.class);
     private final TipoListaMaterialRepository entityRepository;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.ListaDeMateriales;
 import com.project.dev.api.dto.ListaDeMaterialesDTO;
 import com.project.dev.api.repository.ListaDeMaterialesRepository;
-import com.project.dev.api.service.ListaDeMaterialesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.ListaDeMaterialesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class ListaDeMaterialesServiceImpl implements ListaDeMaterialesService {
+public class ListaDeMaterialesServiceImpl implements GenericService<ListaDeMaterialesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(ListaDeMaterialesServiceImpl.class);
     private final ListaDeMaterialesRepository entityRepository;

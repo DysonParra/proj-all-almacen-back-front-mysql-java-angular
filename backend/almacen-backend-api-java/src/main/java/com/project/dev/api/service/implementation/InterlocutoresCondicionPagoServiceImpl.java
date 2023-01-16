@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.InterlocutoresCondicionPago;
 import com.project.dev.api.dto.InterlocutoresCondicionPagoDTO;
 import com.project.dev.api.repository.InterlocutoresCondicionPagoRepository;
-import com.project.dev.api.service.InterlocutoresCondicionPagoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.InterlocutoresCondicionPagoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class InterlocutoresCondicionPagoServiceImpl implements InterlocutoresCondicionPagoService {
+public class InterlocutoresCondicionPagoServiceImpl implements GenericService<InterlocutoresCondicionPagoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(InterlocutoresCondicionPagoServiceImpl.class);
     private final InterlocutoresCondicionPagoRepository entityRepository;

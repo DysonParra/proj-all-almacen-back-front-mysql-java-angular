@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.GrupoInterlocutores;
 import com.project.dev.api.dto.GrupoInterlocutoresDTO;
 import com.project.dev.api.repository.GrupoInterlocutoresRepository;
-import com.project.dev.api.service.GrupoInterlocutoresService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.GrupoInterlocutoresMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class GrupoInterlocutoresServiceImpl implements GrupoInterlocutoresService {
+public class GrupoInterlocutoresServiceImpl implements GenericService<GrupoInterlocutoresDTO> {
 
     private final Logger log = LoggerFactory.getLogger(GrupoInterlocutoresServiceImpl.class);
     private final GrupoInterlocutoresRepository entityRepository;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.CentrosTrabajos;
 import com.project.dev.api.dto.CentrosTrabajosDTO;
 import com.project.dev.api.repository.CentrosTrabajosRepository;
-import com.project.dev.api.service.CentrosTrabajosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.CentrosTrabajosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class CentrosTrabajosServiceImpl implements CentrosTrabajosService {
+public class CentrosTrabajosServiceImpl implements GenericService<CentrosTrabajosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(CentrosTrabajosServiceImpl.class);
     private final CentrosTrabajosRepository entityRepository;

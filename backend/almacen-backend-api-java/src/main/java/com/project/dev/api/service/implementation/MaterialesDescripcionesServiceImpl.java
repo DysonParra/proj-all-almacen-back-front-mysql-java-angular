@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MaterialesDescripciones;
 import com.project.dev.api.dto.MaterialesDescripcionesDTO;
 import com.project.dev.api.repository.MaterialesDescripcionesRepository;
-import com.project.dev.api.service.MaterialesDescripcionesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MaterialesDescripcionesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MaterialesDescripcionesServiceImpl implements MaterialesDescripcionesService {
+public class MaterialesDescripcionesServiceImpl implements GenericService<MaterialesDescripcionesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MaterialesDescripcionesServiceImpl.class);
     private final MaterialesDescripcionesRepository entityRepository;

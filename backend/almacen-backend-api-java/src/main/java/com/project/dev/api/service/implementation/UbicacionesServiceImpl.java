@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Ubicaciones;
 import com.project.dev.api.dto.UbicacionesDTO;
 import com.project.dev.api.repository.UbicacionesRepository;
-import com.project.dev.api.service.UbicacionesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.UbicacionesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class UbicacionesServiceImpl implements UbicacionesService {
+public class UbicacionesServiceImpl implements GenericService<UbicacionesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(UbicacionesServiceImpl.class);
     private final UbicacionesRepository entityRepository;

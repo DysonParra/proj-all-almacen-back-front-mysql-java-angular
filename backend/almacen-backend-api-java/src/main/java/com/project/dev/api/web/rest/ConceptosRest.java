@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.ConceptosDTO;
-import com.project.dev.api.service.ConceptosService;
+import com.project.dev.api.service.implementation.ConceptosServiceImpl;
 import com.project.dev.api.web.rest.assembler.ConceptosRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class ConceptosRest {
 
     private final Logger log = LoggerFactory.getLogger(ConceptosRest.class);
-    private final ConceptosService entityService;
+    private final ConceptosServiceImpl entityService;
     private final ConceptosRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class ConceptosRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public ConceptosRest(ConceptosService entityService,
+    public ConceptosRest(ConceptosServiceImpl entityService,
             ConceptosRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

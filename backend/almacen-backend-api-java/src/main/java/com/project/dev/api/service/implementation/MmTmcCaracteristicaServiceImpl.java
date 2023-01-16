@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MmTmcCaracteristica;
 import com.project.dev.api.dto.MmTmcCaracteristicaDTO;
 import com.project.dev.api.repository.MmTmcCaracteristicaRepository;
-import com.project.dev.api.service.MmTmcCaracteristicaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MmTmcCaracteristicaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MmTmcCaracteristicaServiceImpl implements MmTmcCaracteristicaService {
+public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCaracteristicaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MmTmcCaracteristicaServiceImpl.class);
     private final MmTmcCaracteristicaRepository entityRepository;

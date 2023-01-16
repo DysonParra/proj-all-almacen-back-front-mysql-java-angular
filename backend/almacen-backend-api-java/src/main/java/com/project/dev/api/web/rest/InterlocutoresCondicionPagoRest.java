@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.InterlocutoresCondicionPagoDTO;
-import com.project.dev.api.service.InterlocutoresCondicionPagoService;
+import com.project.dev.api.service.implementation.InterlocutoresCondicionPagoServiceImpl;
 import com.project.dev.api.web.rest.assembler.InterlocutoresCondicionPagoRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class InterlocutoresCondicionPagoRest {
 
     private final Logger log = LoggerFactory.getLogger(InterlocutoresCondicionPagoRest.class);
-    private final InterlocutoresCondicionPagoService entityService;
+    private final InterlocutoresCondicionPagoServiceImpl entityService;
     private final InterlocutoresCondicionPagoRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class InterlocutoresCondicionPagoRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public InterlocutoresCondicionPagoRest(InterlocutoresCondicionPagoService entityService,
+    public InterlocutoresCondicionPagoRest(InterlocutoresCondicionPagoServiceImpl entityService,
             InterlocutoresCondicionPagoRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

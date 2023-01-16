@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TiposAgentes;
 import com.project.dev.api.dto.TiposAgentesDTO;
 import com.project.dev.api.repository.TiposAgentesRepository;
-import com.project.dev.api.service.TiposAgentesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TiposAgentesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TiposAgentesServiceImpl implements TiposAgentesService {
+public class TiposAgentesServiceImpl implements GenericService<TiposAgentesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TiposAgentesServiceImpl.class);
     private final TiposAgentesRepository entityRepository;

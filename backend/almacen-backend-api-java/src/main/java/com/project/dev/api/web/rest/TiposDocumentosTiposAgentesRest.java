@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.TiposDocumentosTiposAgentesDTO;
-import com.project.dev.api.service.TiposDocumentosTiposAgentesService;
+import com.project.dev.api.service.implementation.TiposDocumentosTiposAgentesServiceImpl;
 import com.project.dev.api.web.rest.assembler.TiposDocumentosTiposAgentesRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class TiposDocumentosTiposAgentesRest {
 
     private final Logger log = LoggerFactory.getLogger(TiposDocumentosTiposAgentesRest.class);
-    private final TiposDocumentosTiposAgentesService entityService;
+    private final TiposDocumentosTiposAgentesServiceImpl entityService;
     private final TiposDocumentosTiposAgentesRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class TiposDocumentosTiposAgentesRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public TiposDocumentosTiposAgentesRest(TiposDocumentosTiposAgentesService entityService,
+    public TiposDocumentosTiposAgentesRest(TiposDocumentosTiposAgentesServiceImpl entityService,
             TiposDocumentosTiposAgentesRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

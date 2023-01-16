@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Sociedad;
 import com.project.dev.api.dto.SociedadDTO;
 import com.project.dev.api.repository.SociedadRepository;
-import com.project.dev.api.service.SociedadService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.SociedadMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class SociedadServiceImpl implements SociedadService {
+public class SociedadServiceImpl implements GenericService<SociedadDTO> {
 
     private final Logger log = LoggerFactory.getLogger(SociedadServiceImpl.class);
     private final SociedadRepository entityRepository;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Movimientos;
 import com.project.dev.api.dto.MovimientosDTO;
 import com.project.dev.api.repository.MovimientosRepository;
-import com.project.dev.api.service.MovimientosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MovimientosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MovimientosServiceImpl implements MovimientosService {
+public class MovimientosServiceImpl implements GenericService<MovimientosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MovimientosServiceImpl.class);
     private final MovimientosRepository entityRepository;

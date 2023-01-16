@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.TipoUnidadMedida;
 import com.project.dev.api.dto.TipoUnidadMedidaDTO;
 import com.project.dev.api.repository.TipoUnidadMedidaRepository;
-import com.project.dev.api.service.TipoUnidadMedidaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.TipoUnidadMedidaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class TipoUnidadMedidaServiceImpl implements TipoUnidadMedidaService {
+public class TipoUnidadMedidaServiceImpl implements GenericService<TipoUnidadMedidaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(TipoUnidadMedidaServiceImpl.class);
     private final TipoUnidadMedidaRepository entityRepository;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MaterialesCostosPromedios;
 import com.project.dev.api.dto.MaterialesCostosPromediosDTO;
 import com.project.dev.api.repository.MaterialesCostosPromediosRepository;
-import com.project.dev.api.service.MaterialesCostosPromediosService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MaterialesCostosPromediosMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MaterialesCostosPromediosServiceImpl implements MaterialesCostosPromediosService {
+public class MaterialesCostosPromediosServiceImpl implements GenericService<MaterialesCostosPromediosDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MaterialesCostosPromediosServiceImpl.class);
     private final MaterialesCostosPromediosRepository entityRepository;
