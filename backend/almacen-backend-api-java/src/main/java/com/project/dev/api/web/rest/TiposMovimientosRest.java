@@ -119,16 +119,23 @@ public class TiposMovimientosRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/TiposMovimientos/pages")
-    public ResponseEntity<List<TiposMovimientosDTO>> getAllEntitiesPaged(Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<TiposMovimientosDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type TiposMovimientos");
         Page<TiposMovimientosDTO> page = null;
+        List<EntityModel<TiposMovimientosDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposMovimientos/pages");
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<TiposMovimientosDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(TiposMovimientosRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposMovimientos/pages");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
     /**
@@ -273,16 +280,23 @@ public class TiposMovimientosRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/TiposMovimientos/search/{query}/pages")
-    public ResponseEntity<List<TiposMovimientosDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<TiposMovimientosDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TiposMovimientos with the search : {}", query);
         Page<TiposMovimientosDTO> page = null;
+        List<EntityModel<TiposMovimientosDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposMovimientos/search/{query}/pages/" + query);
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<TiposMovimientosDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(TiposMovimientosRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposMovimientos/search/{query}/pages/" + query);
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
 }

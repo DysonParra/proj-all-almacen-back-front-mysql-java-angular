@@ -119,16 +119,23 @@ public class SaldosRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/Saldos/pages")
-    public ResponseEntity<List<SaldosDTO>> getAllEntitiesPaged(Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<SaldosDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Saldos");
         Page<SaldosDTO> page = null;
+        List<EntityModel<SaldosDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Saldos/pages");
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<SaldosDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(SaldosRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Saldos/pages");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
     /**
@@ -273,16 +280,23 @@ public class SaldosRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/Saldos/search/{query}/pages")
-    public ResponseEntity<List<SaldosDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<SaldosDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Saldos with the search : {}", query);
         Page<SaldosDTO> page = null;
+        List<EntityModel<SaldosDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Saldos/search/{query}/pages/" + query);
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<SaldosDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(SaldosRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Saldos/search/{query}/pages/" + query);
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
 }

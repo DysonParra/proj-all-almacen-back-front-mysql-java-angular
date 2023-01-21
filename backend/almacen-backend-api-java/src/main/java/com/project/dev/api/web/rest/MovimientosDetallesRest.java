@@ -119,16 +119,23 @@ public class MovimientosDetallesRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/MovimientosDetalles/pages")
-    public ResponseEntity<List<MovimientosDetallesDTO>> getAllEntitiesPaged(Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<MovimientosDetallesDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type MovimientosDetalles");
         Page<MovimientosDetallesDTO> page = null;
+        List<EntityModel<MovimientosDetallesDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MovimientosDetalles/pages");
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<MovimientosDetallesDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(MovimientosDetallesRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MovimientosDetalles/pages");
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
     /**
@@ -273,16 +280,23 @@ public class MovimientosDetallesRest {
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
     @GetMapping("/MovimientosDetalles/search/{query}/pages")
-    public ResponseEntity<List<MovimientosDetallesDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
+    public ResponseEntity<CollectionModel<EntityModel<MovimientosDetallesDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type MovimientosDetalles with the search : {}", query);
         Page<MovimientosDetallesDTO> page = null;
+        List<EntityModel<MovimientosDetallesDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MovimientosDetalles/search/{query}/pages/" + query);
+            entities = page.getContent().parallelStream()
+                    .map(entityRestAssembler::toModel)
+                    .collect(Collectors.toList());
+            CollectionModel<EntityModel<MovimientosDetallesDTO>> entitiesCollection = new CollectionModel<>(entities);
+            entitiesCollection.add(linkTo(methodOn(MovimientosDetallesRest.class).getAllEntities()).withSelfRel());
+            return new ResponseEntity<>(entitiesCollection, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MovimientosDetalles/search/{query}/pages/" + query);
-        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+        return null;
     }
 
 }
