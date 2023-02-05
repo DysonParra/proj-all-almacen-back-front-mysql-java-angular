@@ -400,15 +400,15 @@ CREATE TABLE IF NOT EXISTS `movimientos` (
 );
 
 CREATE TABLE IF NOT EXISTS `movimientos_detalles` (
-    `id_movimiento_detalle`            BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `numero_documento`                VARCHAR(255)            NULL DEFAULT NULL,
-    `codigo_producto`                 VARCHAR(255)            NULL DEFAULT NULL,
-    `valor_unitario`                  DECIMAL(10, 2)          NULL DEFAULT NULL,
-    `sobre_costo`                     DECIMAL(10, 2)          NULL DEFAULT NULL,
-    `cantidad`                       DECIMAL(10, 2)          NULL DEFAULT NULL,
-    `usuario`                        VARCHAR(255)            NULL DEFAULT NULL,
-    `fecha`                           TIMESTAMP           NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
-    `id_estado_saldo`                  BIGINT                  NULL DEFAULT NULL
+    `id_movimiento_detalle`             BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `numero_documento`                  VARCHAR(255)            NULL DEFAULT NULL,
+    `codigo_producto`                   VARCHAR(255)            NULL DEFAULT NULL,
+    `valor_unitario`                    DECIMAL(10, 2)          NULL DEFAULT NULL,
+    `sobre_costo`                       DECIMAL(10, 2)          NULL DEFAULT NULL,
+    `cantidad`                          DECIMAL(10, 2)          NULL DEFAULT NULL,
+    `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
+    `fecha`                             TIMESTAMP           NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
+    `id_estado_saldo`                   BIGINT                  NULL DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `remisiones_compras` (
