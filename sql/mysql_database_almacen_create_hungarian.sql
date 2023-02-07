@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS almacen;
-CREATE DATABASE IF NOT EXISTS almacen;
-USE almacen;
+DROP DATABASE IF EXISTS `almacen`;
+CREATE DATABASE IF NOT EXISTS `almacen`;
+USE `almacen`;
 
 CREATE TABLE IF NOT EXISTS `CentrosTrabajos` (
     `intIdCentroDeTrabajo`              BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -507,8 +507,8 @@ CREATE TABLE IF NOT EXISTS `ListaDeMateriales` (
     `dtFechaInicio`                     DATETIME                NULL DEFAULT NULL,
     `dtFechaFin`                        DATETIME                NULL DEFAULT NULL,
     `intCantidad`                       INT                     NULL DEFAULT NULL,
-    `strCodigoMaterial`                 VARCHAR(20)             NULL DEFAULT NULL,
-    `strCodigoComponente`               VARCHAR(20)             NULL DEFAULT NULL,
+    `strCodigoMaterial`                 VARCHAR(255)            NULL DEFAULT NULL,
+    `strCodigoComponente`               VARCHAR(255)            NULL DEFAULT NULL,
     `intIdListaPrecio`                  BIGINT                  NULL DEFAULT NULL,
     `decPrecioUnitario`                 DECIMAL(18, 1)          NULL DEFAULT NULL,
     `strUsuario`                        VARCHAR(100)            NULL DEFAULT NULL,
@@ -536,7 +536,7 @@ CREATE TABLE IF NOT EXISTS `MaterialesDatosCompra` (
 CREATE TABLE IF NOT EXISTS `OrdenProduccion` (
     `strNumeroOrden`                    VARCHAR(20)         NOT NULL PRIMARY KEY,
     `strReferencia`                     VARCHAR(20)             NULL DEFAULT NULL,
-    `strCodigoMateria`                  VARCHAR(20)             NULL DEFAULT NULL,
+    `strCodigoMaterial`                 VARCHAR(255)            NULL DEFAULT NULL,
     `intIdEstadoProduccion`             BIGINT                  NULL DEFAULT NULL,
     `intIdRutaOrdenTrabajo`             BIGINT                  NULL DEFAULT NULL,
     `intIdListaMateriales`              BIGINT                  NULL DEFAULT NULL,
@@ -554,7 +554,7 @@ CREATE TABLE IF NOT EXISTS `OrdenProduccion` (
 CREATE TABLE IF NOT EXISTS `Componentes` (
     `intIdComponente`                   BIGINT              NOT NULL PRIMARY KEY,
     `strNumeroOrden`                    VARCHAR(20)             NULL DEFAULT NULL,
-    `strCodigoMaterial`                 VARCHAR(20)             NULL DEFAULT NULL,
+    `strCodigoMaterial`                 VARCHAR(255)            NULL DEFAULT NULL,
     `intIdUnidadMedida`                 BIGINT                  NULL DEFAULT NULL,
     `intIdAlmacen`                      BIGINT                  NULL DEFAULT NULL,
     `decCantidadBase`                   DECIMAL(18, 1)          NULL DEFAULT NULL,
@@ -682,11 +682,11 @@ ALTER TABLE `Agentes`
     ADD CONSTRAINT `agentesSociedadIdFk`
         FOREIGN KEY (`intIdSociedad`)
         REFERENCES `Sociedad` (`intIdSociedad`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `agentesTiposAgentesIdFk`
         FOREIGN KEY (`intIdTipoAgente`)
         REFERENCES `TiposAgentes` (`intIdTipoAgente`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Bodegas`
     ADD CONSTRAINT `bodegasCodigoBodegaUindex`
@@ -694,7 +694,7 @@ ALTER TABLE `Bodegas`
     ADD CONSTRAINT `bodegasAgentesIdFk`
         FOREIGN KEY (`intIdAgente`)
         REFERENCES `Agentes` (`intIdAgente`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Localizaciones`
     ADD CONSTRAINT `fkLocalizacionesInterlocutorId`
@@ -703,7 +703,7 @@ ALTER TABLE `Localizaciones`
     ADD CONSTRAINT `localizacionesBodegasIdFk`
         FOREIGN KEY (`intIdBodega`)
         REFERENCES `Bodegas` (`intIdBodega`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Remisiones`
     ADD CONSTRAINT `fkRemisionesAgentedestinoId`
@@ -722,13 +722,13 @@ ALTER TABLE `Materiales`
     ADD CONSTRAINT `materialesTiposMaterialesIdTipoMaterialFk`
         FOREIGN KEY (`intIdTiposMateriales`)
         REFERENCES `TiposMateriales` (`intIdTipoMaterial`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `MaterialesCostosPromedios`
     ADD CONSTRAINT `materialesCostosPromediosMaterialesCodigoProductoFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `MaterialesDescripciones`
     ADD CONSTRAINT `materialesDescripcionesMaterialesCodigoProductoFk`
@@ -742,7 +742,7 @@ ALTER TABLE `MmCodigoEquivalente`
     ADD CONSTRAINT `mmCodigoEquivalenteMaterialesCodigoProductoFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 CREATE OR REPLACE INDEX `mmCodigoEquivalenteCodigoMaterialIndex`
         ON `MmCodigoEquivalente` (`strCodigoMaterial`);
@@ -756,21 +756,21 @@ ALTER TABLE `MaterialesCaracteristicas`
     ADD CONSTRAINT `materialesCaracteristicasMaterialesIdMaterialFk`
         FOREIGN KEY (`intIdMaterial`)
         REFERENCES `Materiales` (`intIdMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `materialesCaracteristicasMmTmcCaracteristicaFk`
         FOREIGN KEY (`intIdTipoMaterialCaracteristica`)
         REFERENCES `MmTmcCaracteristica` (`intIdMmTmcCaracteristica`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `MaterialesCaracteristicas`
     ADD CONSTRAINT `materialesCaracteristicasTiposMaterialesIdTipoMaterialFk`
         FOREIGN KEY (`intIdTipoMaterial`)
         REFERENCES `TiposMateriales` (`intIdTipoMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `materialesCaracteristicasFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 CREATE OR REPLACE INDEX `materialesCaracteristicasIdTipoMaterialCaracteristicaIndex`
         ON `MaterialesCaracteristicas` (`intIdTipoMaterialCaracteristica`);
@@ -785,7 +785,7 @@ ALTER TABLE `MmTmcdDescripciones`
     ADD CONSTRAINT `mmTmcdTmcFk`
         FOREIGN KEY (`intIdTipoMaterialCaracteristica`)
         REFERENCES `MmTmcCaracteristica` (`intIdMmTmcCaracteristica`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 CREATE OR REPLACE INDEX `mmTmcdDescripcionesTipoMaterialCaracteristicaIndex`
         ON `MmTmcdDescripciones` (`intIdTipoMaterialCaracteristica`);
@@ -805,7 +805,7 @@ ALTER TABLE `Consecutivos`
     ADD CONSTRAINT `consecutivosTiposDocumentosIdFk`
         FOREIGN KEY (`intIdTipoDocumento`)
         REFERENCES `TiposDocumentos` (`intIdTipoDocumento`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Movimientos`
     ADD CONSTRAINT `movimientosNumeroDocumentoUindex`
@@ -813,30 +813,30 @@ ALTER TABLE `Movimientos`
     ADD CONSTRAINT `movimientosBodegasIdFk`
         FOREIGN KEY (`intIdBodega`)
         REFERENCES `Bodegas` (`intIdBodega`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `movimientosConceptosIdFk`
         FOREIGN KEY (`intIdConcepto`)
         REFERENCES `Conceptos` (`intIdConcepto`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `movimientosEstadosMovimientosIdFk`
         FOREIGN KEY (`intIdEstadoMovimiento`)
         REFERENCES `EstadosMovimientos` (`intIdEstadoMovimiento`)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE,
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
     ADD CONSTRAINT `movimientosRemisionesIdFk`
         FOREIGN KEY (`intIdRemision`)
         REFERENCES `Remisiones` (`intIdRemision`)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE,
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
     ADD CONSTRAINT `movimientosTiposDocumentosIdFk`
         FOREIGN KEY (`intIdTipoDocumento`)
         REFERENCES `TiposDocumentos` (`intIdTipoDocumento`)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE,
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
     ADD CONSTRAINT `movimientosTiposMovimientosIdFk`
         FOREIGN KEY (`intIdTipoMovimiento`)
         REFERENCES `TiposMovimientos` (`intIdTipoMovimiento`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `MovimientosDetalles`
     ADD CONSTRAINT `movimientosDetallesEstadosSaldosIdFk`
@@ -872,7 +872,7 @@ ALTER TABLE `RemisionesVenta`
     ADD CONSTRAINT `remisionesVentaListasPreciosIdListaPrecioFk`
         FOREIGN KEY (`intListaPrecio`)
         REFERENCES `ListasPrecios` (`intIdListaPrecio`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `fkRemisionesVentaTipoDocumentoId`
         FOREIGN KEY (`intIdTipoDocumento`)
         REFERENCES `TiposDocumentos` (`intIdTipoDocumento`),
@@ -887,21 +887,21 @@ ALTER TABLE `TiposDocumentosConceptos`
     ADD CONSTRAINT `tiposDocumentosConceptosConceptosIdFk`
         FOREIGN KEY (`intIdConcepto`)
         REFERENCES `Conceptos` (`intIdConcepto`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `tiposDocumentosConceptosTiposDocumentosIdFk`
         FOREIGN KEY (`intIdTipoDocumento`)
         REFERENCES `TiposDocumentos` (`intIdTipoDocumento`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `TiposDocumentosTiposAgentes`
     ADD CONSTRAINT `tiposDocumentosTiposAgentesTiposAgentesIdFk`
         FOREIGN KEY (`intIdTipoAgente`)
         REFERENCES `TiposAgentes` (`intIdTipoAgente`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `tiposDocumentosTiposAgentesTiposDocumentosIdFk`
         FOREIGN KEY (`intIdTipoDocumento`)
         REFERENCES `TiposDocumentos` (`intIdTipoDocumento`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `UnidadMedida`
     ADD CONSTRAINT `fkUnidadMedidaTipoUnidadMedidaId`
@@ -914,44 +914,44 @@ ALTER TABLE `ListaDeMateriales`
     ADD CONSTRAINT `listaDeMaterialesBodegasIdBodegaFk`
         FOREIGN KEY (`intIdBodega`)
         REFERENCES `Bodegas` (`intIdBodega`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `listaDeMaterialesListasPreciosIdListaPrecioFk`
         FOREIGN KEY (`intIdListaPrecio`)
         REFERENCES `ListasPrecios` (`intIdListaPrecio`),
     ADD CONSTRAINT `listaDeMaterialesMaterialesCodigoMaterialFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `listaDeMaterialesMaterialesCodigoMaterialFk2`
         FOREIGN KEY (`strCodigoComponente`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `listaDeMaterialesIdTipoListaMaterialFk`
         FOREIGN KEY (`intIdTipoListaMaterial`)
         REFERENCES `TipoListaMaterial` (`intIdTipoListaMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `listaDeMaterialesUnidadMedidaIdUnidadMedidaFk`
         FOREIGN KEY (`intIdUnidadMedida`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `MaterialesDatosCompra`
     ADD CONSTRAINT `materialesDatosCompraInterlocutoresComercialesFk`
         FOREIGN KEY (`intIdInterlocutor`)
         REFERENCES `InterlocutoresComerciales` (`intIdInterlocutorComercial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `materialesDatosCompraUnidadMedidaIdUnidadMedidaFk`
         FOREIGN KEY (`intIdUnidadMedidaBase`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `materialesDatosCompraUnidadMedidaIdUnidadMedidaFk2`
         FOREIGN KEY (`intIdUnidadMedidaCompra`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `materialesDatosCompraMaterialesCodigoProductoFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 CREATE OR REPLACE INDEX `materialesDatosCompraCodigoMaterialIndex`
         ON `MaterialesDatosCompra` (`strCodigoMaterial`);
@@ -960,45 +960,45 @@ ALTER TABLE `OrdenProduccion`
     ADD CONSTRAINT `ordenProduccionListaDeMaterialesIdListaMaterialFk`
         FOREIGN KEY (`intIdListaMateriales`)
         REFERENCES `ListaDeMateriales` (`intIdListaMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `ordenProduccionMaterialesCodigoMaterialFk`
-        FOREIGN KEY (`strCodigoMateria`)
+        FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `ordenProduccionUnidadMedidaIdUnidadMedidaFk`
         FOREIGN KEY (`intIdUnidadMedida`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Componentes`
     ADD CONSTRAINT `componentesMaterialesCodigoMaterialFk`
         FOREIGN KEY (`strCodigoMaterial`)
         REFERENCES `Materiales` (`strCodigoMaterial`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `componentesOrdenProduccionNumeroOrdenFk`
         FOREIGN KEY (`strNumeroOrden`)
         REFERENCES `OrdenProduccion` (`strNumeroOrden`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `componentesUnidadMedidaIdUnidadMedidaFk`
         FOREIGN KEY (`intIdUnidadMedida`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `OrdenDeTrabajo`
     ADD CONSTRAINT `ordenDeTrabajoCentrosTrabajosIdCentroDeTrabajoFk`
         FOREIGN KEY (`intIdCentroTrabajo`)
         REFERENCES `CentrosTrabajos` (`intIdCentroDeTrabajo`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `ordenDeTrabajoOrdenProduccionNumeroOrdenFk`
         FOREIGN KEY (`strNumeroOrden`)
         REFERENCES `OrdenProduccion` (`strNumeroOrden`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `RemisionesVentaMateriales`
     ADD CONSTRAINT `remisionesVentaMaterialesUnidadMedidaIdUnidadMedidaFk`
         FOREIGN KEY (`intIdUnidadMedida`)
         REFERENCES `UnidadMedida` (`intIdUnidadMedida`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `fkRemisionesVentaMaterialesMaterialId`
         FOREIGN KEY (`intIdMaterial`)
         REFERENCES `Materiales` (`intIdMaterial`),
@@ -1012,7 +1012,7 @@ ALTER TABLE `Zonas`
     ADD CONSTRAINT `zonasBodegasIdFk`
         FOREIGN KEY (`intIdBodega`)
         REFERENCES `Bodegas` (`intIdBodega`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Ubicaciones`
     ADD CONSTRAINT `ubicacionesCodigoUbicacionUindex`
@@ -1020,21 +1020,21 @@ ALTER TABLE `Ubicaciones`
     ADD CONSTRAINT `ubicacionesZonasCodigoZonaFk`
         FOREIGN KEY (`strCodigoZona`)
         REFERENCES `Zonas` (`strCodigoZona`)
-        ON UPDATE CASCADE;
+        ON UPDATE NO ACTION;
 
 ALTER TABLE `Saldos`
     ADD CONSTRAINT `saldosEstadosSaldosIdFk`
         FOREIGN KEY (`intIdEstadoSaldo`)
         REFERENCES `EstadosSaldos` (`intIdEstadoSaldo`)
-        ON UPDATE CASCADE,
+        ON UPDATE NO ACTION,
     ADD CONSTRAINT `saldosMaterialesCodigoProductoFk`
         FOREIGN KEY (`strCodigoProducto`)
         REFERENCES `Materiales` (`strCodigoMaterial`),
     ADD CONSTRAINT `saldosUbicacionesIdFk`
         FOREIGN KEY (`intIdUbicacion`)
         REFERENCES `Ubicaciones` (`intIdUbicacion`)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE;
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION;
 
 CREATE OR REPLACE INDEX `saldosCodigoProductoIndex`
         ON `Saldos` (`strCodigoProducto`);

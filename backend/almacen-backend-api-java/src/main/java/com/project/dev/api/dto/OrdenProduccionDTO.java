@@ -46,7 +46,7 @@ public class OrdenProduccionDTO {
     private String strUsuario;
     private Date dtFecha;
     private Long intIdListaMateriales;
-    private String strCodigoMateria;
+    private String strCodigoMaterial;
     private Long intIdUnidadMedida;
 
 }
