@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {OrdenProduccionMapping}
  *
  * @version         2.0
  *

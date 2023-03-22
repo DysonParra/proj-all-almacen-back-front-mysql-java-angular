@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoUnidadMedidaDTO}
  *
  * @version         2.0
  *

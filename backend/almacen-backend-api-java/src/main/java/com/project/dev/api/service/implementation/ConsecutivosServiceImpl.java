@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {ConsecutivosServiceImpl}
  *
  * @version         2.0
  *

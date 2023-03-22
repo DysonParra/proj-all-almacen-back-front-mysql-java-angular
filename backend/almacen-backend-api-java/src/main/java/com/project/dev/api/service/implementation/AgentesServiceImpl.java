@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AgentesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {AgentesServiceImpl}
  *
  * @version         2.0
  *

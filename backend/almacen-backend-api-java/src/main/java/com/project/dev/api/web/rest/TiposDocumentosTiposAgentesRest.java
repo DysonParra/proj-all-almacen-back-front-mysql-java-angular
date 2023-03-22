@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosTiposAgentesRest}
  *
  * @version         2.0
  *

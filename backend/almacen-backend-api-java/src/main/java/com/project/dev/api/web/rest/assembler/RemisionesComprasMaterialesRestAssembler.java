@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesComprasMaterialesRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {RemisionesComprasMaterialesRestAssembler}
  *
  * @version         2.0
  *

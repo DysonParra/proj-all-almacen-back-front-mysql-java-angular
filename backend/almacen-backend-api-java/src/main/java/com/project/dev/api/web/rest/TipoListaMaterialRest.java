@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoListaMaterialRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoListaMaterialRest}
  *
  * @version         2.0
  *

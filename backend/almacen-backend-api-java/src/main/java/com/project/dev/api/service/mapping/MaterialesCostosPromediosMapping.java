@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCostosPromediosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MaterialesCostosPromediosMapping}
  *
  * @version         2.0
  *

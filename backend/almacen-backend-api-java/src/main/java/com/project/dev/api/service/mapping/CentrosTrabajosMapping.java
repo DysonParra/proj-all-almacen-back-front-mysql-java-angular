@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {CentrosTrabajosMapping}
  *
  * @version         2.0
  *

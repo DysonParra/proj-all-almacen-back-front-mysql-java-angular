@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MovimientosDetallesMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MovimientosDetallesMapping}
  *
  * @version         2.0
  *

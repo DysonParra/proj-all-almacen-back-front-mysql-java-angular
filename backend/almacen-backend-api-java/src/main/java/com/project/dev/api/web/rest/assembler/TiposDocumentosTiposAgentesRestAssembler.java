@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosTiposAgentesRestAssembler}
  *
  * @version         2.0
  *

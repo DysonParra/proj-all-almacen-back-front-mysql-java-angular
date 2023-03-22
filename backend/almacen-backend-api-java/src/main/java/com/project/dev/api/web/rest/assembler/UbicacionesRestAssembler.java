@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UbicacionesRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {UbicacionesRestAssembler}
  *
  * @version         2.0
  *

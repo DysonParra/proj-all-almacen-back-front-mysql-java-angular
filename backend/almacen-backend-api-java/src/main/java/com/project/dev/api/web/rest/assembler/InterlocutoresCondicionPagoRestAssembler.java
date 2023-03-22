@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutoresCondicionPagoRestAssembler}
  *
  * @version         2.0
  *

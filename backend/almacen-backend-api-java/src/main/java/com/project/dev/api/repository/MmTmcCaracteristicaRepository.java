@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcCaracteristicaRepository}
  *
  * @version         2.0
  *

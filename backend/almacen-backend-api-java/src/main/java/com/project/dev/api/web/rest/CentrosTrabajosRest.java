@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {CentrosTrabajosRest}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoUnidadMedidaMapping}
  *
  * @version         2.0
  *

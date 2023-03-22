@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {CotizacionMapping}
  *
  * @version         2.0
  *

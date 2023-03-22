@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {ListasPreciosRestAssembler}
  *
  * @version         2.0
  *

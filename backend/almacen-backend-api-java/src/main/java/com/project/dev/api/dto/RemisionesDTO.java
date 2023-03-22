@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {RemisionesDTO}
  *
  * @version         2.0
  *

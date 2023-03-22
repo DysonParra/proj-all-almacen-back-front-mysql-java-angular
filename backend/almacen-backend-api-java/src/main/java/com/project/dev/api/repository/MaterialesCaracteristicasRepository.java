@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCaracteristicasRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MaterialesCaracteristicasRepository}
  *
  * @version         2.0
  *

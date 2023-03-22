@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {CotizacionDTO}
  *
  * @version         2.0
  *

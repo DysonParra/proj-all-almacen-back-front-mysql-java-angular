@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {PlanCompraMapping}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {PlanCompraRepository}
  *
  * @version         2.0
  *

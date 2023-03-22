@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {GrupoInterlocutoresRestAssembler}
  *
  * @version         2.0
  *

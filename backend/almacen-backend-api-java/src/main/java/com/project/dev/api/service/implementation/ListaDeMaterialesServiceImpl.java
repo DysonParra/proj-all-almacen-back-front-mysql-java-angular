@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListaDeMaterialesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {ListaDeMaterialesServiceImpl}
  *
  * @version         2.0
  *

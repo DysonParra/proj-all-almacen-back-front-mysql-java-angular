@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SaldosRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {SaldosRepository}
  *
  * @version         2.0
  *

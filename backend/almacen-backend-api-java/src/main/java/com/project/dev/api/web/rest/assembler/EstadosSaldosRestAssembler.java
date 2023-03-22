@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {EstadosSaldosRestAssembler}
  *
  * @version         2.0
  *

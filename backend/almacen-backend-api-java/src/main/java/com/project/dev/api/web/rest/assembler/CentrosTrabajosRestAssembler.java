@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {CentrosTrabajosRestAssembler}
  *
  * @version         2.0
  *

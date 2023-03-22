@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosDTO}
  *
  * @version         2.0
  *

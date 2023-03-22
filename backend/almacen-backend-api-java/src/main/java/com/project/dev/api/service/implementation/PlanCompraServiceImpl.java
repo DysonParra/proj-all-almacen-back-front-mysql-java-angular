@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {PlanCompraServiceImpl}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoListaMaterialMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoListaMaterialMapping}
  *
  * @version         2.0
  *

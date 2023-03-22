@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosTiposAgentesMapping}
  *
  * @version         2.0
  *

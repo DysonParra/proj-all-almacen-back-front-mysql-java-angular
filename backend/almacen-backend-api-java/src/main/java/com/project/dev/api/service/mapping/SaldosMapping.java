@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SaldosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {SaldosMapping}
  *
  * @version         2.0
  *

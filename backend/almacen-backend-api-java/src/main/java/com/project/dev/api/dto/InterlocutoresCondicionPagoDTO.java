@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutoresCondicionPagoDTO}
  *
  * @version         2.0
  *

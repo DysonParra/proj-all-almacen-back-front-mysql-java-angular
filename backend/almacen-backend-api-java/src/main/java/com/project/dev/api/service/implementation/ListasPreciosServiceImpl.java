@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {ListasPreciosServiceImpl}
  *
  * @version         2.0
  *

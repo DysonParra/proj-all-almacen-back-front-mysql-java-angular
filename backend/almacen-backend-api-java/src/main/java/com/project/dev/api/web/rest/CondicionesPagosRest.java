@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {CondicionesPagosRest}
  *
  * @version         2.0
  *

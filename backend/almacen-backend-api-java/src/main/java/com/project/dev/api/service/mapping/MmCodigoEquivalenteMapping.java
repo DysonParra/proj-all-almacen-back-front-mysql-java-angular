@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmCodigoEquivalenteMapping}
  *
  * @version         2.0
  *

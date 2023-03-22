@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {BodegasDTO}
  *
  * @version         2.0
  *

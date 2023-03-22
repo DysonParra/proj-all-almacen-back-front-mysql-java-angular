@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaMaterialesMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {RemisionesVentaMaterialesMapping}
  *
  * @version         2.0
  *

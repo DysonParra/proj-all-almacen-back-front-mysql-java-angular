@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutorFinanzasRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutorFinanzasRestAssembler}
  *
  * @version         2.0
  *

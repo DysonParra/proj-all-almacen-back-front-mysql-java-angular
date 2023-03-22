@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutorFinanzasMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutorFinanzasMapping}
  *
  * @version         2.0
  *

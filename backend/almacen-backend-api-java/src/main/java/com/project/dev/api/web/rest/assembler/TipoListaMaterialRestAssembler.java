@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoListaMaterialRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoListaMaterialRestAssembler}
  *
  * @version         2.0
  *

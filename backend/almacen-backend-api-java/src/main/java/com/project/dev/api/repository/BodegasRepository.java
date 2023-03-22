@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {BodegasRepository}
  *
  * @version         2.0
  *

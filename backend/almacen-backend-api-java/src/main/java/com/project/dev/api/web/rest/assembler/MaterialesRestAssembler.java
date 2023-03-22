@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MaterialesRestAssembler}
  *
  * @version         2.0
  *

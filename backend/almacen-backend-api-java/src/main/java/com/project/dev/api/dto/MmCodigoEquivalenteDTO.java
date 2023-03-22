@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmCodigoEquivalenteDTO}
  *
  * @version         2.0
  *

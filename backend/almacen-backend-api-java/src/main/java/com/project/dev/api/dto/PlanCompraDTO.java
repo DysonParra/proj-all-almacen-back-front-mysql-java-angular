@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {PlanCompraDTO}
  *
  * @version         2.0
  *

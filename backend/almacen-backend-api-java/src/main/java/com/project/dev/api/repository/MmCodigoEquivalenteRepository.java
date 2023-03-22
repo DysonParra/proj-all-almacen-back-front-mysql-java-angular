@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmCodigoEquivalenteRepository}
  *
  * @version         2.0
  *

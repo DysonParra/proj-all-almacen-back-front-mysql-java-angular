@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {CotizacionRest}
  *
  * @version         2.0
  *

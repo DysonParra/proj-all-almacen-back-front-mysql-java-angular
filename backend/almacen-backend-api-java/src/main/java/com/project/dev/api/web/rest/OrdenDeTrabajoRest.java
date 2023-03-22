@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {OrdenDeTrabajoRest}
  *
  * @version         2.0
  *

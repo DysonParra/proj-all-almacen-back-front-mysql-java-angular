@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcdDescripcionesRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcdDescripcionesRepository}
  *
  * @version         2.0
  *

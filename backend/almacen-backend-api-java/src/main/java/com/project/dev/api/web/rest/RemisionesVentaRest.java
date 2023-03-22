@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {RemisionesVentaRest}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcCaracteristicaDTO}
  *
  * @version         2.0
  *

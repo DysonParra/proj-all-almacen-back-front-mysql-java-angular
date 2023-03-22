@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutorFinanzasServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutorFinanzasServiceImpl}
  *
  * @version         2.0
  *

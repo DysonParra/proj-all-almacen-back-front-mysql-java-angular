@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmCodigoEquivalenteRestAssembler}
  *
  * @version         2.0
  *

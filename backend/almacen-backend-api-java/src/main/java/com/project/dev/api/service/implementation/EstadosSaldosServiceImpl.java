@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {EstadosSaldosServiceImpl}
  *
  * @version         2.0
  *

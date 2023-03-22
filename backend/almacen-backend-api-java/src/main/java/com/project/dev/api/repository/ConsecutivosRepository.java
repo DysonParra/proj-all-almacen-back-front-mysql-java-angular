@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {ConsecutivosRepository}
  *
  * @version         2.0
  *

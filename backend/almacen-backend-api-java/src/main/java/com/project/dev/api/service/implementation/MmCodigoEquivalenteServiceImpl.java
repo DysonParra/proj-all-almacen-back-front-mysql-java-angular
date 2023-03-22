@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmCodigoEquivalenteServiceImpl}
  *
  * @version         2.0
  *

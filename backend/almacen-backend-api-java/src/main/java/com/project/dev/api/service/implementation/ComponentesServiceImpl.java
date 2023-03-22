@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComponentesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {ComponentesServiceImpl}
  *
  * @version         2.0
  *

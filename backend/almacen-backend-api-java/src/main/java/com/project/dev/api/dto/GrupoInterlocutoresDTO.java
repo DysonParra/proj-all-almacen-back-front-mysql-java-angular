@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {GrupoInterlocutoresDTO}
  *
  * @version         2.0
  *

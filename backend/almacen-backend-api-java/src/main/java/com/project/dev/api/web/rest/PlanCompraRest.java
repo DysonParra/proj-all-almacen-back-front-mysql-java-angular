@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {PlanCompraRest}
  *
  * @version         2.0
  *

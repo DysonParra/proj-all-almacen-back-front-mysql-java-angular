@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MovimientosDetallesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {MovimientosDetallesDTO}
  *
  * @version         2.0
  *

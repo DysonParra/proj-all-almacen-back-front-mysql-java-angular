@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {GrupoInterlocutoresMapping}
  *
  * @version         2.0
  *

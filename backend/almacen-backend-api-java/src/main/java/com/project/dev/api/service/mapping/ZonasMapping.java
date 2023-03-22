@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {ZonasMapping}
  *
  * @version         2.0
  *

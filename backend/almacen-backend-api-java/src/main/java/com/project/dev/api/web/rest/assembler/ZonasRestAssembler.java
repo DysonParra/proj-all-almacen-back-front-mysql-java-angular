@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {ZonasRestAssembler}
  *
  * @version         2.0
  *

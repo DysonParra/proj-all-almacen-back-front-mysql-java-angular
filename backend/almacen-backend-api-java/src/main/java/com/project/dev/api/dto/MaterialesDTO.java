@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {MaterialesDTO}
  *
  * @version         2.0
  *

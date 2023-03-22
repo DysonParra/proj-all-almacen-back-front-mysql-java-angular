@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {CentrosTrabajosDTO}
  *
  * @version         2.0
  *

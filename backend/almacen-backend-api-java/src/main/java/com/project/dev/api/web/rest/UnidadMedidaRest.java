@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {UnidadMedidaRest}
  *
  * @version         2.0
  *

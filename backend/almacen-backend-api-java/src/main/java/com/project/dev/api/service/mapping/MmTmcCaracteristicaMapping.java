@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcCaracteristicaMapping}
  *
  * @version         2.0
  *

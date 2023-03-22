@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCostosPromediosRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MaterialesCostosPromediosRestAssembler}
  *
  * @version         2.0
  *

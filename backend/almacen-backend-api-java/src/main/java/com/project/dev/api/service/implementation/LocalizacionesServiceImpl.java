@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LocalizacionesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {LocalizacionesServiceImpl}
  *
  * @version         2.0
  *

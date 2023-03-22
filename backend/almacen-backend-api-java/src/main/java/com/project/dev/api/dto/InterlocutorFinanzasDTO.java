@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutorFinanzasDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutorFinanzasDTO}
  *
  * @version         2.0
  *

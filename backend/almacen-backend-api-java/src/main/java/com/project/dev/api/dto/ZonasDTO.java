@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {ZonasDTO}
  *
  * @version         2.0
  *

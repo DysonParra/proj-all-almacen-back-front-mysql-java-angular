@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosConceptosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosConceptosMapping}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {OrdenProduccionRestAssembler}
  *
  * @version         2.0
  *

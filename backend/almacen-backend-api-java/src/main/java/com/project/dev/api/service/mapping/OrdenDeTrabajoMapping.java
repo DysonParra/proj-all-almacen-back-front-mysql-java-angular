@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {OrdenDeTrabajoMapping}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConceptosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {ConceptosMapping}
  *
  * @version         2.0
  *

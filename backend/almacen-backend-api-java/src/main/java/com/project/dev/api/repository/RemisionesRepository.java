@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {RemisionesRepository}
  *
  * @version         2.0
  *

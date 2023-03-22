@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {SociedadRest}
  *
  * @version         2.0
  *

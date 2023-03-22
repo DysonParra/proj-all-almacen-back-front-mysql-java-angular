@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosServiceImpl}
  *
  * @version         2.0
  *

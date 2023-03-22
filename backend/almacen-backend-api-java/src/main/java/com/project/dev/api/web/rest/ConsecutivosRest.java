@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {ConsecutivosRest}
  *
  * @version         2.0
  *

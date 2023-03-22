@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AgentesMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {AgentesMapping}
  *
  * @version         2.0
  *

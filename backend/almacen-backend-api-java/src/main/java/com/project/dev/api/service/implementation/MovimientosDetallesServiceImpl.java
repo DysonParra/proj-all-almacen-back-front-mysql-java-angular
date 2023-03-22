@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MovimientosDetallesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {MovimientosDetallesServiceImpl}
  *
  * @version         2.0
  *

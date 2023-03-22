@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosMapping}
  *
  * @version         2.0
  *

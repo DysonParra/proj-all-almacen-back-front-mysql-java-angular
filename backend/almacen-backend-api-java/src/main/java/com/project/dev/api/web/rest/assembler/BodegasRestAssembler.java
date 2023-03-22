@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {BodegasRestAssembler}
  *
  * @version         2.0
  *

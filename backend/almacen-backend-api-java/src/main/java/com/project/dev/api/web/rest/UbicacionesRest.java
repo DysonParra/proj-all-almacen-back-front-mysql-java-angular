@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UbicacionesRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {UbicacionesRest}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosMaterialesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {ListasPreciosMaterialesDTO}
  *
  * @version         2.0
  *

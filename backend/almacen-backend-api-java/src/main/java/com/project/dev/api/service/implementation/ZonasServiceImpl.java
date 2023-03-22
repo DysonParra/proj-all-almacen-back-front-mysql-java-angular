@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {ZonasServiceImpl}
  *
  * @version         2.0
  *

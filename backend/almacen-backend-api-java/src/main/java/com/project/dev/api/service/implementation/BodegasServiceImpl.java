@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {BodegasServiceImpl}
  *
  * @version         2.0
  *

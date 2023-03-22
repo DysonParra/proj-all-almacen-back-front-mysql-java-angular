@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcCaracteristicaRest}
  *
  * @version         2.0
  *

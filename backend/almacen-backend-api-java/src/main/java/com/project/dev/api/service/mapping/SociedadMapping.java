@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {SociedadMapping}
  *
  * @version         2.0
  *

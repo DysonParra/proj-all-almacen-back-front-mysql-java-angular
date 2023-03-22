@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosMovimientosRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {EstadosMovimientosRestAssembler}
  *
  * @version         2.0
  *

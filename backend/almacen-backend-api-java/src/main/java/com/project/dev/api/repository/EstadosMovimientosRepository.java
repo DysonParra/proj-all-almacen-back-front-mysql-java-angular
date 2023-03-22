@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosMovimientosRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {EstadosMovimientosRepository}
  *
  * @version         2.0
  *

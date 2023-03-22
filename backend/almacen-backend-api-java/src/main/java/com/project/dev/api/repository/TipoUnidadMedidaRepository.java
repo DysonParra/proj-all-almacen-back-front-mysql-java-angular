@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoUnidadMedidaRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {CotizacionRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {InterlocutoresCondicionPagoRest}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConceptosRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {ConceptosRepository}
  *
  * @version         2.0
  *

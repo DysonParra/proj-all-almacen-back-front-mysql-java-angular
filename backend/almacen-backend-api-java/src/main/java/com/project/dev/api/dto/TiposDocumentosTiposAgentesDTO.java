@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {TiposDocumentosTiposAgentesDTO}
  *
  * @version         2.0
  *

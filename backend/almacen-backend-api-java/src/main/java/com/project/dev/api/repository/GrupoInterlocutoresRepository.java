@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {GrupoInterlocutoresRepository}
  *
  * @version         2.0
  *

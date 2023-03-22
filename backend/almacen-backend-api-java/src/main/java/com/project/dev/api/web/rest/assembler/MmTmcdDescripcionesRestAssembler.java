@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcdDescripcionesRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MmTmcdDescripcionesRestAssembler}
  *
  * @version         2.0
  *

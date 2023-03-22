@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {OrdenProduccionServiceImpl}
  *
  * @version         2.0
  *
