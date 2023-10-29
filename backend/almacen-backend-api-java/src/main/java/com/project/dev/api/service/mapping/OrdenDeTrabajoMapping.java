@@ -23,7 +23,7 @@ import org.mapstruct.Mapping;
  * TODO: Definición de {@code OrdenDeTrabajoMapping}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Mapper(componentModel = "spring") //, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface OrdenDeTrabajoMapping extends GenericMapping<OrdenDeTrabajoDTO, OrdenDeTrabajo> {

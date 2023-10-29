@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code InterlocutoresCondicionPagoRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class InterlocutoresCondicionPagoRestAssembler implements RepresentationModelAssembler<InterlocutoresCondicionPagoDTO, EntityModel<InterlocutoresCondicionPagoDTO>> {

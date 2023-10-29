@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code TiposAgentesRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class TiposAgentesRestAssembler implements RepresentationModelAssembler<TiposAgentesDTO, EntityModel<TiposAgentesDTO>> {

@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code SociedadRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class SociedadRestAssembler implements RepresentationModelAssembler<SociedadDTO, EntityModel<SociedadDTO>> {

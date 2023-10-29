@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
  * TODO: Definición de {@code ConsecutivosDTO}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @AllArgsConstructor
 @Builder

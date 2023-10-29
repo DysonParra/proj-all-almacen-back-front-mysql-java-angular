@@ -23,7 +23,7 @@ import org.mapstruct.Mapping;
  * TODO: Definición de {@code InterlocutoresComercialesMapping}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Mapper(componentModel = "spring") //, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface InterlocutoresComercialesMapping extends GenericMapping<InterlocutoresComercialesDTO, InterlocutoresComerciales> {

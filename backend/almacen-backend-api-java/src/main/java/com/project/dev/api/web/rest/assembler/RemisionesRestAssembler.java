@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code RemisionesRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class RemisionesRestAssembler implements RepresentationModelAssembler<RemisionesDTO, EntityModel<RemisionesDTO>> {
