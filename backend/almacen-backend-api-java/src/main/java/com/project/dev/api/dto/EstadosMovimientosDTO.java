@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code EstadosMovimientosDTO}.
+ * TODO: Description of {@code EstadosMovimientosDTO}.
  *
  * @author Dyson Parra
  * @since 11

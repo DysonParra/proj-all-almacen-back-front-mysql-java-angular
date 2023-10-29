@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code EstadosRemisionesMapping}.
+ * TODO: Description of {@code EstadosRemisionesMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface EstadosRemisionesMapping extends GenericMapping<EstadosRemision
     public EstadosRemisionesDTO getDto(EstadosRemisiones entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

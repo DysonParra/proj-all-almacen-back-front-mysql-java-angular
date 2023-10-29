@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code CondicionesPagosDTO}.
+ * TODO: Description of {@code CondicionesPagosDTO}.
  *
  * @author Dyson Parra
  * @since 11

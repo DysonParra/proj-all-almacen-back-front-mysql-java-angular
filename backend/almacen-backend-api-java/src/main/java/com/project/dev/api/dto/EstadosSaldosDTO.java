@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code EstadosSaldosDTO}.
+ * TODO: Description of {@code EstadosSaldosDTO}.
  *
  * @author Dyson Parra
  * @since 11

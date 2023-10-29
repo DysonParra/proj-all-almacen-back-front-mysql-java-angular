@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TiposMovimientosMapping}.
+ * TODO: Description of {@code TiposMovimientosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TiposMovimientosMapping extends GenericMapping<TiposMovimientos
     public TiposMovimientosDTO getDto(TiposMovimientos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

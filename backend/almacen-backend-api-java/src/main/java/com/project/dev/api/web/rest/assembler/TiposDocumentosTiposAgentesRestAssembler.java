@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code TiposDocumentosTiposAgentesRestAssembler}.
+ * TODO: Description of {@code TiposDocumentosTiposAgentesRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

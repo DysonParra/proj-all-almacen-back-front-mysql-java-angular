@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Movimientos}.
+ * TODO: Description of {@code Movimientos}.
  *
  * @author Dyson Parra
  * @since 11

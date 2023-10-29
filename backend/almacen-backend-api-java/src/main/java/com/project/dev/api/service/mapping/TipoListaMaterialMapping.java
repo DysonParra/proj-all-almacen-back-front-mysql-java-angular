@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TipoListaMaterialMapping}.
+ * TODO: Description of {@code TipoListaMaterialMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TipoListaMaterialMapping extends GenericMapping<TipoListaMateri
     public TipoListaMaterialDTO getDto(TipoListaMaterial entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

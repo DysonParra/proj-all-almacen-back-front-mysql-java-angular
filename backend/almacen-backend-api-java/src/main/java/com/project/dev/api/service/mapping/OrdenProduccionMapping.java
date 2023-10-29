@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code OrdenProduccionMapping}.
+ * TODO: Description of {@code OrdenProduccionMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface OrdenProduccionMapping extends GenericMapping<OrdenProduccionDT
     public OrdenProduccionDTO getDto(OrdenProduccion entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

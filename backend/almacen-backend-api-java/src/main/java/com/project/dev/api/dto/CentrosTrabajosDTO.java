@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code CentrosTrabajosDTO}.
+ * TODO: Description of {@code CentrosTrabajosDTO}.
  *
  * @author Dyson Parra
  * @since 11

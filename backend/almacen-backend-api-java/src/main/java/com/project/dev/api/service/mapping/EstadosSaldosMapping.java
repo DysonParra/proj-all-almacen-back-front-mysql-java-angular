@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code EstadosSaldosMapping}.
+ * TODO: Description of {@code EstadosSaldosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface EstadosSaldosMapping extends GenericMapping<EstadosSaldosDTO, E
     public EstadosSaldosDTO getDto(EstadosSaldos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

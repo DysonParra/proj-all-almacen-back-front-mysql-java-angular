@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code MmTmcCaracteristica}.
+ * TODO: Description of {@code MmTmcCaracteristica}.
  *
  * @author Dyson Parra
  * @since 11

@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code RemisionesVentaMateriales}.
+ * TODO: Description of {@code RemisionesVentaMateriales}.
  *
  * @author Dyson Parra
  * @since 11

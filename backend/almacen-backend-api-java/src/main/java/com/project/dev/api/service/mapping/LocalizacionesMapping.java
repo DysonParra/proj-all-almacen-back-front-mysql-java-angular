@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code LocalizacionesMapping}.
+ * TODO: Description of {@code LocalizacionesMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface LocalizacionesMapping extends GenericMapping<LocalizacionesDTO,
     public LocalizacionesDTO getDto(Localizaciones entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TiposDocumentosConceptosMapping}.
+ * TODO: Description of {@code TiposDocumentosConceptosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TiposDocumentosConceptosMapping extends GenericMapping<TiposDoc
     public TiposDocumentosConceptosDTO getDto(TiposDocumentosConceptos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

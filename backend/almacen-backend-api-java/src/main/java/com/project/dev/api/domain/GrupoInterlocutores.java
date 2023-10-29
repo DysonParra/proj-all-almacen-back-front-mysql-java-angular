@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code GrupoInterlocutores}.
+ * TODO: Description of {@code GrupoInterlocutores}.
  *
  * @author Dyson Parra
  * @since 11

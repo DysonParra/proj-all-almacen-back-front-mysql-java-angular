@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code CentrosTrabajosMapping}.
+ * TODO: Description of {@code CentrosTrabajosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface CentrosTrabajosMapping extends GenericMapping<CentrosTrabajosDT
     public CentrosTrabajosDTO getDto(CentrosTrabajos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

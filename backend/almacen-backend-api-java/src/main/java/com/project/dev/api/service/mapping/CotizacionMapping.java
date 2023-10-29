@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code CotizacionMapping}.
+ * TODO: Description of {@code CotizacionMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface CotizacionMapping extends GenericMapping<CotizacionDTO, Cotizac
     public CotizacionDTO getDto(Cotizacion entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

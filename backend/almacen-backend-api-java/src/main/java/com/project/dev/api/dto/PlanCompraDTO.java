@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code PlanCompraDTO}.
+ * TODO: Description of {@code PlanCompraDTO}.
  *
  * @author Dyson Parra
  * @since 11

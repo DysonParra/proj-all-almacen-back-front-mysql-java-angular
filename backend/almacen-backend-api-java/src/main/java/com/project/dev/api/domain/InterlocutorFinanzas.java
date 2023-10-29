@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code InterlocutorFinanzas}.
+ * TODO: Description of {@code InterlocutorFinanzas}.
  *
  * @author Dyson Parra
  * @since 11

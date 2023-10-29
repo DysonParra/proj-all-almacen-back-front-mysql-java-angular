@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code TipoUnidadMedidaDTO}.
+ * TODO: Description of {@code TipoUnidadMedidaDTO}.
  *
  * @author Dyson Parra
  * @since 11

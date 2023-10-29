@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code LocalizacionesRestAssembler}.
+ * TODO: Description of {@code LocalizacionesRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

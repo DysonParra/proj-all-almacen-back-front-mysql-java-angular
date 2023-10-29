@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code TiposMaterialesServiceImpl}.
+ * TODO: Description of {@code TiposMaterialesServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

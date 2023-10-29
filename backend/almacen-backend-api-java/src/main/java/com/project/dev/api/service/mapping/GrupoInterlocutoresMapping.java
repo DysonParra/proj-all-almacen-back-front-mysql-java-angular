@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code GrupoInterlocutoresMapping}.
+ * TODO: Description of {@code GrupoInterlocutoresMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface GrupoInterlocutoresMapping extends GenericMapping<GrupoInterloc
     public GrupoInterlocutoresDTO getDto(GrupoInterlocutores entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

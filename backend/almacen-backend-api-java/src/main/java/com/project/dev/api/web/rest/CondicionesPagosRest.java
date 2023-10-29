@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code CondicionesPagosRest}.
+ * TODO: Description of {@code CondicionesPagosRest}.
  *
  * @author Dyson Parra
  * @since 11

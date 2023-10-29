@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code OrdenDeTrabajo}.
+ * TODO: Description of {@code OrdenDeTrabajo}.
  *
  * @author Dyson Parra
  * @since 11

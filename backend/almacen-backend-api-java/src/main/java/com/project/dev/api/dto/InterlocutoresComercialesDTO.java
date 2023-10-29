@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code InterlocutoresComercialesDTO}.
+ * TODO: Description of {@code InterlocutoresComercialesDTO}.
  *
  * @author Dyson Parra
  * @since 11

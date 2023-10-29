@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code RemisionesComprasServiceImpl}.
+ * TODO: Description of {@code RemisionesComprasServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

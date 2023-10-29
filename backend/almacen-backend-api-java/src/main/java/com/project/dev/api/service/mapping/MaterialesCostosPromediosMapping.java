@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code MaterialesCostosPromediosMapping}.
+ * TODO: Description of {@code MaterialesCostosPromediosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface MaterialesCostosPromediosMapping extends GenericMapping<Materia
     public MaterialesCostosPromediosDTO getDto(MaterialesCostosPromedios entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

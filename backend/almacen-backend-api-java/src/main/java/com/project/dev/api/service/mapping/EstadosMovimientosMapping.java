@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code EstadosMovimientosMapping}.
+ * TODO: Description of {@code EstadosMovimientosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface EstadosMovimientosMapping extends GenericMapping<EstadosMovimie
     public EstadosMovimientosDTO getDto(EstadosMovimientos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

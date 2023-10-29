@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code MovimientosDetallesServiceImpl}.
+ * TODO: Description of {@code MovimientosDetallesServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

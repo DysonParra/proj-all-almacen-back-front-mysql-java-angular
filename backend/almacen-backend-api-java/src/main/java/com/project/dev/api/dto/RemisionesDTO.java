@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code RemisionesDTO}.
+ * TODO: Description of {@code RemisionesDTO}.
  *
  * @author Dyson Parra
  * @since 11

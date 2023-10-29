@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code BodegasMapping}.
+ * TODO: Description of {@code BodegasMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface BodegasMapping extends GenericMapping<BodegasDTO, Bodegas> {
     public BodegasDTO getDto(Bodegas entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

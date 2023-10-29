@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code RemisionesCompras}.
+ * TODO: Description of {@code RemisionesCompras}.
  *
  * @author Dyson Parra
  * @since 11

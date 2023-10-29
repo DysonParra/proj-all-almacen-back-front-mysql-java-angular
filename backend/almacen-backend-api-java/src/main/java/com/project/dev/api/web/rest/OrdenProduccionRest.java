@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code OrdenProduccionRest}.
+ * TODO: Description of {@code OrdenProduccionRest}.
  *
  * @author Dyson Parra
  * @since 11

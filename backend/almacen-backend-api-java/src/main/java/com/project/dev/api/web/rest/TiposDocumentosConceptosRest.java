@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code TiposDocumentosConceptosRest}.
+ * TODO: Description of {@code TiposDocumentosConceptosRest}.
  *
  * @author Dyson Parra
  * @since 11

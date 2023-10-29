@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code TipoInterlocutorComercialRestAssembler}.
+ * TODO: Description of {@code TipoInterlocutorComercialRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * TODO: Definición de {@code OrdenProduccionRepository}.
+ * TODO: Description of {@code OrdenProduccionRepository}.
  *
  * @author Dyson Parra
  * @since 11

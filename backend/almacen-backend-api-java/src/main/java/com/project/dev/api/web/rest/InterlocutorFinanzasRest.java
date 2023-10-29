@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code InterlocutorFinanzasRest}.
+ * TODO: Description of {@code InterlocutorFinanzasRest}.
  *
  * @author Dyson Parra
  * @since 11

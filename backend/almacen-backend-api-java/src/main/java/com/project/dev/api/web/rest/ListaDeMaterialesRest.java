@@ -50,7 +50,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 /**
- * TODO: Definición de {@code ListaDeMaterialesRest}.
+ * TODO: Description of {@code ListaDeMaterialesRest}.
  *
  * @author Dyson Parra
  * @since 11

@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Consecutivos}.
+ * TODO: Description of {@code Consecutivos}.
  *
  * @author Dyson Parra
  * @since 11

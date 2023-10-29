@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code InterlocutoresComerciales}.
+ * TODO: Description of {@code InterlocutoresComerciales}.
  *
  * @author Dyson Parra
  * @since 11

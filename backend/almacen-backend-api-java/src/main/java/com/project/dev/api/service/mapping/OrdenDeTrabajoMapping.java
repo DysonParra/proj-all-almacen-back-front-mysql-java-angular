@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code OrdenDeTrabajoMapping}.
+ * TODO: Description of {@code OrdenDeTrabajoMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface OrdenDeTrabajoMapping extends GenericMapping<OrdenDeTrabajoDTO,
     public OrdenDeTrabajoDTO getDto(OrdenDeTrabajo entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

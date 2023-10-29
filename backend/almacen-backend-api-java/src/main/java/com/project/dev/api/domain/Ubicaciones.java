@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Ubicaciones}.
+ * TODO: Description of {@code Ubicaciones}.
  *
  * @author Dyson Parra
  * @since 11

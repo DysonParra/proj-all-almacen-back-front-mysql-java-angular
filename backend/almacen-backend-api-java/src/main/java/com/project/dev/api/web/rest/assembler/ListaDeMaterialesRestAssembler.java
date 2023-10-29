@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code ListaDeMaterialesRestAssembler}.
+ * TODO: Description of {@code ListaDeMaterialesRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

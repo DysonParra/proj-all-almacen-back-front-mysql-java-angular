@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code ListasPreciosMaterialesMapping}.
+ * TODO: Description of {@code ListasPreciosMaterialesMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface ListasPreciosMaterialesMapping extends GenericMapping<ListasPre
     public ListasPreciosMaterialesDTO getDto(ListasPreciosMateriales entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code ListasPreciosMateriales}.
+ * TODO: Description of {@code ListasPreciosMateriales}.
  *
  * @author Dyson Parra
  * @since 11

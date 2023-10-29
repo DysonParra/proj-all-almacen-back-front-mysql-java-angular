@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code EstadosRemisiones}.
+ * TODO: Description of {@code EstadosRemisiones}.
  *
  * @author Dyson Parra
  * @since 11

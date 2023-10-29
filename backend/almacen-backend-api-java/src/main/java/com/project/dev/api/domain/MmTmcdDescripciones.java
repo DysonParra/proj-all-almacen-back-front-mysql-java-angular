@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code MmTmcdDescripciones}.
+ * TODO: Description of {@code MmTmcdDescripciones}.
  *
  * @author Dyson Parra
  * @since 11

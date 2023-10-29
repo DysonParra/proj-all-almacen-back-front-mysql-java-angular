@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code TiposDocumentosConceptos}.
+ * TODO: Description of {@code TiposDocumentosConceptos}.
  *
  * @author Dyson Parra
  * @since 11

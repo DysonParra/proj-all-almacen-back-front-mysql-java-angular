@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Zonas}.
+ * TODO: Description of {@code Zonas}.
  *
  * @author Dyson Parra
  * @since 11

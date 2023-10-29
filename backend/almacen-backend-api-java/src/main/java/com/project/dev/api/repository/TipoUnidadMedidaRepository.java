@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * TODO: Definición de {@code TipoUnidadMedidaRepository}.
+ * TODO: Description of {@code TipoUnidadMedidaRepository}.
  *
  * @author Dyson Parra
  * @since 11

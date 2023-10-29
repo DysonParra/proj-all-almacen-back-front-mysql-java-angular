@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code MaterialesCostosPromediosDTO}.
+ * TODO: Description of {@code MaterialesCostosPromediosDTO}.
  *
  * @author Dyson Parra
  * @since 11

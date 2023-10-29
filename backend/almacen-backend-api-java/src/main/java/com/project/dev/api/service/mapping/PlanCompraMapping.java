@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code PlanCompraMapping}.
+ * TODO: Description of {@code PlanCompraMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface PlanCompraMapping extends GenericMapping<PlanCompraDTO, PlanCom
     public PlanCompraDTO getDto(PlanCompra entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

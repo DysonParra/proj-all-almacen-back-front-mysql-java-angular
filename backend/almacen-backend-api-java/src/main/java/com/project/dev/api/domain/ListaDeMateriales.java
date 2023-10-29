@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code ListaDeMateriales}.
+ * TODO: Description of {@code ListaDeMateriales}.
  *
  * @author Dyson Parra
  * @since 11

@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code ConsecutivosMapping}.
+ * TODO: Description of {@code ConsecutivosMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface ConsecutivosMapping extends GenericMapping<ConsecutivosDTO, Con
     public ConsecutivosDTO getDto(Consecutivos entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

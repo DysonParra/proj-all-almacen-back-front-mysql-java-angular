@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code RemisionesVentaMaterialesMapping}.
+ * TODO: Description of {@code RemisionesVentaMaterialesMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface RemisionesVentaMaterialesMapping extends GenericMapping<Remisio
     public RemisionesVentaMaterialesDTO getDto(RemisionesVentaMateriales entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

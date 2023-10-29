@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code InterlocutoresComercialesServiceImpl}.
+ * TODO: Description of {@code InterlocutoresComercialesServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

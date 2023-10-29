@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code PlanCompra}.
+ * TODO: Description of {@code PlanCompra}.
  *
  * @author Dyson Parra
  * @since 11
