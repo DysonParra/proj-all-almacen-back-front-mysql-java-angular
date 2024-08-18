@@ -91,8 +91,8 @@ public class CondicionesPagosServiceImpl implements GenericService<CondicionesPa
         CondicionesPagos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        CondicionesPagosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        CondicionesPagosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

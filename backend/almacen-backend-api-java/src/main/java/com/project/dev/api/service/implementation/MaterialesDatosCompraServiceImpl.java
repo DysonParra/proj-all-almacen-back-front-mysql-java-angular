@@ -91,8 +91,8 @@ public class MaterialesDatosCompraServiceImpl implements GenericService<Material
         MaterialesDatosCompra entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesDatosCompraDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MaterialesDatosCompraDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

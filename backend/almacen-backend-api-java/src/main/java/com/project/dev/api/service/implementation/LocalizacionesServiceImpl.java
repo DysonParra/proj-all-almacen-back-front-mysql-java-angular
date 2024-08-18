@@ -91,8 +91,8 @@ public class LocalizacionesServiceImpl implements GenericService<LocalizacionesD
         Localizaciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        LocalizacionesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        LocalizacionesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

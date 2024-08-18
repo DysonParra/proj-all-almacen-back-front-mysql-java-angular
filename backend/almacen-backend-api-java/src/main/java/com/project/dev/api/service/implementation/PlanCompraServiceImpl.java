@@ -91,8 +91,8 @@ public class PlanCompraServiceImpl implements GenericService<PlanCompraDTO> {
         PlanCompra entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PlanCompraDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PlanCompraDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

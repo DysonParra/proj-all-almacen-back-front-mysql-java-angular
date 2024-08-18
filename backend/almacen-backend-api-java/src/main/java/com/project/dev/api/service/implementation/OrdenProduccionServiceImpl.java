@@ -91,8 +91,8 @@ public class OrdenProduccionServiceImpl implements GenericService<OrdenProduccio
         OrdenProduccion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        OrdenProduccionDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        OrdenProduccionDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

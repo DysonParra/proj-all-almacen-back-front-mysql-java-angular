@@ -91,8 +91,8 @@ public class ListasPreciosServiceImpl implements GenericService<ListasPreciosDTO
         ListasPrecios entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ListasPreciosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ListasPreciosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

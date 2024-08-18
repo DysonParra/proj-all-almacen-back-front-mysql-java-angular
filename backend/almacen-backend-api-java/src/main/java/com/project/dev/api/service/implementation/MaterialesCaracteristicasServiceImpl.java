@@ -91,8 +91,8 @@ public class MaterialesCaracteristicasServiceImpl implements GenericService<Mate
         MaterialesCaracteristicas entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesCaracteristicasDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MaterialesCaracteristicasDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

@@ -91,8 +91,8 @@ public class TipoListaMaterialServiceImpl implements GenericService<TipoListaMat
         TipoListaMaterial entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TipoListaMaterialDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TipoListaMaterialDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

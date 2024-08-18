@@ -91,8 +91,8 @@ public class EstadosMovimientosServiceImpl implements GenericService<EstadosMovi
         EstadosMovimientos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        EstadosMovimientosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        EstadosMovimientosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

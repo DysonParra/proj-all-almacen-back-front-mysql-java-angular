@@ -91,8 +91,8 @@ public class ZonasServiceImpl implements GenericService<ZonasDTO> {
         Zonas entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ZonasDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ZonasDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

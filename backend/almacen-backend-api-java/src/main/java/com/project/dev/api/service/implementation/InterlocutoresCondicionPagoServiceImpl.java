@@ -91,8 +91,8 @@ public class InterlocutoresCondicionPagoServiceImpl implements GenericService<In
         InterlocutoresCondicionPago entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        InterlocutoresCondicionPagoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        InterlocutoresCondicionPagoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

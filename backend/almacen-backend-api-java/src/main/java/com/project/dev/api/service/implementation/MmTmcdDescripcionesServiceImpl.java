@@ -91,8 +91,8 @@ public class MmTmcdDescripcionesServiceImpl implements GenericService<MmTmcdDesc
         MmTmcdDescripciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmTmcdDescripcionesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MmTmcdDescripcionesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

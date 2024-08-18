@@ -91,8 +91,8 @@ public class CotizacionServiceImpl implements GenericService<CotizacionDTO> {
         Cotizacion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        CotizacionDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        CotizacionDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

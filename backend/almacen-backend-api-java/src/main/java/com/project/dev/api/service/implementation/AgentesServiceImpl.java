@@ -91,8 +91,8 @@ public class AgentesServiceImpl implements GenericService<AgentesDTO> {
         Agentes entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        AgentesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        AgentesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

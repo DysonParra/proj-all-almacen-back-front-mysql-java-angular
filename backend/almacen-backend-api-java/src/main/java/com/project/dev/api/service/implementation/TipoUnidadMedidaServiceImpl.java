@@ -91,8 +91,8 @@ public class TipoUnidadMedidaServiceImpl implements GenericService<TipoUnidadMed
         TipoUnidadMedida entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TipoUnidadMedidaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TipoUnidadMedidaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

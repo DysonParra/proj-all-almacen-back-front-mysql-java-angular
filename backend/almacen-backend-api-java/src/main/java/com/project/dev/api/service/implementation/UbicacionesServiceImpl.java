@@ -91,8 +91,8 @@ public class UbicacionesServiceImpl implements GenericService<UbicacionesDTO> {
         Ubicaciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        UbicacionesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        UbicacionesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

@@ -91,8 +91,8 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
         MmTmcCaracteristica entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmTmcCaracteristicaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MmTmcCaracteristicaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

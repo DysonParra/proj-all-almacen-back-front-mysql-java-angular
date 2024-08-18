@@ -91,8 +91,8 @@ public class RemisionesVentaMaterialesServiceImpl implements GenericService<Remi
         RemisionesVentaMateriales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        RemisionesVentaMaterialesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        RemisionesVentaMaterialesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

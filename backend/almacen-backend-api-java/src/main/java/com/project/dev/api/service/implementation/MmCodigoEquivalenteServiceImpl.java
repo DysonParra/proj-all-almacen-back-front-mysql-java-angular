@@ -91,8 +91,8 @@ public class MmCodigoEquivalenteServiceImpl implements GenericService<MmCodigoEq
         MmCodigoEquivalente entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmCodigoEquivalenteDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MmCodigoEquivalenteDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

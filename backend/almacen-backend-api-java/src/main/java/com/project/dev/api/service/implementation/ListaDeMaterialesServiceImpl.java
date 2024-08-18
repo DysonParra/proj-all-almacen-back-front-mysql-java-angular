@@ -91,8 +91,8 @@ public class ListaDeMaterialesServiceImpl implements GenericService<ListaDeMater
         ListaDeMateriales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ListaDeMaterialesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ListaDeMaterialesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

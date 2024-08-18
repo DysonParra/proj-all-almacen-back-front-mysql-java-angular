@@ -91,8 +91,8 @@ public class InterlocutoresComercialesServiceImpl implements GenericService<Inte
         InterlocutoresComerciales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        InterlocutoresComercialesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        InterlocutoresComercialesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

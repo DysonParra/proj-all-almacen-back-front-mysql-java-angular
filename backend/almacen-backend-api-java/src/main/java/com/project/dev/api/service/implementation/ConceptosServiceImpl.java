@@ -91,8 +91,8 @@ public class ConceptosServiceImpl implements GenericService<ConceptosDTO> {
         Conceptos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ConceptosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ConceptosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

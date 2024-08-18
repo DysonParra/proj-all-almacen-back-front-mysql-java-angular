@@ -91,8 +91,8 @@ public class TiposDocumentosServiceImpl implements GenericService<TiposDocumento
         TiposDocumentos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TiposDocumentosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TiposDocumentosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

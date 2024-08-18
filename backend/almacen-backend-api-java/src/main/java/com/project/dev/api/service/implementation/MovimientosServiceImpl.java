@@ -91,8 +91,8 @@ public class MovimientosServiceImpl implements GenericService<MovimientosDTO> {
         Movimientos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MovimientosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MovimientosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

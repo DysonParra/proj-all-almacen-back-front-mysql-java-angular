@@ -91,8 +91,8 @@ public class EstadosRemisionesServiceImpl implements GenericService<EstadosRemis
         EstadosRemisiones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        EstadosRemisionesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        EstadosRemisionesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

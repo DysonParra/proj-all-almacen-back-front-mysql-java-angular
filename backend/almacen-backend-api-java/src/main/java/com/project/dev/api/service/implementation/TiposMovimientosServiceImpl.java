@@ -91,8 +91,8 @@ public class TiposMovimientosServiceImpl implements GenericService<TiposMovimien
         TiposMovimientos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TiposMovimientosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TiposMovimientosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

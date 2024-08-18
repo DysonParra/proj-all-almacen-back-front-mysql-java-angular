@@ -91,8 +91,8 @@ public class OrdenDeTrabajoServiceImpl implements GenericService<OrdenDeTrabajoD
         OrdenDeTrabajo entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        OrdenDeTrabajoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        OrdenDeTrabajoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

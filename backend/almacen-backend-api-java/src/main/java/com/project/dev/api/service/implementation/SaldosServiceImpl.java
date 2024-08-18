@@ -91,8 +91,8 @@ public class SaldosServiceImpl implements GenericService<SaldosDTO> {
         Saldos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        SaldosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        SaldosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

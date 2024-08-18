@@ -91,8 +91,8 @@ public class TiposMaterialesServiceImpl implements GenericService<TiposMateriale
         TiposMateriales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TiposMaterialesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TiposMaterialesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

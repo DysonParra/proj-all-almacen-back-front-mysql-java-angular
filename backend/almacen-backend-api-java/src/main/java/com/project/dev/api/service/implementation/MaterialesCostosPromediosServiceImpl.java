@@ -91,8 +91,8 @@ public class MaterialesCostosPromediosServiceImpl implements GenericService<Mate
         MaterialesCostosPromedios entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesCostosPromediosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MaterialesCostosPromediosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

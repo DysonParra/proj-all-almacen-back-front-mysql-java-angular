@@ -91,8 +91,8 @@ public class GrupoInterlocutoresServiceImpl implements GenericService<GrupoInter
         GrupoInterlocutores entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        GrupoInterlocutoresDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        GrupoInterlocutoresDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

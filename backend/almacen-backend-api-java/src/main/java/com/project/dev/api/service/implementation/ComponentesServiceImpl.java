@@ -91,8 +91,8 @@ public class ComponentesServiceImpl implements GenericService<ComponentesDTO> {
         Componentes entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ComponentesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ComponentesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

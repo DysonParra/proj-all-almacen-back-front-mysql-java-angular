@@ -91,8 +91,8 @@ public class BodegasServiceImpl implements GenericService<BodegasDTO> {
         Bodegas entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        BodegasDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        BodegasDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

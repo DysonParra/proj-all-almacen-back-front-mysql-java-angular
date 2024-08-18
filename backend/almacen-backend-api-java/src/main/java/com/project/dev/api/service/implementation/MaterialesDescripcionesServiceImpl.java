@@ -91,8 +91,8 @@ public class MaterialesDescripcionesServiceImpl implements GenericService<Materi
         MaterialesDescripciones entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesDescripcionesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        MaterialesDescripcionesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

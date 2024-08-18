@@ -91,8 +91,8 @@ public class ConsecutivosServiceImpl implements GenericService<ConsecutivosDTO> 
         Consecutivos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        ConsecutivosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        ConsecutivosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

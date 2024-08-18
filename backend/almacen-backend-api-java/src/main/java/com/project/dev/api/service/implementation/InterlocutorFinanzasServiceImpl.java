@@ -91,8 +91,8 @@ public class InterlocutorFinanzasServiceImpl implements GenericService<Interlocu
         InterlocutorFinanzas entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        InterlocutorFinanzasDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        InterlocutorFinanzasDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

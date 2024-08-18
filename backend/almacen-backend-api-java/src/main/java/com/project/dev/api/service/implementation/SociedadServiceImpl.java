@@ -91,8 +91,8 @@ public class SociedadServiceImpl implements GenericService<SociedadDTO> {
         Sociedad entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        SociedadDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        SociedadDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

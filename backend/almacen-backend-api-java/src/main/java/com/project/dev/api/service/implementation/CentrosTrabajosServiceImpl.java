@@ -91,8 +91,8 @@ public class CentrosTrabajosServiceImpl implements GenericService<CentrosTrabajo
         CentrosTrabajos entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        CentrosTrabajosDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        CentrosTrabajosDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**
