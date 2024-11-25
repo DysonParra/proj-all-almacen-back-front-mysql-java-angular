@@ -29,23 +29,21 @@ import org.mapstruct.Mapping;
 public interface CentrosTrabajosMapping extends GenericMapping<CentrosTrabajosDTO, CentrosTrabajos> {
 
     /**
-     * Obtiene una entidad en base a su DTO.
+     * Obtiene una entidad en base a su DTO usando el campo clave de la base de datos.
      *
      * @param dto es el DTO a convertir en entidad.
      * @return la entidad equivalente al dto.
      */
-    // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCentroDeTrabajo", target = "intIdCentroDeTrabajo")
     @Override
     public CentrosTrabajos getEntity(CentrosTrabajosDTO dto);
 
     /**
-     * Obtiene un DTO en base a su entidad.
+     * Obtiene un DTO en base a su entidad usando el campo clave de la base de datos.
      *
      * @param entity es la entidad a convertir en DTO.
      * @return el dto equivalente a la entidad.
      */
-    // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCentroDeTrabajo", target = "intIdCentroDeTrabajo")
     @Override
     public CentrosTrabajosDTO getDto(CentrosTrabajos entity);
