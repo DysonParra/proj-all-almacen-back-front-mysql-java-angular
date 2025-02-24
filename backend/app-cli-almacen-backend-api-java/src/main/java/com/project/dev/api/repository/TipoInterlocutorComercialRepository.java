@@ -26,7 +26,7 @@ import org.springframework.data.repository.query.Param;
  * TODO: Description of {@code TipoInterlocutorComercialRepository}.
  *
  * @author Dyson Parra
- * @since 11
+ * @since Java 17 (LTS), Gradle 7.3
  */
 @org.springframework.stereotype.Repository
 public interface TipoInterlocutorComercialRepository extends JpaRepository<TipoInterlocutorComercial, Long> {
