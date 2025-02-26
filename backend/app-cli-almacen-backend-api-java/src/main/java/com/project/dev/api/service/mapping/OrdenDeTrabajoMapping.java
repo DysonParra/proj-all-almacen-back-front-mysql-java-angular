@@ -49,7 +49,7 @@ public interface OrdenDeTrabajoMapping extends GenericMapping<OrdenDeTrabajoDTO,
     public OrdenDeTrabajoDTO getDto(OrdenDeTrabajo entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface InterlocutoresComercialesMapping extends GenericMapping<Interlo
     public InterlocutoresComercialesDTO getDto(InterlocutoresComerciales entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

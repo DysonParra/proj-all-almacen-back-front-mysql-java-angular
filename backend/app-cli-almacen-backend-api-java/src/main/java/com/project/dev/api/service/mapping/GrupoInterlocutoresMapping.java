@@ -49,7 +49,7 @@ public interface GrupoInterlocutoresMapping extends GenericMapping<GrupoInterloc
     public GrupoInterlocutoresDTO getDto(GrupoInterlocutores entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

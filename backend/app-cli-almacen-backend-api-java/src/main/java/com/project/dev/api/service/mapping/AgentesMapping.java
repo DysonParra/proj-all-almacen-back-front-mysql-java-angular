@@ -49,7 +49,7 @@ public interface AgentesMapping extends GenericMapping<AgentesDTO, Agentes> {
     public AgentesDTO getDto(Agentes entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

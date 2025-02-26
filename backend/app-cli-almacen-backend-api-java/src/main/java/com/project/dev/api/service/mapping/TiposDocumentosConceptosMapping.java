@@ -49,7 +49,7 @@ public interface TiposDocumentosConceptosMapping extends GenericMapping<TiposDoc
     public TiposDocumentosConceptosDTO getDto(TiposDocumentosConceptos entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

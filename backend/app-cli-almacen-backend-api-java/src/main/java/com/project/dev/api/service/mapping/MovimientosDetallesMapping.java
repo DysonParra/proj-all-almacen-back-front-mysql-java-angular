@@ -49,7 +49,7 @@ public interface MovimientosDetallesMapping extends GenericMapping<MovimientosDe
     public MovimientosDetallesDTO getDto(MovimientosDetalles entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

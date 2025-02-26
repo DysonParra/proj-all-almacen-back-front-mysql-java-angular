@@ -49,7 +49,7 @@ public interface ConsecutivosMapping extends GenericMapping<ConsecutivosDTO, Con
     public ConsecutivosDTO getDto(Consecutivos entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

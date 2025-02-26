@@ -49,7 +49,7 @@ public interface MaterialesMapping extends GenericMapping<MaterialesDTO, Materia
     public MaterialesDTO getDto(Materiales entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface TipoListaMaterialMapping extends GenericMapping<TipoListaMateri
     public TipoListaMaterialDTO getDto(TipoListaMaterial entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

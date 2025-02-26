@@ -49,7 +49,7 @@ public interface SociedadMapping extends GenericMapping<SociedadDTO, Sociedad> {
     public SociedadDTO getDto(Sociedad entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

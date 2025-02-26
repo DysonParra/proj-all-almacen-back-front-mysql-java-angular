@@ -49,7 +49,7 @@ public interface InterlocutoresCondicionPagoMapping extends GenericMapping<Inter
     public InterlocutoresCondicionPagoDTO getDto(InterlocutoresCondicionPago entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

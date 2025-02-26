@@ -49,7 +49,7 @@ public interface UnidadMedidaMapping extends GenericMapping<UnidadMedidaDTO, Uni
     public UnidadMedidaDTO getDto(UnidadMedida entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

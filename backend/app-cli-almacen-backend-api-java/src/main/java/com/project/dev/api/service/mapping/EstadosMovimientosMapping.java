@@ -49,7 +49,7 @@ public interface EstadosMovimientosMapping extends GenericMapping<EstadosMovimie
     public EstadosMovimientosDTO getDto(EstadosMovimientos entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

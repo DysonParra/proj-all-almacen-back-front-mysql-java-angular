@@ -49,7 +49,7 @@ public interface CotizacionMapping extends GenericMapping<CotizacionDTO, Cotizac
     public CotizacionDTO getDto(Cotizacion entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

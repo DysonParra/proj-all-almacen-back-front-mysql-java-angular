@@ -49,7 +49,7 @@ public interface ListasPreciosMaterialesMapping extends GenericMapping<ListasPre
     public ListasPreciosMaterialesDTO getDto(ListasPreciosMateriales entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

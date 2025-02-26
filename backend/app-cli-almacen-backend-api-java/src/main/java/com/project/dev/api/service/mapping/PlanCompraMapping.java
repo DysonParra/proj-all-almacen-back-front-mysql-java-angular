@@ -49,7 +49,7 @@ public interface PlanCompraMapping extends GenericMapping<PlanCompraDTO, PlanCom
     public PlanCompraDTO getDto(PlanCompra entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

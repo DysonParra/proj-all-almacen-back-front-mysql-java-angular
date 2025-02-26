@@ -49,7 +49,7 @@ public interface MmTmcCaracteristicaMapping extends GenericMapping<MmTmcCaracter
     public MmTmcCaracteristicaDTO getDto(MmTmcCaracteristica entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

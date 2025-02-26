@@ -49,7 +49,7 @@ public interface InterlocutorFinanzasMapping extends GenericMapping<Interlocutor
     public InterlocutorFinanzasDTO getDto(InterlocutorFinanzas entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

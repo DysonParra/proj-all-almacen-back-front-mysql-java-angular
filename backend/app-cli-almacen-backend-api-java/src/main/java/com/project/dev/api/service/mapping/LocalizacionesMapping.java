@@ -49,7 +49,7 @@ public interface LocalizacionesMapping extends GenericMapping<LocalizacionesDTO,
     public LocalizacionesDTO getDto(Localizaciones entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

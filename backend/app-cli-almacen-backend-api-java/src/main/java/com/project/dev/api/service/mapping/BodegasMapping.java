@@ -49,7 +49,7 @@ public interface BodegasMapping extends GenericMapping<BodegasDTO, Bodegas> {
     public BodegasDTO getDto(Bodegas entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

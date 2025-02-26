@@ -49,7 +49,7 @@ public interface MmTmcdDescripcionesMapping extends GenericMapping<MmTmcdDescrip
     public MmTmcdDescripcionesDTO getDto(MmTmcdDescripciones entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface TiposAgentesMapping extends GenericMapping<TiposAgentesDTO, Tip
     public TiposAgentesDTO getDto(TiposAgentes entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

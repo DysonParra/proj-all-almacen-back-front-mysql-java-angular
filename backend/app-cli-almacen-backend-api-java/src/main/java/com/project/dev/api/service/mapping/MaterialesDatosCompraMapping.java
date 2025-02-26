@@ -49,7 +49,7 @@ public interface MaterialesDatosCompraMapping extends GenericMapping<MaterialesD
     public MaterialesDatosCompraDTO getDto(MaterialesDatosCompra entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface CentrosTrabajosMapping extends GenericMapping<CentrosTrabajosDT
     public CentrosTrabajosDTO getDto(CentrosTrabajos entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

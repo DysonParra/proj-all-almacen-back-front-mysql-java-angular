@@ -49,7 +49,7 @@ public interface MmCodigoEquivalenteMapping extends GenericMapping<MmCodigoEquiv
     public MmCodigoEquivalenteDTO getDto(MmCodigoEquivalente entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface SaldosMapping extends GenericMapping<SaldosDTO, Saldos> {
     public SaldosDTO getDto(Saldos entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

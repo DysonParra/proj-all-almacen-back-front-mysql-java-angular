@@ -49,7 +49,7 @@ public interface TipoInterlocutorComercialMapping extends GenericMapping<TipoInt
     public TipoInterlocutorComercialDTO getDto(TipoInterlocutorComercial entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

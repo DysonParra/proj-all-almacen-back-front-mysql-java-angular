@@ -49,7 +49,7 @@ public interface RemisionesComprasMaterialesMapping extends GenericMapping<Remis
     public RemisionesComprasMaterialesDTO getDto(RemisionesComprasMateriales entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return
