@@ -36,7 +36,7 @@ public class PlanCompraDTO {
     private Long intIdPlanCompra;
     private Long intCodigoMaterial;
     private String strDescripcion;
-    private double dblCantidad;
+    private Double dblCantidad;
     private Integer intIdGrupoProveedor;
     private Date dtFechaExplosion;
     private Date dtFechaCreacion;

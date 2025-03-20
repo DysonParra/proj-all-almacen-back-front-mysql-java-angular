@@ -48,7 +48,7 @@ public class PlanCompra implements Serializable {
     private String strDescripcion;
     @Basic(optional = false)
     @Column(nullable = false)
-    private double dblCantidad;
+    private Double dblCantidad;
     private Integer intIdGrupoProveedor;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaExplosion;

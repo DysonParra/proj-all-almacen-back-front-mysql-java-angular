@@ -43,9 +43,9 @@ public class ListasPreciosMateriales implements Serializable {
     private Long intId;
     @Basic(optional = false)
     @Column(nullable = false)
-    private long intIdMateriales;
+    private Long intIdMateriales;
     @Basic(optional = false)
     @Column(nullable = false)
-    private long intIdListasPrecios;
+    private Long intIdListasPrecios;
 
 }

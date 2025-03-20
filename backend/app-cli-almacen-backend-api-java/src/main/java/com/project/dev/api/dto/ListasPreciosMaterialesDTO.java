@@ -34,7 +34,7 @@ import lombok.NoArgsConstructor;
 public class ListasPreciosMaterialesDTO {
 
     private Long intId;
-    private long intIdMateriales;
-    private long intIdListasPrecios;
+    private Long intIdMateriales;
+    private Long intIdListasPrecios;
 
 }

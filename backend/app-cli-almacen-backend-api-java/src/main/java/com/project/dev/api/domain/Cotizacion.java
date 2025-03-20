@@ -45,7 +45,7 @@ public class Cotizacion implements Serializable {
     private Integer intCabecera;
     @Basic(optional = false)
     @Column(nullable = false)
-    private int intIdProveedor;
+    private Integer intIdProveedor;
     @Column(length = 20)
     private String strEstado;
     private Long intCodigoMaterial;
@@ -57,10 +57,10 @@ public class Cotizacion implements Serializable {
     private String strBuzonProveedor;
     @Basic(optional = false)
     @Column(nullable = false)
-    private double dblCantidadRequerida;
+    private Double dblCantidadRequerida;
     @Basic(optional = false)
     @Column(nullable = false)
-    private double dblCantidadCotizada;
+    private Double dblCantidadCotizada;
     @Column(precision = 22, scale = 0)
     private Double dblValorCotizado;
     @Column(precision = 22, scale = 0)

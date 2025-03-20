@@ -35,14 +35,14 @@ public class CotizacionDTO {
 
     private Integer intIdCotizacion;
     private Integer intCabecera;
-    private int intIdProveedor;
+    private Integer intIdProveedor;
     private String strEstado;
     private Long intCodigoMaterial;
     private String strDescripcionMaterial;
     private String strNombreProveedor;
     private String strBuzonProveedor;
-    private double dblCantidadRequerida;
-    private double dblCantidadCotizada;
+    private Double dblCantidadRequerida;
+    private Double dblCantidadCotizada;
     private Double dblValorCotizado;
     private Double dblDescuento;
     private Date dtFechaNecesaria;
