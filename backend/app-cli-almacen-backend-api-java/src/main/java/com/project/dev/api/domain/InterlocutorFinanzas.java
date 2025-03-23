@@ -51,7 +51,6 @@ public class InterlocutorFinanzas implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdInterlocutor", referencedColumnName = "intIdInterlocutorComercial")
     private Long intIdInterlocutor;
 
 }

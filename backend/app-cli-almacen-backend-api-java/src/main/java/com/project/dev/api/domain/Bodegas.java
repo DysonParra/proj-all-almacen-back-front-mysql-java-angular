@@ -50,7 +50,6 @@ public class Bodegas implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdAgente", referencedColumnName = "intIdAgente")
     private Long intIdAgente;
 
 }

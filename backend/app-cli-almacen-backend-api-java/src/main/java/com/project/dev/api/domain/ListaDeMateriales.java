@@ -51,17 +51,11 @@ public class ListaDeMateriales implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdBodega", referencedColumnName = "intIdBodega")
     private Long intIdBodega;
-    @JoinColumn(name = "intIdTipoListaMaterial", referencedColumnName = "intIdTipoListaMaterial")
     private Long intIdTipoListaMaterial;
-    @JoinColumn(name = "intIdListaPrecio", referencedColumnName = "intIdListaPrecio")
     private Long intIdListaPrecio;
-    @JoinColumn(name = "strCodigoMaterial", referencedColumnName = "strCodigoMaterial")
     private String strCodigoMaterial;
-    @JoinColumn(name = "strCodigoComponente", referencedColumnName = "strCodigoMaterial")
     private String strCodigoComponente;
-    @JoinColumn(name = "intIdUnidadMedida", referencedColumnName = "intIdUnidadMedida")
     private Long intIdUnidadMedida;
 
 }

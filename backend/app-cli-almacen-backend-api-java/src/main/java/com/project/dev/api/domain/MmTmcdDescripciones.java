@@ -47,7 +47,6 @@ public class MmTmcdDescripciones implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdTipoMaterialCaracteristica", referencedColumnName = "intIdMmTmcCaracteristica")
     private Long intIdTipoMaterialCaracteristica;
 
 }

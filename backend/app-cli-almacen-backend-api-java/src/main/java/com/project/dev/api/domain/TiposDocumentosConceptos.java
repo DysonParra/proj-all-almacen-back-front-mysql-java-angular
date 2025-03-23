@@ -46,9 +46,7 @@ public class TiposDocumentosConceptos implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdConcepto", referencedColumnName = "intIdConcepto")
     private Long intIdConcepto;
-    @JoinColumn(name = "intIdTipoDocumento", referencedColumnName = "intIdTipoDocumento")
     private Long intIdTipoDocumento;
 
 }

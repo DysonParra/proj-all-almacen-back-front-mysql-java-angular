@@ -67,7 +67,6 @@ public class Cotizacion implements Serializable {
     private Date dtFechaEntrega;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaCreacion;
-    @JoinColumn(name = "intIdPlanCompra", referencedColumnName = "intIdPlanCompra", nullable = false)
     private Long intIdPlanCompra;
 
 }

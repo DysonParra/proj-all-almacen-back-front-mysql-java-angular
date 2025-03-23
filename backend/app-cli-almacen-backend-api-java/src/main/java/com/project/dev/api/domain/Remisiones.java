@@ -51,11 +51,8 @@ public class Remisiones implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdAgenteDestino", referencedColumnName = "intIdAgente")
     private Long intIdAgenteDestino;
-    @JoinColumn(name = "intIdAgenteOrigen", referencedColumnName = "intIdAgente")
     private Long intIdAgenteOrigen;
-    @JoinColumn(name = "intIdEstadoRemision", referencedColumnName = "intIdEstadoRemision")
     private Long intIdEstadoRemision;
 
 }

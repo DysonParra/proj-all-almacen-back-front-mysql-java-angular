@@ -53,7 +53,6 @@ public class Ubicaciones implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "strCodigoZona", referencedColumnName = "strCodigoZona")
     private String strCodigoZona;
 
 }

@@ -51,7 +51,6 @@ public class MaterialesCostosPromedios implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdMaterial;
-    @JoinColumn(name = "strCodigoMaterial", referencedColumnName = "strCodigoMaterial")
     private String strCodigoMaterial;
 
 }

@@ -58,11 +58,8 @@ public class Componentes implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "strCodigoMaterial", referencedColumnName = "strCodigoMaterial")
     private String strCodigoMaterial;
-    @JoinColumn(name = "strNumeroOrden", referencedColumnName = "strNumeroOrden")
     private String strNumeroOrden;
-    @JoinColumn(name = "intIdUnidadMedida", referencedColumnName = "intIdUnidadMedida")
     private Long intIdUnidadMedida;
 
 }

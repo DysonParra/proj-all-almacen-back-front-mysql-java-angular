@@ -60,11 +60,8 @@ public class RemisionesCompras implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdInterlocutor", referencedColumnName = "intIdInterlocutorComercial")
     private Long intIdInterlocutor;
-    @JoinColumn(name = "intIdRemision", referencedColumnName = "intIdRemision")
     private Long intIdRemision;
-    @JoinColumn(name = "intIdTipoDocumento", referencedColumnName = "intIdTipoDocumento")
     private Long intIdTipoDocumento;
 
 }

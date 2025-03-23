@@ -56,9 +56,7 @@ public class Localizaciones implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdInterlocutor", referencedColumnName = "intIdInterlocutorComercial")
     private Long intIdInterlocutor;
-    @JoinColumn(name = "intIdBodega", referencedColumnName = "intIdBodega")
     private Long intIdBodega;
 
 }

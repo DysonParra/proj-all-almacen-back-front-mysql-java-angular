@@ -59,17 +59,11 @@ public class Movimientos implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdBodega", referencedColumnName = "intIdBodega")
     private Long intIdBodega;
-    @JoinColumn(name = "intIdConcepto", referencedColumnName = "intIdConcepto")
     private Long intIdConcepto;
-    @JoinColumn(name = "intIdEstadoMovimiento", referencedColumnName = "intIdEstadoMovimiento")
     private Long intIdEstadoMovimiento;
-    @JoinColumn(name = "intIdRemision", referencedColumnName = "intIdRemision")
     private Long intIdRemision;
-    @JoinColumn(name = "intIdTipoDocumento", referencedColumnName = "intIdTipoDocumento")
     private Long intIdTipoDocumento;
-    @JoinColumn(name = "intIdTipoMovimiento", referencedColumnName = "intIdTipoMovimiento")
     private Long intIdTipoMovimiento;
 
 }

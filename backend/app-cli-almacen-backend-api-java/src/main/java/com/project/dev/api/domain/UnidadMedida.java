@@ -52,7 +52,6 @@ public class UnidadMedida implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdTipoUnidadMedida", referencedColumnName = "intIdTipoUnidadMedida")
     private Long intIdTipoUnidadMedida;
 
 }

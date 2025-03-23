@@ -53,7 +53,6 @@ public class Zonas implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdBodega", referencedColumnName = "intIdBodega")
     private Long intIdBodega;
 
 }

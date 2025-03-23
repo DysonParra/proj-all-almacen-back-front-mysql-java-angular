@@ -46,13 +46,9 @@ public class MaterialesCaracteristicas implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "strCodigoMaterial", referencedColumnName = "strCodigoMaterial")
     private String strCodigoMaterial;
-    @JoinColumn(name = "intIdMaterial", referencedColumnName = "intIdMaterial")
     private Long intIdMaterial;
-    @JoinColumn(name = "intIdTipoMaterialCaracteristica", referencedColumnName = "intIdMmTmcCaracteristica")
     private Long intIdTipoMaterialCaracteristica;
-    @JoinColumn(name = "intIdTipoMaterial", referencedColumnName = "intIdTipoMaterial")
     private Long intIdTipoMaterial;
 
 }

@@ -58,7 +58,6 @@ public class Consecutivos implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdTipoDocumento", referencedColumnName = "intIdTipoDocumento")
     private Long intIdTipoDocumento;
 
 }

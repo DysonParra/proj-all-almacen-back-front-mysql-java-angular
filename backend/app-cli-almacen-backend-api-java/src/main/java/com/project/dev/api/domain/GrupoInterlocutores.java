@@ -48,7 +48,6 @@ public class GrupoInterlocutores implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdListaPrecio", referencedColumnName = "intIdListaPrecio")
     private Long intIdListaPrecio;
 
 }

@@ -44,9 +44,7 @@ public class OrdenDeTrabajo implements Serializable {
     private Long intIdOrdenTrabajo;
     private Long intIdOperacion;
     private Long intIdEstadoOT;
-    @JoinColumn(name = "intIdCentroTrabajo", referencedColumnName = "intIdCentroDeTrabajo")
     private Long intIdCentroTrabajo;
-    @JoinColumn(name = "strNumeroOrden", referencedColumnName = "strNumeroOrden")
     private String strNumeroOrden;
 
 }

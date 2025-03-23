@@ -50,11 +50,8 @@ public class MovimientosDetalles implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdEstadoSaldo", referencedColumnName = "intIdEstadoSaldo")
     private Long intIdEstadoSaldo;
-    @JoinColumn(name = "strCodigoProducto", referencedColumnName = "strCodigoMaterial")
     private String strCodigoProducto;
-    @JoinColumn(name = "strNumeroDocumento", referencedColumnName = "strNumeroDocumento")
     private String strNumeroDocumento;
 
 }

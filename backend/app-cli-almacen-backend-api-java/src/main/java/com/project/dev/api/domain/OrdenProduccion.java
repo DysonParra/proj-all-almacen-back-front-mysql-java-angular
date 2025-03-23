@@ -56,11 +56,8 @@ public class OrdenProduccion implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdListaMateriales", referencedColumnName = "intIdListaMaterial")
     private Long intIdListaMateriales;
-    @JoinColumn(name = "strCodigoMaterial", referencedColumnName = "strCodigoMaterial")
     private String strCodigoMaterial;
-    @JoinColumn(name = "intIdUnidadMedida", referencedColumnName = "intIdUnidadMedida")
     private Long intIdUnidadMedida;
 
 }

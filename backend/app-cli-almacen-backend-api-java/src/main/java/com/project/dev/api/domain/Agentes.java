@@ -50,9 +50,7 @@ public class Agentes implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdSociedad", referencedColumnName = "intIdSociedad")
     private Long intIdSociedad;
-    @JoinColumn(name = "intIdTipoAgente", referencedColumnName = "intIdTipoAgente")
     private Long intIdTipoAgente;
 
 }

@@ -47,9 +47,7 @@ public class TiposDocumentos implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdEstadoRemision", referencedColumnName = "intIdEstadoRemision")
     private Long intIdEstadoRemision;
-    @JoinColumn(name = "intIdTipoMovimiento", referencedColumnName = "intIdTipoMovimiento")
     private Long intIdTipoMovimiento;
 
 }

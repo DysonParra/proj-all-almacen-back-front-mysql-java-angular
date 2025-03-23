@@ -52,9 +52,7 @@ public class InterlocutoresComerciales implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdGrupoInterlocutor", referencedColumnName = "intIdGrupoInterlocutor")
     private Long intIdGrupoInterlocutor;
-    @JoinColumn(name = "intIdTipoInterlocutor", referencedColumnName = "intIdTipoInterlocutorComercial")
     private Long intIdTipoInterlocutor;
 
 }

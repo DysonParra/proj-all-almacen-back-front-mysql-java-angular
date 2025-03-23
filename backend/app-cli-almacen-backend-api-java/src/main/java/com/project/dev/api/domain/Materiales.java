@@ -58,7 +58,6 @@ public class Materiales implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdTiposMateriales", referencedColumnName = "intIdTipoMaterial")
     private Long intIdTiposMateriales;
 
 }

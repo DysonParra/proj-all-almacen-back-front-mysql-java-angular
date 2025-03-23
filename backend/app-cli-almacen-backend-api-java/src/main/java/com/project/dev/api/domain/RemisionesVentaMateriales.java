@@ -56,11 +56,8 @@ public class RemisionesVentaMateriales implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    @JoinColumn(name = "intIdMaterial", referencedColumnName = "intIdMaterial")
     private Long intIdMaterial;
-    @JoinColumn(name = "strNumeroDocumento", referencedColumnName = "strNumeroDocumento")
     private String strNumeroDocumento;
-    @JoinColumn(name = "intIdUnidadMedida", referencedColumnName = "intIdUnidadMedida")
     private Long intIdUnidadMedida;
 
 }
