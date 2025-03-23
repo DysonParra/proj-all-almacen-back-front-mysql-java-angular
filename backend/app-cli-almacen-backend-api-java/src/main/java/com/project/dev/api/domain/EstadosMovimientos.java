@@ -42,9 +42,7 @@ public class EstadosMovimientos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdEstadoMovimiento;
-    @Column(length = 255)
     private String strDescripcionEstadoMovimiento;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

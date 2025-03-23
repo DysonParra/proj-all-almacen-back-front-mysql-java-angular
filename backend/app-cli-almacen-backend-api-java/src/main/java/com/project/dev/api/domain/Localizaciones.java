@@ -42,29 +42,17 @@ public class Localizaciones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdLocalizacion;
-    @Column(length = 255)
     private String strNombreLocalizacion;
-    @Column(length = 255)
     private String strDireccion;
-    @Column(length = 255)
     private String strCodigoPostal;
-    @Column(length = 255)
     private String strPoBox;
-    @Column(length = 255)
     private String strCiudad;
-    @Column(length = 255)
     private String strPais;
-    @Column(length = 255)
     private String strRegion;
-    @Column(length = 255)
     private String strTelefono;
-    @Column(length = 255)
     private String strCelular;
-    @Column(length = 255)
     private String strFax;
-    @Column(length = 255)
     private String strEmail;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

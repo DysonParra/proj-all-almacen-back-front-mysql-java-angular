@@ -47,9 +47,7 @@ public class ListaDeMateriales implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaFin;
     private Integer intCantidad;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decPrecioUnitario;
-    @Column(length = 100)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

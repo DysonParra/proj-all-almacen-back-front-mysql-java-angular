@@ -44,13 +44,10 @@ public class InterlocutorFinanzas implements Serializable {
     private Long intIdInterlocutorFinanzas;
     private Boolean bitImpuesto;
     private Boolean bitSujetoRetencion;
-    @Column(length = 255)
     private String strNumeroCertificadoRetencion;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaVencimiento;
-    @Column(length = 255)
     private String strNumeroAfiliacionSeguridad;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

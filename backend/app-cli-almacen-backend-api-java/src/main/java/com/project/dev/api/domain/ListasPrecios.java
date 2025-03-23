@@ -42,11 +42,8 @@ public class ListasPrecios implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdListaPrecio;
-    @Column(length = 255)
     private String strNombreListaPrecios;
-    @Column(length = 255)
     private String strDescripcionListaPrecios;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

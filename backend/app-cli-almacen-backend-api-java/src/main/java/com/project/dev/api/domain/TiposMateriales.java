@@ -42,11 +42,8 @@ public class TiposMateriales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoMaterial;
-    @Column(length = 255)
     private String strTipoMaterial;
-    @Column(length = 255)
     private String strDescripcionTipoMaterial;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

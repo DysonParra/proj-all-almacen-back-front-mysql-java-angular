@@ -42,12 +42,9 @@ public class Bodegas implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdBodega;
-    @Column(length = 20)
     private String strCodigoBodega;
-    @Column(length = 255)
     private String strDescripcionBodega;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

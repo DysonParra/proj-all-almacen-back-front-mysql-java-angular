@@ -42,10 +42,8 @@ public class TiposMovimientos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoMovimiento;
-    @Column(length = 255)
     private String strDescripcionTipoMovimiento;
     private Boolean bitSigno;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

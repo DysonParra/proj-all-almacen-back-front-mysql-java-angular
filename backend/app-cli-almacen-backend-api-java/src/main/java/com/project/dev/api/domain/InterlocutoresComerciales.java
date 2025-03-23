@@ -42,21 +42,13 @@ public class InterlocutoresComerciales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdInterlocutorComercial;
-    @Column(length = 255)
     private String strCodigoInterlocutor;
-    @Column(length = 255)
     private String strNumeroIdentificacionFinanciera;
-    @Column(length = 255)
     private String strNombreInterlocutor;
-    @Column(length = 255)
     private String strTelefono;
-    @Column(length = 255)
     private String strCelular;
-    @Column(length = 255)
     private String strFax;
-    @Column(length = 255)
     private String strEmail;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

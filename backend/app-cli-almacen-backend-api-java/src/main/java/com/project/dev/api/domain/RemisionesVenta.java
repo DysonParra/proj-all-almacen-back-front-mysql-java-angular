@@ -39,7 +39,7 @@ public class RemisionesVenta implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false)
     private String strNumeroDocumento;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaContabilizacion;
@@ -49,19 +49,12 @@ public class RemisionesVenta implements Serializable {
     private Date dtFechaDocumento;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaNecesaria;
-    @Column(length = 255)
     private String strNumeroReferencia;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decTotalBruto;
-    @Column(precision = 22, scale = 0)
     private Double dblPorcentajeDescuento;
-    @Column(precision = 22, scale = 0)
     private Double dblPorcentajeImpuesto;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decValorTotal;
-    @Column(length = 255)
     private String strComentarios;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

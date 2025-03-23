@@ -43,7 +43,6 @@ public class TiposDocumentosTiposAgentes implements Serializable {
     @Column(nullable = false)
     private Long intIdTipoDocumentoTipoAgente;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

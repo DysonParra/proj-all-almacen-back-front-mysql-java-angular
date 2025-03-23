@@ -43,16 +43,12 @@ public class MmTmcCaracteristica implements Serializable {
     @Column(nullable = false)
     private Long intIdMmTmcCaracteristica;
     private Long intIdTipoMaterialCaracteristica;
-    @Column(length = 255)
     private String strTipoMaterial;
-    @Column(length = 255)
     private String strDescripcionTipoMaterialCaracteristica;
     private Integer intTipoDato;
-    @Column(length = 255)
     private String strReglaValidacion;
     private Boolean bitVisibleDetalle;
     private Integer intOrdenDetall;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

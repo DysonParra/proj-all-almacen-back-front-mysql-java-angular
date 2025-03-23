@@ -42,24 +42,17 @@ public class RemisionesVentaMateriales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdRemisionVentaMaterial;
-    @Column(length = 255)
     private String strCodigoMaterial;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaNecesaria;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaSolicitud;
-    @Column(precision = 22, scale = 0)
     private Double dblCantidad;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decValorUnitario;
-    @Column(precision = 12, scale = 0)
     private Float fltPorcentajeDescuento;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decCostoPromedio;
     private Long intIdRemisionCompra;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadUnidadMedida;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

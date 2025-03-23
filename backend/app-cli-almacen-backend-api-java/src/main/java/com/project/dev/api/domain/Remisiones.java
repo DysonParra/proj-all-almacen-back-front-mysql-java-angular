@@ -42,14 +42,12 @@ public class Remisiones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdRemision;
-    @Column(length = 255)
     private String strNumeroGuia;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaCreacion;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaRecepcion;
     private Integer intConcecutivoInterno;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

@@ -42,22 +42,14 @@ public class InterlocutoresCondicionPago implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdInterlocutorCondicionPago;
-    @Column(length = 255)
     private String strNombreCondicion;
-    @Column(precision = 12, scale = 0)
     private Float fltInteresMora;
-    @Column(precision = 12, scale = 0)
     private Float fltDescuentoTotal;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decCupoCredito;
-    @Column(length = 255)
     private String strNumeroCuenta;
-    @Column(length = 255)
     private String strSucursal;
-    @Column(length = 255)
     private String strClaveControl;
     private Boolean bitEntregaParcial;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

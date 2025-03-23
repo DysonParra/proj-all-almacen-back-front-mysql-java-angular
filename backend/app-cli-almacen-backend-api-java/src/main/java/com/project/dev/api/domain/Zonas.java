@@ -39,9 +39,8 @@ public class Zonas implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private String strCodigoZona;
-    @Column(length = 255)
     private String strDescripcionZona;
     private Boolean bitTransitoDirecto;
     private Boolean bitPicking;
@@ -49,7 +48,6 @@ public class Zonas implements Serializable {
     private Boolean bitDespacho;
     private Boolean bitRecepcion;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

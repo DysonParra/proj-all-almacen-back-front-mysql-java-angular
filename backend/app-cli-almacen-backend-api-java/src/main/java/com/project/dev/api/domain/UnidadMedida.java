@@ -42,19 +42,13 @@ public class UnidadMedida implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdUnidadMedida;
-    @Column(length = 255)
     private String strNombre;
-    @Column(length = 255)
     private String strSimbolo;
-    @Column(precision = 12, scale = 0)
     private Float fltFactor;
-    @Column(precision = 12, scale = 0)
     private Float fltPrecision;
-    @Column(precision = 12, scale = 0)
     private Float fltConversion;
     private Integer intDecimales;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

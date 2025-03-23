@@ -42,24 +42,19 @@ public class Consecutivos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdConsecutivo;
-    @Column(length = 255)
     private String strResolucion;
     private Integer intValorInicial;
     private Integer intValorFinal;
     private Integer intIncremento;
     private Integer intValorActual;
-    @Column(length = 255)
     private String strCaracterLlenado;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaInicial;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaFinal;
-    @Column(length = 255)
     private String strSufijo;
-    @Column(length = 255)
     private String strPrefijo;
     private Boolean bitHabilitado;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

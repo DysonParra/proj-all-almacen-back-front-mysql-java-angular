@@ -43,7 +43,6 @@ public class TiposDocumentosConceptos implements Serializable {
     @Column(nullable = false)
     private Long intIdTipoDocumentoConcepto;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

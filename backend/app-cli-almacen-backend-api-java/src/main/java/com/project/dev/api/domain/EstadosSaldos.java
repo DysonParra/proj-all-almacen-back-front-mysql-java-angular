@@ -42,12 +42,9 @@ public class EstadosSaldos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdEstadoSaldo;
-    @Column(length = 255)
     private String strDescripcionEstadoSaldo;
-    @Column(length = 255)
     private String strCodigoColor;
     private Boolean bitEstaEnReposicion;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

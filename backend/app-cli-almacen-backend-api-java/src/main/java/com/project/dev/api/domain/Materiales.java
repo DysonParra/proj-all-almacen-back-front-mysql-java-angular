@@ -42,25 +42,19 @@ public class Materiales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMaterial;
-    @Column(length = 255)
     private String strCodigoMaterial;
-    @Column(length = 255)
     private String strReferencia;
     private Boolean bitGeneraRecibo;
     private Boolean bitVentaApartado;
     private Boolean bitPermiteDevolucion;
-    @Column(length = 255)
     private String strSimbolo;
-    @Column(precision = 12, scale = 0)
     private Float fltValorUnitario;
-    @Column(precision = 12, scale = 0)
     private Float fltCosto;
     private Boolean bitConsumible;
     private Boolean bitProducible;
     private Boolean bitComprable;
     private Boolean bitVendible;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

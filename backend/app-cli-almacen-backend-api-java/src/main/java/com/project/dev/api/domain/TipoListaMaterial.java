@@ -42,9 +42,7 @@ public class TipoListaMaterial implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoListaMaterial;
-    @Column(length = 20)
     private String strNombreTipoLista;
-    @Column(length = 200)
     private String strDescripcionLista;
 
 }

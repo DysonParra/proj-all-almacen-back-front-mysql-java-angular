@@ -42,7 +42,6 @@ public class Movimientos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMovimiento;
-    @Column(length = 255)
     private String strNumeroDocumento;
     @Basic(optional = false)
     @Column(nullable = false)
@@ -52,13 +51,9 @@ public class Movimientos implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaAnulacion;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decSobreCosto;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decSobreCostoAplicadoProducto;
-    @Column(length = 255)
     private String strObservaciones;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

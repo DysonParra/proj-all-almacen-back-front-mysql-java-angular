@@ -42,13 +42,9 @@ public class Componentes implements Serializable {
     @Column(nullable = false)
     private Long intIdComponente;
     private Long intIdAlmacen;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadBase;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadRequerida;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadAdicional;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadConsumida;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaEstimada;
@@ -59,7 +55,6 @@ public class Componentes implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaFinal;
     private Long intIdEstadoComponente;
-    @Column(length = 20)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

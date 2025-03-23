@@ -46,14 +46,10 @@ public class Cotizacion implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer intIdProveedor;
-    @Column(length = 20)
     private String strEstado;
     private Long intCodigoMaterial;
-    @Column(length = 256)
     private String strDescripcionMaterial;
-    @Column(length = 256)
     private String strNombreProveedor;
-    @Column(length = 256)
     private String strBuzonProveedor;
     @Basic(optional = false)
     @Column(nullable = false)
@@ -61,9 +57,7 @@ public class Cotizacion implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Double dblCantidadCotizada;
-    @Column(precision = 22, scale = 0)
     private Double dblValorCotizado;
-    @Column(precision = 22, scale = 0)
     private Double dblDescuento;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaNecesaria;

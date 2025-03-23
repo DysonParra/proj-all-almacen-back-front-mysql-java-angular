@@ -42,9 +42,7 @@ public class CondicionesPagos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdCondicionPago;
-    @Column(length = 255)
     private String strNombreCondicion;
-    @Column(length = 255)
     private String strDescripcion;
     private Boolean bitDeudor;
     private Boolean bitAcreedor;
@@ -52,13 +50,9 @@ public class CondicionesPagos implements Serializable {
     private Integer intMesesAdicionales;
     private Integer intDiasTolerancia;
     private Integer intNumeroPlazos;
-    @Column(precision = 12, scale = 0)
     private Float fltDescuentoTotal;
-    @Column(precision = 12, scale = 0)
     private Float fltInteresCredito;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decHaberMaximo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

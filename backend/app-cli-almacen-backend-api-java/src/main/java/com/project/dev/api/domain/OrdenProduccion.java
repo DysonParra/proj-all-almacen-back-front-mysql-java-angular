@@ -39,9 +39,8 @@ public class OrdenProduccion implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private String strNumeroOrden;
-    @Column(length = 20)
     private String strReferencia;
     private Long intIdEstadoProduccion;
     private Long intIdRutaOrdenTrabajo;
@@ -52,11 +51,8 @@ public class OrdenProduccion implements Serializable {
     private Date dtFechaInicioEstimada;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaFinalizacion;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCantidadPlanificada;
-    @Column(length = 20)
     private String strOrigenOrden;
-    @Column(length = 20)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

@@ -42,17 +42,13 @@ public class MaterialesDatosCompra implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMaterialDatoCompra;
-    @Column(length = 255)
     private String strCodigoMaterialCompra;
     private Boolean bitAutomaticPurchase;
     private Boolean bitGestionLotes;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decToleranciaEntregaInferior;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decToleranciaEntregaSuperior;
     private Integer intDiasEntrega;
     private Boolean bitRequiereInspeccion;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

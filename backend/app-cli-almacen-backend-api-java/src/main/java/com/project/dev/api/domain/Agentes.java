@@ -44,9 +44,7 @@ public class Agentes implements Serializable {
     private Long intIdAgente;
     private Integer intIdEntidad;
     private Integer intIdAlmacen;
-    @Column(length = 255)
     private String strObservaciones;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

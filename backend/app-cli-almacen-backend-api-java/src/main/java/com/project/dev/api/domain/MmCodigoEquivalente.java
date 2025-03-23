@@ -42,11 +42,8 @@ public class MmCodigoEquivalente implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMmCodigoEquivalente;
-    @Column(length = 255)
     private String strTipoCodigoEquivalente;
-    @Column(length = 255)
     private String strValorCodigoEquivalente;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

@@ -42,13 +42,9 @@ public class GrupoInterlocutores implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdGrupoInterlocutor;
-    @Column(length = 255)
     private String strNombreGrupo;
-    @Column(length = 255)
     private String strDescripcion;
-    @Column(length = 255)
     private String strCuentaContable;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

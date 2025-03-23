@@ -43,13 +43,11 @@ public class Ubicaciones implements Serializable {
     @Column(nullable = false)
     private Long intIdUbicacion;
     @Basic(optional = false)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private String strCodigoUbicacion;
-    @Column(length = 255)
     private String strDescripcionUbicacion;
     private Boolean bitDedicado;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

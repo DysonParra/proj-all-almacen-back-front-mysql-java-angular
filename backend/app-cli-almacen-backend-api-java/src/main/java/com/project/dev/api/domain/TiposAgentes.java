@@ -42,12 +42,9 @@ public class TiposAgentes implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoAgente;
-    @Column(length = 255)
     private String strDescripcionTipoAgente;
-    @Column(length = 255)
     private String strTablaInformacion;
     private Boolean bitActivo;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

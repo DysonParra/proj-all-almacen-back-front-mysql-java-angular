@@ -44,7 +44,7 @@ public class PlanCompra implements Serializable {
     private Long intIdPlanCompra;
     private Long intCodigoMaterial;
     @Basic(optional = false)
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false)
     private String strDescripcion;
     @Basic(optional = false)
     @Column(nullable = false)
@@ -56,9 +56,7 @@ public class PlanCompra implements Serializable {
     private Date dtFechaCreacion;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaModificacion;
-    @Column(length = 100)
     private String strUsuario;
-    @Column(length = 10)
     private String strEstado;
 
 }

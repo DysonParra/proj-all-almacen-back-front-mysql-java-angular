@@ -44,7 +44,6 @@ public class CentrosTrabajos implements Serializable {
     private Long intIdCentroDeTrabajo;
     private Long intIdInterlocutorComercial;
     private Long intIdCategoriaCentro;
-    @Column(precision = 18, scale = 1)
     private BigDecimal decCosto;
     private Long intIdBodega;
     private Long intIdMetodoCosteo;

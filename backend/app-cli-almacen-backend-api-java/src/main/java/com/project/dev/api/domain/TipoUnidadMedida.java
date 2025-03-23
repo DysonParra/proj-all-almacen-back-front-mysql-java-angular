@@ -42,9 +42,7 @@ public class TipoUnidadMedida implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoUnidadMedida;
-    @Column(length = 255)
     private String strNombre;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

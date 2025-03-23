@@ -43,9 +43,8 @@ public class EstadosRemisiones implements Serializable {
     @Column(nullable = false)
     private Long intIdEstadoRemision;
     @Basic(optional = false)
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false)
     private String strDescripcionEstadoRemision;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

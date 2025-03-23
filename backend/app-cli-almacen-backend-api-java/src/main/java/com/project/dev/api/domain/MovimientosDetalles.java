@@ -42,13 +42,9 @@ public class MovimientosDetalles implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMovimientoDetalle;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decValorUnitario;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decSobreCosto;
-    @Column(precision = 10, scale = 2)
     private BigDecimal decCantidad;
-    @Column(length = 255)
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)

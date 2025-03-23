@@ -42,11 +42,8 @@ public class TipoInterlocutorComercial implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoInterlocutorComercial;
-    @Column(length = 255)
     private String strTipoInterlocutor;
-    @Column(length = 255)
     private String strDescripcionTipoInterlocutor;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;

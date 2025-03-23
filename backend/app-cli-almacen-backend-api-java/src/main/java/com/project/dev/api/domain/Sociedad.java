@@ -42,13 +42,9 @@ public class Sociedad implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdSociedad;
-    @Column(length = 255)
     private String strCodigoSociedad;
-    @Column(length = 255)
     private String strNombreSociedad;
-    @Column(length = 255)
     private String strDescripcionSociedad;
-    @Column(length = 255)
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
