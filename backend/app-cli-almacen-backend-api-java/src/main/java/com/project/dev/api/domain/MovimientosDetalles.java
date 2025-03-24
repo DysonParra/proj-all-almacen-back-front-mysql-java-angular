@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
  * @since Java 17 (LTS), Gradle 7.3
  */
 @Entity
-@Table(name = "\"MovimientosDetalles\"")
+@Table(name = "\"movimientos_detalles\"")
 @AllArgsConstructor
 @Builder
 @Data

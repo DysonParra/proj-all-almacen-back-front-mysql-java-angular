@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS `almacen`;
 CREATE DATABASE IF NOT EXISTS `almacen`;
 USE `almacen`;
 
-CREATE TABLE IF NOT EXISTS `CentrosTrabajos` (
+CREATE TABLE IF NOT EXISTS `centros_trabajos` (
     `idCentroDeTrabajo`                 BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idInterlocutorComercial`           BIGINT                  NULL DEFAULT NULL,
     `idCategoriaCentro`                 BIGINT                  NULL DEFAULT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `CentrosTrabajos` (
     `idMetodoCosteo`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Conceptos` (
+CREATE TABLE IF NOT EXISTS `conceptos` (
     `idConcepto`                        BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionConcepto`               VARCHAR(255)            NULL DEFAULT NULL,
     `reposicion`                        BIT                     NULL DEFAULT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `Conceptos` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `CondicionesPagos` (
+CREATE TABLE IF NOT EXISTS `condiciones_pagos` (
     `idCondicionPago`                   BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombreCondicion`                   VARCHAR(255)            NULL DEFAULT NULL,
     `descripcion`                       VARCHAR(255)            NULL DEFAULT NULL,
@@ -37,21 +37,21 @@ CREATE TABLE IF NOT EXISTS `CondicionesPagos` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `EstadosMovimientos` (
+CREATE TABLE IF NOT EXISTS `estados_movimientos` (
     `idEstadoMovimiento`                BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionEstadoMovimiento`       VARCHAR(255)            NULL DEFAULT NULL,
     `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `EstadosRemisiones` (
+CREATE TABLE IF NOT EXISTS `estados_remisiones` (
     `idEstadoRemision`                  BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionEstadoRemision`         VARCHAR(255)        NOT NULL,
     `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `EstadosSaldos` (
+CREATE TABLE IF NOT EXISTS `estados_saldos` (
     `idEstadoSaldo`                     BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionEstadoSaldo`            VARCHAR(255)            NULL DEFAULT NULL,
     `codigoColor`                       VARCHAR(255)            NULL DEFAULT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `EstadosSaldos` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `ListasPrecios` (
+CREATE TABLE IF NOT EXISTS `listas_precios` (
     `idListaPrecio`                     BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombreListaPrecios`                VARCHAR(255)            NULL DEFAULT NULL,
     `descripcionListaPrecios`           VARCHAR(255)            NULL DEFAULT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `ListasPrecios` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `GrupoInterlocutores` (
+CREATE TABLE IF NOT EXISTS `grupo_interlocutores` (
     `idGrupoInterlocutor`               BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombreGrupo`                       VARCHAR(255)            NULL DEFAULT NULL,
     `descripcion`                       VARCHAR(255)            NULL DEFAULT NULL,
@@ -78,13 +78,13 @@ CREATE TABLE IF NOT EXISTS `GrupoInterlocutores` (
     `idListaPrecio`                     BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `ListasPreciosMateriales` (
+CREATE TABLE IF NOT EXISTS `listas_precios_materiales` (
     `id`                                BIGINT              NOT NULL PRIMARY KEY,
     `idMateriales`                      BIGINT              NOT NULL,
     `idListasPrecios`                   BIGINT              NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `PlanCompra` (
+CREATE TABLE IF NOT EXISTS `plan_compra` (
     `idPlanCompra`                      BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    BIGINT                  NULL DEFAULT NULL,
     `descripcion`                       VARCHAR(100)        NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `PlanCompra` (
     `estado`                            VARCHAR(10)             NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Cotizacion` (
+CREATE TABLE IF NOT EXISTS `cotizacion` (
     `idCotizacion`                      INT                 NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `cabecera`                          INT                     NULL DEFAULT NULL,
     `idPlanCompra`                      BIGINT                  NULL,
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `Cotizacion` (
     `fechaCreacion`                     DATETIME                NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Sociedad` (
+CREATE TABLE IF NOT EXISTS `sociedad` (
     `idSociedad`                        BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoSociedad`                    VARCHAR(255)            NULL DEFAULT NULL,
     `nombreSociedad`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `Sociedad` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TipoInterlocutorComercial` (
+CREATE TABLE IF NOT EXISTS `tipo_interlocutor_comercial` (
     `idTipoInterlocutorComercial`       BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `tipoInterlocutor`                  VARCHAR(255)            NULL DEFAULT NULL,
     `descripcionTipoInterlocutor`       VARCHAR(255)            NULL DEFAULT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `TipoInterlocutorComercial` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `InterlocutoresComerciales` (
+CREATE TABLE IF NOT EXISTS `interlocutores_comerciales` (
     `idInterlocutorComercial`           BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoInterlocutor`                VARCHAR(255)            NULL DEFAULT NULL,
     `numeroIdentificacionFinanciera`    VARCHAR(255)            NULL DEFAULT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `InterlocutoresComerciales` (
     `idTipoInterlocutor`                BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `InterlocutorFinanzas` (
+CREATE TABLE IF NOT EXISTS `interlocutor_finanzas` (
     `idInterlocutorFinanzas`            BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `impuesto`                          BIT                     NULL DEFAULT NULL,
     `sujetoRetencion`                   BIT                     NULL DEFAULT NULL,
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `InterlocutorFinanzas` (
     `idInterlocutor`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `InterlocutoresCondicionPago` (
+CREATE TABLE IF NOT EXISTS `interlocutores_condicion_pago` (
     `idInterlocutorCondicionPago`       BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombreCondicion`                   VARCHAR(255)            NULL DEFAULT NULL,
     `interesMora`                       FLOAT                   NULL DEFAULT NULL,
@@ -177,20 +177,20 @@ CREATE TABLE IF NOT EXISTS `InterlocutoresCondicionPago` (
     `idCondicionPago`                   BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TipoListaMaterial` (
+CREATE TABLE IF NOT EXISTS `tipo_lista_material` (
     `idTipoListaMaterial`               BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombreTipoLista`                   VARCHAR(20)             NULL DEFAULT NULL,
     `descripcionLista`                  VARCHAR(200)            NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TipoUnidadMedida` (
+CREATE TABLE IF NOT EXISTS `tipo_unidad_medida` (
     `idTipoUnidadMedida`                BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombre`                            VARCHAR(255)            NULL DEFAULT NULL,
     `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposAgentes` (
+CREATE TABLE IF NOT EXISTS `tipos_agentes` (
     `idTipoAgente`                      BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionTipoAgente`             VARCHAR(255)            NULL DEFAULT NULL,
     `tablaInformacion`                  VARCHAR(255)            NULL DEFAULT NULL,
@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `TiposAgentes` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Agentes` (
+CREATE TABLE IF NOT EXISTS `agentes` (
     `idAgente`                          BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idTipoAgente`                      BIGINT                  NULL DEFAULT NULL,
     `idEntidad`                         INT                     NULL DEFAULT NULL,
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `Agentes` (
     `idSociedad`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Bodegas` (
+CREATE TABLE IF NOT EXISTS `bodegas` (
     `idBodega`                          BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoBodega`                      VARCHAR(20)             NULL DEFAULT NULL,
     `descripcionBodega`                 VARCHAR(255)            NULL DEFAULT NULL,
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `Bodegas` (
     `idAgente`                          BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Localizaciones` (
+CREATE TABLE IF NOT EXISTS `localizaciones` (
     `idLocalizacion`                    BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idBodega`                          BIGINT                  NULL DEFAULT NULL,
     `nombreLocalizacion`                VARCHAR(255)            NULL DEFAULT NULL,
@@ -239,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `Localizaciones` (
     `idInterlocutor`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Remisiones` (
+CREATE TABLE IF NOT EXISTS `remisiones` (
     `idRemision`                        BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numeroGuia`                        VARCHAR(255)            NULL DEFAULT NULL,
     `fechaCreacion`                     TIMESTAMP               NULL DEFAULT NULL,
@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `Remisiones` (
     `idEstadoRemision`                  BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposMateriales` (
+CREATE TABLE IF NOT EXISTS `tipos_materiales` (
     `idTipoMaterial`                    BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `tipoMaterial`                      VARCHAR(255)            NULL DEFAULT NULL,
     `descripcionTipoMaterial`           VARCHAR(255)            NULL DEFAULT NULL,
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `TiposMateriales` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Materiales` (
+CREATE TABLE IF NOT EXISTS `materiales` (
     `idMaterial`                        BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
     `referencia`                        VARCHAR(255)            NULL DEFAULT NULL,
@@ -280,7 +280,7 @@ CREATE TABLE IF NOT EXISTS `Materiales` (
     `idTiposMateriales`                 BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MaterialesCostosPromedios` (
+CREATE TABLE IF NOT EXISTS `materiales_costos_promedios` (
     `idMaterialCostoPromedio`           BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
     `costoPromedio`                     DECIMAL(10, 2)          NULL DEFAULT NULL,
@@ -291,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `MaterialesCostosPromedios` (
     `idMaterial`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MaterialesDescripciones` (
+CREATE TABLE IF NOT EXISTS `materiales_descripciones` (
     `idMaterialDescripcion`             BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
     `cultura`                           VARCHAR(255)            NULL DEFAULT NULL,
@@ -301,7 +301,7 @@ CREATE TABLE IF NOT EXISTS `MaterialesDescripciones` (
     `idMaterial`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MmCodigoEquivalente` (
+CREATE TABLE IF NOT EXISTS `mm_codigo_equivalente` (
     `idMmCodigoEquivalente`             BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
     `tipoCodigoEquivalente`             VARCHAR(255)            NULL DEFAULT NULL,
@@ -311,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `MmCodigoEquivalente` (
     `idMaterial`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MmTmcCaracteristica` (
+CREATE TABLE IF NOT EXISTS `mm_tmc_caracteristica` (
     `idMmTmcCaracteristica`             BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idTipoMaterialCaracteristica`      BIGINT                  NULL DEFAULT NULL,
     `tipoMaterial`                      VARCHAR(255)            NULL DEFAULT NULL,
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `MmTmcCaracteristica` (
     `idTipoMaterial`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MaterialesCaracteristicas` (
+CREATE TABLE IF NOT EXISTS `materiales_caracteristicas` (
     `idMaterialCaracteristica`          BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
     `valorCaracteristica`               VARCHAR(255)            NULL DEFAULT NULL,
@@ -336,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `MaterialesCaracteristicas` (
     `idMaterial`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MmTmcdDescripciones` (
+CREATE TABLE IF NOT EXISTS `mm_tmcd_descripciones` (
     `idMmTmcdDescripciones`             BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idTipoMaterialCaracteristica`      BIGINT                  NULL DEFAULT NULL,
     `cultura`                           VARCHAR(255)            NULL DEFAULT NULL,
@@ -345,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `MmTmcdDescripciones` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposMovimientos` (
+CREATE TABLE IF NOT EXISTS `tipos_movimientos` (
     `idTipoMovimiento`                  BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionTipoMovimiento`         VARCHAR(255)            NULL DEFAULT NULL,
     `signo`                             BIT                     NULL DEFAULT NULL,
@@ -353,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `TiposMovimientos` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposDocumentos` (
+CREATE TABLE IF NOT EXISTS `tipos_documentos` (
     `idTipoDocumento`                   BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descripcionTipoDocumento`          VARCHAR(255)            NULL DEFAULT NULL,
     `activo`                            BIT                     NULL DEFAULT NULL,
@@ -363,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `TiposDocumentos` (
     `idEstadoRemision`                  BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Consecutivos` (
+CREATE TABLE IF NOT EXISTS `consecutivos` (
     `idConsecutivo`                     BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `resolucion`                        VARCHAR(255)            NULL DEFAULT NULL,
     `valorInicial`                      INT                     NULL DEFAULT NULL,
@@ -381,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `Consecutivos` (
     `idTipoDocumento`                   BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Movimientos` (
+CREATE TABLE IF NOT EXISTS `movimientos` (
     `idMovimiento`                      BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idRemision`                        BIGINT                  NULL DEFAULT NULL,
     `numeroDocumento`                   VARCHAR(255)            NULL DEFAULT NULL,
@@ -399,7 +399,7 @@ CREATE TABLE IF NOT EXISTS `Movimientos` (
     `fecha`                             TIMESTAMP           NOT NULL DEFAULT '1969-12-31 19:00:01'
 );
 
-CREATE TABLE IF NOT EXISTS `MovimientosDetalles` (
+CREATE TABLE IF NOT EXISTS `movimientos_detalles` (
     `idMovimientoDetalle`               BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numeroDocumento`                   VARCHAR(255)            NULL DEFAULT NULL,
     `codigoProducto`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `MovimientosDetalles` (
     `idEstadoSaldo`                     BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `RemisionesCompras` (
+CREATE TABLE IF NOT EXISTS `remisiones_compras` (
     `idRemisionCompra`                  BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numeroRemisionCompra`              VARCHAR(255)            NULL DEFAULT NULL,
     `fechaContabilizacion`              TIMESTAMP               NULL DEFAULT NULL,
@@ -431,7 +431,7 @@ CREATE TABLE IF NOT EXISTS `RemisionesCompras` (
     `idInterlocutor`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `RemisionesComprasMateriales` (
+CREATE TABLE IF NOT EXISTS `remisiones_compras_materiales` (
     `idRemisionCompraMaterial`          BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numeroRemisionCompra`              VARCHAR(255)            NULL DEFAULT NULL,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -447,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `RemisionesComprasMateriales` (
     `idMaterial`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `RemisionesVenta` (
+CREATE TABLE IF NOT EXISTS `remisiones_venta` (
     `numeroDocumento`                   VARCHAR(255)        NOT NULL PRIMARY KEY,
     `fechaContabilizacion`              TIMESTAMP               NULL DEFAULT NULL,
     `fechaValidez`                      TIMESTAMP               NULL DEFAULT NULL,
@@ -467,7 +467,7 @@ CREATE TABLE IF NOT EXISTS `RemisionesVenta` (
     `listaPrecio`                       BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposDocumentosConceptos` (
+CREATE TABLE IF NOT EXISTS `tipos_documentos_conceptos` (
     `idTipoDocumentoConcepto`           BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `activo`                            BIT                     NULL DEFAULT NULL,
     `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
@@ -476,7 +476,7 @@ CREATE TABLE IF NOT EXISTS `TiposDocumentosConceptos` (
     `idConcepto`                        BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `TiposDocumentosTiposAgentes` (
+CREATE TABLE IF NOT EXISTS `tipos_documentos_tipos_agentes` (
     `idTipoDocumentoTipoAgente`         BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `activo`                            BIT                     NULL DEFAULT NULL,
     `usuario`                           VARCHAR(255)            NULL DEFAULT NULL,
@@ -485,7 +485,7 @@ CREATE TABLE IF NOT EXISTS `TiposDocumentosTiposAgentes` (
     `idTipoAgente`                      BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `UnidadMedida` (
+CREATE TABLE IF NOT EXISTS `unidad_medida` (
     `idUnidadMedida`                    BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombre`                            VARCHAR(255)            NULL DEFAULT NULL,
     `simbolo`                           VARCHAR(255)            NULL DEFAULT NULL,
@@ -499,7 +499,7 @@ CREATE TABLE IF NOT EXISTS `UnidadMedida` (
     `idTipoUnidadMedida`                BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `ListaDeMateriales` (
+CREATE TABLE IF NOT EXISTS `lista_de_materiales` (
     `idListaMaterial`                   BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idUnidadMedida`                    BIGINT                  NULL DEFAULT NULL,
     `idTipoListaMaterial`               BIGINT                  NULL DEFAULT NULL,
@@ -515,7 +515,7 @@ CREATE TABLE IF NOT EXISTS `ListaDeMateriales` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `MaterialesDatosCompra` (
+CREATE TABLE IF NOT EXISTS `materiales_datos_compra` (
     `idMaterialDatoCompra`              BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoMaterialCompra`              VARCHAR(255)            NULL DEFAULT NULL,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -533,7 +533,7 @@ CREATE TABLE IF NOT EXISTS `MaterialesDatosCompra` (
     `idInterlocutor`                    BIGINT                  NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `OrdenProduccion` (
+CREATE TABLE IF NOT EXISTS `orden_produccion` (
     `numeroOrden`                       VARCHAR(20)         NOT NULL PRIMARY KEY,
     `referencia`                        VARCHAR(20)             NULL DEFAULT NULL,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -551,7 +551,7 @@ CREATE TABLE IF NOT EXISTS `OrdenProduccion` (
     `fecha`                             DATETIME                NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Componentes` (
+CREATE TABLE IF NOT EXISTS `componentes` (
     `idComponente`                      BIGINT              NOT NULL PRIMARY KEY,
     `numeroOrden`                       VARCHAR(20)             NULL DEFAULT NULL,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -570,7 +570,7 @@ CREATE TABLE IF NOT EXISTS `Componentes` (
     `fecha`                             DATETIME                NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `OrdenDeTrabajo` (
+CREATE TABLE IF NOT EXISTS `orden_de_trabajo` (
     `idOrdenTrabajo`                    BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idOperacion`                       BIGINT                  NULL DEFAULT NULL,
     `idCentroTrabajo`                   BIGINT                  NULL DEFAULT NULL,
@@ -578,7 +578,7 @@ CREATE TABLE IF NOT EXISTS `OrdenDeTrabajo` (
     `numeroOrden`                       VARCHAR(20)             NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `RemisionesVentaMateriales` (
+CREATE TABLE IF NOT EXISTS `remisiones_venta_materiales` (
     `idRemisionVentaMaterial`           BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numeroDocumento`                   VARCHAR(255)            NULL DEFAULT NULL,
     `codigoMaterial`                    VARCHAR(255)            NULL DEFAULT NULL,
@@ -596,7 +596,7 @@ CREATE TABLE IF NOT EXISTS `RemisionesVentaMateriales` (
     `fecha`                             TIMESTAMP               NULL DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Zonas` (
+CREATE TABLE IF NOT EXISTS `zonas` (
     `codigoZona`                        VARCHAR(20)         NOT NULL PRIMARY KEY,
     `idBodega`                          BIGINT                  NULL DEFAULT NULL,
     `descripcionZona`                   VARCHAR(255)            NULL DEFAULT NULL,
@@ -610,7 +610,7 @@ CREATE TABLE IF NOT EXISTS `Zonas` (
     `fecha`                             TIMESTAMP           NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()
 );
 
-CREATE TABLE IF NOT EXISTS `Ubicaciones` (
+CREATE TABLE IF NOT EXISTS `ubicaciones` (
     `idUbicacion`                       BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `codigoUbicacion`                   VARCHAR(20)         NOT NULL,
     `codigoZona`                        VARCHAR(20)             NULL DEFAULT NULL,
@@ -621,7 +621,7 @@ CREATE TABLE IF NOT EXISTS `Ubicaciones` (
     `fecha`                             TIMESTAMP           NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()
 );
 
-CREATE TABLE IF NOT EXISTS `Saldos` (
+CREATE TABLE IF NOT EXISTS `saldos` (
     `idSaldo`                           BIGINT              NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `idEstadoSaldo`                     BIGINT                  NULL DEFAULT NULL,
     `idUbicacion`                       BIGINT                  NULL DEFAULT NULL,
