@@ -88,7 +88,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcCaracteristica")
+    @GetMapping("/mm-tmc-caracteristica")
     public CollectionModel<EntityModel<MmTmcCaracteristicaDTO>> getAllEntities() {
         log.debug("REST request to get all entities type MmTmcCaracteristica");
         List<EntityModel<MmTmcCaracteristicaDTO>> entities = null;
@@ -118,14 +118,14 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcCaracteristica/pages")
+    @GetMapping("/mm-tmc-caracteristica/pages")
     public ResponseEntity<CollectionModel<EntityModel<MmTmcCaracteristicaDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type MmTmcCaracteristica");
         Page<MmTmcCaracteristicaDTO> page = null;
         List<EntityModel<MmTmcCaracteristicaDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmTmcCaracteristica/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/mm-tmc-caracteristica/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/MmTmcCaracteristica")
+    @PostMapping("/mm-tmc-caracteristica")
     public ResponseEntity<?> saveEntity(@RequestBody MmTmcCaracteristicaDTO entityDTO) {
         log.debug("POST request to save a new entity type MmTmcCaracteristica");
         EntityModel<MmTmcCaracteristicaDTO> resource = null;
@@ -180,7 +180,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/MmTmcCaracteristica/{id}")
+    @PutMapping("/mm-tmc-caracteristica/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody MmTmcCaracteristicaDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcCaracteristica/{id}")
+    @GetMapping("/mm-tmc-caracteristica/{id}")
     public ResponseEntity<EntityModel<MmTmcCaracteristicaDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type MmTmcCaracteristica with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/MmTmcCaracteristica/{id}")
+    @DeleteMapping("/mm-tmc-caracteristica/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity MmTmcCaracteristica with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcCaracteristica/search/{query}")
+    @GetMapping("/mm-tmc-caracteristica/search/{query}")
     public CollectionModel<EntityModel<MmTmcCaracteristicaDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type MmTmcCaracteristica with the search : {} ", query);
         List<EntityModel<MmTmcCaracteristicaDTO>> entities = null;
@@ -279,14 +279,14 @@ public class MmTmcCaracteristicaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmTmcCaracteristica/search/{query}/pages")
+    @GetMapping("/mm-tmc-caracteristica/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<MmTmcCaracteristicaDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type MmTmcCaracteristica with the search : {}", query);
         Page<MmTmcCaracteristicaDTO> page = null;
         List<EntityModel<MmTmcCaracteristicaDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmTmcCaracteristica/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/mm-tmc-caracteristica/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

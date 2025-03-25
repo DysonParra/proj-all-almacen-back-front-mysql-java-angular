@@ -88,7 +88,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesComprasMateriales")
+    @GetMapping("/remisiones-compras-materiales")
     public CollectionModel<EntityModel<RemisionesComprasMaterialesDTO>> getAllEntities() {
         log.debug("REST request to get all entities type RemisionesComprasMateriales");
         List<EntityModel<RemisionesComprasMaterialesDTO>> entities = null;
@@ -118,14 +118,14 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesComprasMateriales/pages")
+    @GetMapping("/remisiones-compras-materiales/pages")
     public ResponseEntity<CollectionModel<EntityModel<RemisionesComprasMaterialesDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type RemisionesComprasMateriales");
         Page<RemisionesComprasMaterialesDTO> page = null;
         List<EntityModel<RemisionesComprasMaterialesDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RemisionesComprasMateriales/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/remisiones-compras-materiales/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/RemisionesComprasMateriales")
+    @PostMapping("/remisiones-compras-materiales")
     public ResponseEntity<?> saveEntity(@RequestBody RemisionesComprasMaterialesDTO entityDTO) {
         log.debug("POST request to save a new entity type RemisionesComprasMateriales");
         EntityModel<RemisionesComprasMaterialesDTO> resource = null;
@@ -180,7 +180,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/RemisionesComprasMateriales/{id}")
+    @PutMapping("/remisiones-compras-materiales/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody RemisionesComprasMaterialesDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesComprasMateriales/{id}")
+    @GetMapping("/remisiones-compras-materiales/{id}")
     public ResponseEntity<EntityModel<RemisionesComprasMaterialesDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type RemisionesComprasMateriales with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/RemisionesComprasMateriales/{id}")
+    @DeleteMapping("/remisiones-compras-materiales/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity RemisionesComprasMateriales with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesComprasMateriales/search/{query}")
+    @GetMapping("/remisiones-compras-materiales/search/{query}")
     public CollectionModel<EntityModel<RemisionesComprasMaterialesDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type RemisionesComprasMateriales with the search : {} ", query);
         List<EntityModel<RemisionesComprasMaterialesDTO>> entities = null;
@@ -279,14 +279,14 @@ public class RemisionesComprasMaterialesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/RemisionesComprasMateriales/search/{query}/pages")
+    @GetMapping("/remisiones-compras-materiales/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<RemisionesComprasMaterialesDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type RemisionesComprasMateriales with the search : {}", query);
         Page<RemisionesComprasMaterialesDTO> page = null;
         List<EntityModel<RemisionesComprasMaterialesDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/RemisionesComprasMateriales/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/remisiones-compras-materiales/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

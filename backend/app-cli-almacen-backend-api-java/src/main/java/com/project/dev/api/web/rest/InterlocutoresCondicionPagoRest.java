@@ -88,7 +88,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresCondicionPago")
+    @GetMapping("/interlocutores-condicion-pago")
     public CollectionModel<EntityModel<InterlocutoresCondicionPagoDTO>> getAllEntities() {
         log.debug("REST request to get all entities type InterlocutoresCondicionPago");
         List<EntityModel<InterlocutoresCondicionPagoDTO>> entities = null;
@@ -118,14 +118,14 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresCondicionPago/pages")
+    @GetMapping("/interlocutores-condicion-pago/pages")
     public ResponseEntity<CollectionModel<EntityModel<InterlocutoresCondicionPagoDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type InterlocutoresCondicionPago");
         Page<InterlocutoresCondicionPagoDTO> page = null;
         List<EntityModel<InterlocutoresCondicionPagoDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/InterlocutoresCondicionPago/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/interlocutores-condicion-pago/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/InterlocutoresCondicionPago")
+    @PostMapping("/interlocutores-condicion-pago")
     public ResponseEntity<?> saveEntity(@RequestBody InterlocutoresCondicionPagoDTO entityDTO) {
         log.debug("POST request to save a new entity type InterlocutoresCondicionPago");
         EntityModel<InterlocutoresCondicionPagoDTO> resource = null;
@@ -180,7 +180,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/InterlocutoresCondicionPago/{id}")
+    @PutMapping("/interlocutores-condicion-pago/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody InterlocutoresCondicionPagoDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresCondicionPago/{id}")
+    @GetMapping("/interlocutores-condicion-pago/{id}")
     public ResponseEntity<EntityModel<InterlocutoresCondicionPagoDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type InterlocutoresCondicionPago with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/InterlocutoresCondicionPago/{id}")
+    @DeleteMapping("/interlocutores-condicion-pago/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity InterlocutoresCondicionPago with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresCondicionPago/search/{query}")
+    @GetMapping("/interlocutores-condicion-pago/search/{query}")
     public CollectionModel<EntityModel<InterlocutoresCondicionPagoDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type InterlocutoresCondicionPago with the search : {} ", query);
         List<EntityModel<InterlocutoresCondicionPagoDTO>> entities = null;
@@ -279,14 +279,14 @@ public class InterlocutoresCondicionPagoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/InterlocutoresCondicionPago/search/{query}/pages")
+    @GetMapping("/interlocutores-condicion-pago/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<InterlocutoresCondicionPagoDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type InterlocutoresCondicionPago with the search : {}", query);
         Page<InterlocutoresCondicionPagoDTO> page = null;
         List<EntityModel<InterlocutoresCondicionPagoDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/InterlocutoresCondicionPago/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/interlocutores-condicion-pago/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

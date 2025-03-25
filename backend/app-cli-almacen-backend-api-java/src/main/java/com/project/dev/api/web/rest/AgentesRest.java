@@ -88,7 +88,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Agentes")
+    @GetMapping("/agentes")
     public CollectionModel<EntityModel<AgentesDTO>> getAllEntities() {
         log.debug("REST request to get all entities type Agentes");
         List<EntityModel<AgentesDTO>> entities = null;
@@ -118,14 +118,14 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Agentes/pages")
+    @GetMapping("/agentes/pages")
     public ResponseEntity<CollectionModel<EntityModel<AgentesDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Agentes");
         Page<AgentesDTO> page = null;
         List<EntityModel<AgentesDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Agentes/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/agentes/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/Agentes")
+    @PostMapping("/agentes")
     public ResponseEntity<?> saveEntity(@RequestBody AgentesDTO entityDTO) {
         log.debug("POST request to save a new entity type Agentes");
         EntityModel<AgentesDTO> resource = null;
@@ -180,7 +180,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/Agentes/{id}")
+    @PutMapping("/agentes/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody AgentesDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Agentes/{id}")
+    @GetMapping("/agentes/{id}")
     public ResponseEntity<EntityModel<AgentesDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type Agentes with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/Agentes/{id}")
+    @DeleteMapping("/agentes/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity Agentes with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Agentes/search/{query}")
+    @GetMapping("/agentes/search/{query}")
     public CollectionModel<EntityModel<AgentesDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type Agentes with the search : {} ", query);
         List<EntityModel<AgentesDTO>> entities = null;
@@ -279,14 +279,14 @@ public class AgentesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Agentes/search/{query}/pages")
+    @GetMapping("/agentes/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<AgentesDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Agentes with the search : {}", query);
         Page<AgentesDTO> page = null;
         List<EntityModel<AgentesDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Agentes/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/agentes/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

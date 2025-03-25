@@ -88,7 +88,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmCodigoEquivalente")
+    @GetMapping("/mm-codigo-equivalente")
     public CollectionModel<EntityModel<MmCodigoEquivalenteDTO>> getAllEntities() {
         log.debug("REST request to get all entities type MmCodigoEquivalente");
         List<EntityModel<MmCodigoEquivalenteDTO>> entities = null;
@@ -118,14 +118,14 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmCodigoEquivalente/pages")
+    @GetMapping("/mm-codigo-equivalente/pages")
     public ResponseEntity<CollectionModel<EntityModel<MmCodigoEquivalenteDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type MmCodigoEquivalente");
         Page<MmCodigoEquivalenteDTO> page = null;
         List<EntityModel<MmCodigoEquivalenteDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmCodigoEquivalente/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/mm-codigo-equivalente/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/MmCodigoEquivalente")
+    @PostMapping("/mm-codigo-equivalente")
     public ResponseEntity<?> saveEntity(@RequestBody MmCodigoEquivalenteDTO entityDTO) {
         log.debug("POST request to save a new entity type MmCodigoEquivalente");
         EntityModel<MmCodigoEquivalenteDTO> resource = null;
@@ -180,7 +180,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/MmCodigoEquivalente/{id}")
+    @PutMapping("/mm-codigo-equivalente/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody MmCodigoEquivalenteDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmCodigoEquivalente/{id}")
+    @GetMapping("/mm-codigo-equivalente/{id}")
     public ResponseEntity<EntityModel<MmCodigoEquivalenteDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type MmCodigoEquivalente with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/MmCodigoEquivalente/{id}")
+    @DeleteMapping("/mm-codigo-equivalente/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity MmCodigoEquivalente with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmCodigoEquivalente/search/{query}")
+    @GetMapping("/mm-codigo-equivalente/search/{query}")
     public CollectionModel<EntityModel<MmCodigoEquivalenteDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type MmCodigoEquivalente with the search : {} ", query);
         List<EntityModel<MmCodigoEquivalenteDTO>> entities = null;
@@ -279,14 +279,14 @@ public class MmCodigoEquivalenteRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MmCodigoEquivalente/search/{query}/pages")
+    @GetMapping("/mm-codigo-equivalente/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<MmCodigoEquivalenteDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type MmCodigoEquivalente with the search : {}", query);
         Page<MmCodigoEquivalenteDTO> page = null;
         List<EntityModel<MmCodigoEquivalenteDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MmCodigoEquivalente/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/mm-codigo-equivalente/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

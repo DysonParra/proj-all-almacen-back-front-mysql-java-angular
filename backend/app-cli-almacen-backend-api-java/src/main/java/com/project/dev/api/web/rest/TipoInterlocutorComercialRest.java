@@ -88,7 +88,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoInterlocutorComercial")
+    @GetMapping("/tipo-interlocutor-comercial")
     public CollectionModel<EntityModel<TipoInterlocutorComercialDTO>> getAllEntities() {
         log.debug("REST request to get all entities type TipoInterlocutorComercial");
         List<EntityModel<TipoInterlocutorComercialDTO>> entities = null;
@@ -118,14 +118,14 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoInterlocutorComercial/pages")
+    @GetMapping("/tipo-interlocutor-comercial/pages")
     public ResponseEntity<CollectionModel<EntityModel<TipoInterlocutorComercialDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type TipoInterlocutorComercial");
         Page<TipoInterlocutorComercialDTO> page = null;
         List<EntityModel<TipoInterlocutorComercialDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoInterlocutorComercial/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipo-interlocutor-comercial/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/TipoInterlocutorComercial")
+    @PostMapping("/tipo-interlocutor-comercial")
     public ResponseEntity<?> saveEntity(@RequestBody TipoInterlocutorComercialDTO entityDTO) {
         log.debug("POST request to save a new entity type TipoInterlocutorComercial");
         EntityModel<TipoInterlocutorComercialDTO> resource = null;
@@ -180,7 +180,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/TipoInterlocutorComercial/{id}")
+    @PutMapping("/tipo-interlocutor-comercial/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody TipoInterlocutorComercialDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoInterlocutorComercial/{id}")
+    @GetMapping("/tipo-interlocutor-comercial/{id}")
     public ResponseEntity<EntityModel<TipoInterlocutorComercialDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type TipoInterlocutorComercial with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/TipoInterlocutorComercial/{id}")
+    @DeleteMapping("/tipo-interlocutor-comercial/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity TipoInterlocutorComercial with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoInterlocutorComercial/search/{query}")
+    @GetMapping("/tipo-interlocutor-comercial/search/{query}")
     public CollectionModel<EntityModel<TipoInterlocutorComercialDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type TipoInterlocutorComercial with the search : {} ", query);
         List<EntityModel<TipoInterlocutorComercialDTO>> entities = null;
@@ -279,14 +279,14 @@ public class TipoInterlocutorComercialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoInterlocutorComercial/search/{query}/pages")
+    @GetMapping("/tipo-interlocutor-comercial/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<TipoInterlocutorComercialDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TipoInterlocutorComercial with the search : {}", query);
         Page<TipoInterlocutorComercialDTO> page = null;
         List<EntityModel<TipoInterlocutorComercialDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoInterlocutorComercial/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipo-interlocutor-comercial/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

@@ -88,7 +88,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos")
+    @GetMapping("/tipos-documentos-conceptos")
     public CollectionModel<EntityModel<TiposDocumentosConceptosDTO>> getAllEntities() {
         log.debug("REST request to get all entities type TiposDocumentosConceptos");
         List<EntityModel<TiposDocumentosConceptosDTO>> entities = null;
@@ -118,14 +118,14 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos/pages")
+    @GetMapping("/tipos-documentos-conceptos/pages")
     public ResponseEntity<CollectionModel<EntityModel<TiposDocumentosConceptosDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type TiposDocumentosConceptos");
         Page<TiposDocumentosConceptosDTO> page = null;
         List<EntityModel<TiposDocumentosConceptosDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposDocumentosConceptos/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipos-documentos-conceptos/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/TiposDocumentosConceptos")
+    @PostMapping("/tipos-documentos-conceptos")
     public ResponseEntity<?> saveEntity(@RequestBody TiposDocumentosConceptosDTO entityDTO) {
         log.debug("POST request to save a new entity type TiposDocumentosConceptos");
         EntityModel<TiposDocumentosConceptosDTO> resource = null;
@@ -180,7 +180,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/TiposDocumentosConceptos/{id}")
+    @PutMapping("/tipos-documentos-conceptos/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody TiposDocumentosConceptosDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos/{id}")
+    @GetMapping("/tipos-documentos-conceptos/{id}")
     public ResponseEntity<EntityModel<TiposDocumentosConceptosDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type TiposDocumentosConceptos with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/TiposDocumentosConceptos/{id}")
+    @DeleteMapping("/tipos-documentos-conceptos/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity TiposDocumentosConceptos with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos/search/{query}")
+    @GetMapping("/tipos-documentos-conceptos/search/{query}")
     public CollectionModel<EntityModel<TiposDocumentosConceptosDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type TiposDocumentosConceptos with the search : {} ", query);
         List<EntityModel<TiposDocumentosConceptosDTO>> entities = null;
@@ -279,14 +279,14 @@ public class TiposDocumentosConceptosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TiposDocumentosConceptos/search/{query}/pages")
+    @GetMapping("/tipos-documentos-conceptos/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<TiposDocumentosConceptosDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TiposDocumentosConceptos with the search : {}", query);
         Page<TiposDocumentosConceptosDTO> page = null;
         List<EntityModel<TiposDocumentosConceptosDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TiposDocumentosConceptos/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipos-documentos-conceptos/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

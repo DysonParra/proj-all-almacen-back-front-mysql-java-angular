@@ -88,7 +88,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MaterialesDescripciones")
+    @GetMapping("/materiales-descripciones")
     public CollectionModel<EntityModel<MaterialesDescripcionesDTO>> getAllEntities() {
         log.debug("REST request to get all entities type MaterialesDescripciones");
         List<EntityModel<MaterialesDescripcionesDTO>> entities = null;
@@ -118,14 +118,14 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MaterialesDescripciones/pages")
+    @GetMapping("/materiales-descripciones/pages")
     public ResponseEntity<CollectionModel<EntityModel<MaterialesDescripcionesDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type MaterialesDescripciones");
         Page<MaterialesDescripcionesDTO> page = null;
         List<EntityModel<MaterialesDescripcionesDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MaterialesDescripciones/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/materiales-descripciones/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/MaterialesDescripciones")
+    @PostMapping("/materiales-descripciones")
     public ResponseEntity<?> saveEntity(@RequestBody MaterialesDescripcionesDTO entityDTO) {
         log.debug("POST request to save a new entity type MaterialesDescripciones");
         EntityModel<MaterialesDescripcionesDTO> resource = null;
@@ -180,7 +180,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/MaterialesDescripciones/{id}")
+    @PutMapping("/materiales-descripciones/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody MaterialesDescripcionesDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MaterialesDescripciones/{id}")
+    @GetMapping("/materiales-descripciones/{id}")
     public ResponseEntity<EntityModel<MaterialesDescripcionesDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type MaterialesDescripciones with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/MaterialesDescripciones/{id}")
+    @DeleteMapping("/materiales-descripciones/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity MaterialesDescripciones with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MaterialesDescripciones/search/{query}")
+    @GetMapping("/materiales-descripciones/search/{query}")
     public CollectionModel<EntityModel<MaterialesDescripcionesDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type MaterialesDescripciones with the search : {} ", query);
         List<EntityModel<MaterialesDescripcionesDTO>> entities = null;
@@ -279,14 +279,14 @@ public class MaterialesDescripcionesRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/MaterialesDescripciones/search/{query}/pages")
+    @GetMapping("/materiales-descripciones/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<MaterialesDescripcionesDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type MaterialesDescripciones with the search : {}", query);
         Page<MaterialesDescripcionesDTO> page = null;
         List<EntityModel<MaterialesDescripcionesDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/MaterialesDescripciones/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/materiales-descripciones/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

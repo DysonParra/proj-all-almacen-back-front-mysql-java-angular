@@ -88,7 +88,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosMovimientos")
+    @GetMapping("/estados-movimientos")
     public CollectionModel<EntityModel<EstadosMovimientosDTO>> getAllEntities() {
         log.debug("REST request to get all entities type EstadosMovimientos");
         List<EntityModel<EstadosMovimientosDTO>> entities = null;
@@ -118,14 +118,14 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosMovimientos/pages")
+    @GetMapping("/estados-movimientos/pages")
     public ResponseEntity<CollectionModel<EntityModel<EstadosMovimientosDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type EstadosMovimientos");
         Page<EstadosMovimientosDTO> page = null;
         List<EntityModel<EstadosMovimientosDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/EstadosMovimientos/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/estados-movimientos/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/EstadosMovimientos")
+    @PostMapping("/estados-movimientos")
     public ResponseEntity<?> saveEntity(@RequestBody EstadosMovimientosDTO entityDTO) {
         log.debug("POST request to save a new entity type EstadosMovimientos");
         EntityModel<EstadosMovimientosDTO> resource = null;
@@ -180,7 +180,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/EstadosMovimientos/{id}")
+    @PutMapping("/estados-movimientos/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody EstadosMovimientosDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosMovimientos/{id}")
+    @GetMapping("/estados-movimientos/{id}")
     public ResponseEntity<EntityModel<EstadosMovimientosDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type EstadosMovimientos with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/EstadosMovimientos/{id}")
+    @DeleteMapping("/estados-movimientos/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity EstadosMovimientos with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosMovimientos/search/{query}")
+    @GetMapping("/estados-movimientos/search/{query}")
     public CollectionModel<EntityModel<EstadosMovimientosDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type EstadosMovimientos with the search : {} ", query);
         List<EntityModel<EstadosMovimientosDTO>> entities = null;
@@ -279,14 +279,14 @@ public class EstadosMovimientosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/EstadosMovimientos/search/{query}/pages")
+    @GetMapping("/estados-movimientos/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<EstadosMovimientosDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type EstadosMovimientos with the search : {}", query);
         Page<EstadosMovimientosDTO> page = null;
         List<EntityModel<EstadosMovimientosDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/EstadosMovimientos/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/estados-movimientos/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

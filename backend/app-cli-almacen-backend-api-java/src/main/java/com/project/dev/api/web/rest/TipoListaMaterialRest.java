@@ -88,7 +88,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial")
+    @GetMapping("/tipo-lista-material")
     public CollectionModel<EntityModel<TipoListaMaterialDTO>> getAllEntities() {
         log.debug("REST request to get all entities type TipoListaMaterial");
         List<EntityModel<TipoListaMaterialDTO>> entities = null;
@@ -118,14 +118,14 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial/pages")
+    @GetMapping("/tipo-lista-material/pages")
     public ResponseEntity<CollectionModel<EntityModel<TipoListaMaterialDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type TipoListaMaterial");
         Page<TipoListaMaterialDTO> page = null;
         List<EntityModel<TipoListaMaterialDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoListaMaterial/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipo-lista-material/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/TipoListaMaterial")
+    @PostMapping("/tipo-lista-material")
     public ResponseEntity<?> saveEntity(@RequestBody TipoListaMaterialDTO entityDTO) {
         log.debug("POST request to save a new entity type TipoListaMaterial");
         EntityModel<TipoListaMaterialDTO> resource = null;
@@ -180,7 +180,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/TipoListaMaterial/{id}")
+    @PutMapping("/tipo-lista-material/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody TipoListaMaterialDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial/{id}")
+    @GetMapping("/tipo-lista-material/{id}")
     public ResponseEntity<EntityModel<TipoListaMaterialDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type TipoListaMaterial with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/TipoListaMaterial/{id}")
+    @DeleteMapping("/tipo-lista-material/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity TipoListaMaterial with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial/search/{query}")
+    @GetMapping("/tipo-lista-material/search/{query}")
     public CollectionModel<EntityModel<TipoListaMaterialDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type TipoListaMaterial with the search : {} ", query);
         List<EntityModel<TipoListaMaterialDTO>> entities = null;
@@ -279,14 +279,14 @@ public class TipoListaMaterialRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoListaMaterial/search/{query}/pages")
+    @GetMapping("/tipo-lista-material/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<TipoListaMaterialDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TipoListaMaterial with the search : {}", query);
         Page<TipoListaMaterialDTO> page = null;
         List<EntityModel<TipoListaMaterialDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoListaMaterial/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tipo-lista-material/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());

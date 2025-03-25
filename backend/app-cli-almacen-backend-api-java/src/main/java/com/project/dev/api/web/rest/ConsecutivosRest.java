@@ -88,7 +88,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Consecutivos")
+    @GetMapping("/consecutivos")
     public CollectionModel<EntityModel<ConsecutivosDTO>> getAllEntities() {
         log.debug("REST request to get all entities type Consecutivos");
         List<EntityModel<ConsecutivosDTO>> entities = null;
@@ -118,14 +118,14 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Consecutivos/pages")
+    @GetMapping("/consecutivos/pages")
     public ResponseEntity<CollectionModel<EntityModel<ConsecutivosDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type Consecutivos");
         Page<ConsecutivosDTO> page = null;
         List<EntityModel<ConsecutivosDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Consecutivos/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/consecutivos/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/Consecutivos")
+    @PostMapping("/consecutivos")
     public ResponseEntity<?> saveEntity(@RequestBody ConsecutivosDTO entityDTO) {
         log.debug("POST request to save a new entity type Consecutivos");
         EntityModel<ConsecutivosDTO> resource = null;
@@ -180,7 +180,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/Consecutivos/{id}")
+    @PutMapping("/consecutivos/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody ConsecutivosDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Consecutivos/{id}")
+    @GetMapping("/consecutivos/{id}")
     public ResponseEntity<EntityModel<ConsecutivosDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type Consecutivos with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/Consecutivos/{id}")
+    @DeleteMapping("/consecutivos/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity Consecutivos with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Consecutivos/search/{query}")
+    @GetMapping("/consecutivos/search/{query}")
     public CollectionModel<EntityModel<ConsecutivosDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type Consecutivos with the search : {} ", query);
         List<EntityModel<ConsecutivosDTO>> entities = null;
@@ -279,14 +279,14 @@ public class ConsecutivosRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/Consecutivos/search/{query}/pages")
+    @GetMapping("/consecutivos/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<ConsecutivosDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type Consecutivos with the search : {}", query);
         Page<ConsecutivosDTO> page = null;
         List<EntityModel<ConsecutivosDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/Consecutivos/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/consecutivos/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
