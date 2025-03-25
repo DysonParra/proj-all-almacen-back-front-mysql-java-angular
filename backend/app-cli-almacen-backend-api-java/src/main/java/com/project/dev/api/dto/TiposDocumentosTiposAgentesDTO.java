@@ -38,7 +38,7 @@ public class TiposDocumentosTiposAgentesDTO {
     private Boolean bitActivo;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdTipoAgente;
     private Long intIdTipoDocumento;
+    private Long intIdTipoAgente;
 
 }

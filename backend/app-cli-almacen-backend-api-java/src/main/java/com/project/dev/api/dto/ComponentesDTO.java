@@ -35,6 +35,9 @@ import lombok.NoArgsConstructor;
 public class ComponentesDTO {
 
     private Long intIdComponente;
+    private String strNumeroOrden;
+    private String strCodigoMaterial;
+    private Long intIdUnidadMedida;
     private Long intIdAlmacen;
     private BigDecimal decCantidadBase;
     private BigDecimal decCantidadRequerida;
@@ -47,8 +50,5 @@ public class ComponentesDTO {
     private Long intIdEstadoComponente;
     private String strUsuario;
     private Date dtFecha;
-    private String strCodigoMaterial;
-    private String strNumeroOrden;
-    private Long intIdUnidadMedida;
 
 }

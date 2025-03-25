@@ -46,7 +46,7 @@ public class TiposDocumentosConceptos implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdConcepto;
     private Long intIdTipoDocumento;
+    private Long intIdConcepto;
 
 }

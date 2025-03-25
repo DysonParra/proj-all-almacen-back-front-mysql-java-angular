@@ -43,8 +43,8 @@ public class OrdenDeTrabajo implements Serializable {
     @Column(nullable = false)
     private Long intIdOrdenTrabajo;
     private Long intIdOperacion;
-    private Long intIdEstadoOT;
     private Long intIdCentroTrabajo;
+    private Long intIdEstadoOT;
     private String strNumeroOrden;
 
 }

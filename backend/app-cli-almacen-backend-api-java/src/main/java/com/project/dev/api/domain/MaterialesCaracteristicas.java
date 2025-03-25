@@ -42,13 +42,13 @@ public class MaterialesCaracteristicas implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMaterialCaracteristica;
+    private String strCodigoMaterial;
     private String strValorCaracteristica;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private String strCodigoMaterial;
-    private Long intIdMaterial;
     private Long intIdTipoMaterialCaracteristica;
     private Long intIdTipoMaterial;
+    private Long intIdMaterial;
 
 }

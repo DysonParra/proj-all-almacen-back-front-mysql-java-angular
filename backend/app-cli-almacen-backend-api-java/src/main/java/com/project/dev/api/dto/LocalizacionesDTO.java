@@ -35,6 +35,7 @@ import lombok.NoArgsConstructor;
 public class LocalizacionesDTO {
 
     private Long intIdLocalizacion;
+    private Long intIdBodega;
     private String strNombreLocalizacion;
     private String strDireccion;
     private String strCodigoPostal;
@@ -49,6 +50,5 @@ public class LocalizacionesDTO {
     private String strUsuario;
     private Date dtFecha;
     private Long intIdInterlocutor;
-    private Long intIdBodega;
 
 }

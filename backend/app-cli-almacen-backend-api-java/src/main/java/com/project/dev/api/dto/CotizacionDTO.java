@@ -36,6 +36,7 @@ public class CotizacionDTO {
 
     private Integer intIdCotizacion;
     private Integer intCabecera;
+    private Long intIdPlanCompra;
     private Integer intIdProveedor;
     private String strEstado;
     private Long intCodigoMaterial;
@@ -49,6 +50,5 @@ public class CotizacionDTO {
     private Date dtFechaNecesaria;
     private Date dtFechaEntrega;
     private Date dtFechaCreacion;
-    private Long intIdPlanCompra;
 
 }

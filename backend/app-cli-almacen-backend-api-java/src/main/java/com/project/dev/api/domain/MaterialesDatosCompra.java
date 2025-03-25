@@ -43,6 +43,7 @@ public class MaterialesDatosCompra implements Serializable {
     @Column(nullable = false)
     private Long intIdMaterialDatoCompra;
     private String strCodigoMaterialCompra;
+    private String strCodigoMaterial;
     private Boolean bitAutomaticPurchase;
     private Boolean bitGestionLotes;
     private BigDecimal decToleranciaEntregaInferior;
@@ -52,10 +53,9 @@ public class MaterialesDatosCompra implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdMaterial;
-    private Long intIdInterlocutor;
-    private String strCodigoMaterial;
     private Long intIdUnidadMedidaBase;
     private Long intIdUnidadMedidaCompra;
+    private Long intIdMaterial;
+    private Long intIdInterlocutor;
 
 }

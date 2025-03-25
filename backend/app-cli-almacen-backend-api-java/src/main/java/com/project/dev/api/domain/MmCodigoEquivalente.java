@@ -42,12 +42,12 @@ public class MmCodigoEquivalente implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMmCodigoEquivalente;
+    private String strCodigoMaterial;
     private String strTipoCodigoEquivalente;
     private String strValorCodigoEquivalente;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdMaterial;
-    private String strCodigoMaterial;
 
 }

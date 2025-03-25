@@ -35,12 +35,12 @@ import lombok.NoArgsConstructor;
 public class MaterialesCostosPromediosDTO {
 
     private Long intIdMaterialCostoPromedio;
+    private String strCodigoMaterial;
     private BigDecimal decCostoPromedio;
     private Date dtFechaInicial;
     private Date dtFechaFinal;
     private String strUsuario;
     private Date dtFecha;
     private Long intIdMaterial;
-    private String strCodigoMaterial;
 
 }

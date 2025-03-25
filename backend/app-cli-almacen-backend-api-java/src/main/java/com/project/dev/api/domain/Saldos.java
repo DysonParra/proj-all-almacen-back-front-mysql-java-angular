@@ -42,14 +42,14 @@ public class Saldos implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdSaldo;
+    private Long intIdEstadoSaldo;
+    private Long intIdUbicacion;
+    private String strCodigoProducto;
     private BigDecimal decCantidad;
     private String strUsuario;
     @Basic(optional = false)
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdEstadoSaldo;
-    private String strCodigoProducto;
-    private Long intIdUbicacion;
 
 }

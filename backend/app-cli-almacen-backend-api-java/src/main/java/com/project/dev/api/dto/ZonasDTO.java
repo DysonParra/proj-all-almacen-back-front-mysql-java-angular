@@ -35,6 +35,7 @@ import lombok.NoArgsConstructor;
 public class ZonasDTO {
 
     private String strCodigoZona;
+    private Long intIdBodega;
     private String strDescripcionZona;
     private Boolean bitTransitoDirecto;
     private Boolean bitPicking;
@@ -44,6 +45,5 @@ public class ZonasDTO {
     private Boolean bitActivo;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdBodega;
 
 }

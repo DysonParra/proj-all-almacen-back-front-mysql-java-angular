@@ -59,9 +59,9 @@ public class RemisionesVenta implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdInterlocutor;
-    private Long intIdRemision;
     private Long intIdTipoDocumento;
+    private Long intIdRemision;
+    private Long intIdInterlocutor;
     private Long intListaPrecio;
 
 }

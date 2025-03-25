@@ -35,13 +35,13 @@ import lombok.NoArgsConstructor;
 public class MovimientosDetallesDTO {
 
     private Long intIdMovimientoDetalle;
+    private String strNumeroDocumento;
+    private String strCodigoProducto;
     private BigDecimal decValorUnitario;
     private BigDecimal decSobreCosto;
     private BigDecimal decCantidad;
     private String strUsuario;
     private Date dtFecha;
     private Long intIdEstadoSaldo;
-    private String strCodigoProducto;
-    private String strNumeroDocumento;
 
 }

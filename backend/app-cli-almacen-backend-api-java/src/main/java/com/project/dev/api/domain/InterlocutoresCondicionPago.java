@@ -53,8 +53,8 @@ public class InterlocutoresCondicionPago implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdCondicionPago;
-    private Long intIdInterlocutor;
     private Long intIdListaPrecio;
+    private Long intIdInterlocutor;
+    private Long intIdCondicionPago;
 
 }

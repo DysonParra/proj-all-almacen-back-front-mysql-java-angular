@@ -36,8 +36,8 @@ public class OrdenDeTrabajoDTO {
 
     private Long intIdOrdenTrabajo;
     private Long intIdOperacion;
-    private Long intIdEstadoOT;
     private Long intIdCentroTrabajo;
+    private Long intIdEstadoOT;
     private String strNumeroOrden;
 
 }

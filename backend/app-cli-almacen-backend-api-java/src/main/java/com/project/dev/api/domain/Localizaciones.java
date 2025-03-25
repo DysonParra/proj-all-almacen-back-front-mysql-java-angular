@@ -42,6 +42,7 @@ public class Localizaciones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdLocalizacion;
+    private Long intIdBodega;
     private String strNombreLocalizacion;
     private String strDireccion;
     private String strCodigoPostal;
@@ -57,6 +58,5 @@ public class Localizaciones implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdInterlocutor;
-    private Long intIdBodega;
 
 }

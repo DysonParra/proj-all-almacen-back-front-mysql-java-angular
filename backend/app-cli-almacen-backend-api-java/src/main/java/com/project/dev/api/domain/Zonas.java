@@ -42,6 +42,7 @@ public class Zonas implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private String strCodigoZona;
+    private Long intIdBodega;
     private String strDescripcionZona;
     private Boolean bitTransitoDirecto;
     private Boolean bitPicking;
@@ -54,6 +55,5 @@ public class Zonas implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdBodega;
 
 }

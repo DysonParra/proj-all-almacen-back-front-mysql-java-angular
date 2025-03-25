@@ -42,12 +42,12 @@ public class MaterialesDescripciones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMaterialDescripcion;
+    private String strCodigoMaterial;
     private String strCultura;
     private String strDescripcionMaterial;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdMaterial;
-    private String strCodigoMaterial;
 
 }

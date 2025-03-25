@@ -55,7 +55,7 @@ public class RemisionesComprasMateriales implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdMaterial;
     private Long intIdRemisionCompra;
+    private Long intIdMaterial;
 
 }

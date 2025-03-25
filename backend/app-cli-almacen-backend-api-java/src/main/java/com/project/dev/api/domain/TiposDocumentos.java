@@ -47,7 +47,7 @@ public class TiposDocumentos implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdEstadoRemision;
     private Long intIdTipoMovimiento;
+    private Long intIdEstadoRemision;
 
 }

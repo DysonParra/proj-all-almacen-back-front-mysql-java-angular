@@ -36,11 +36,11 @@ public class UbicacionesDTO {
 
     private Long intIdUbicacion;
     private String strCodigoUbicacion;
+    private String strCodigoZona;
     private String strDescripcionUbicacion;
     private Boolean bitDedicado;
     private Boolean bitActivo;
     private String strUsuario;
     private Date dtFecha;
-    private String strCodigoZona;
 
 }

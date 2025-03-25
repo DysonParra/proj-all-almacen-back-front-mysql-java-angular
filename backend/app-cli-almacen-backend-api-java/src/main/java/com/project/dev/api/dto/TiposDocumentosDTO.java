@@ -39,7 +39,7 @@ public class TiposDocumentosDTO {
     private Boolean bitActivo;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdEstadoRemision;
     private Long intIdTipoMovimiento;
+    private Long intIdEstadoRemision;
 
 }

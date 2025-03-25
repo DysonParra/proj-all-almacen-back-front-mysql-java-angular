@@ -42,20 +42,20 @@ public class ListaDeMateriales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdListaMaterial;
+    private Long intIdUnidadMedida;
+    private Long intIdTipoListaMaterial;
+    private Long intIdBodega;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaInicio;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaFin;
     private Integer intCantidad;
+    private String strCodigoMaterial;
+    private String strCodigoComponente;
+    private Long intIdListaPrecio;
     private BigDecimal decPrecioUnitario;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdBodega;
-    private Long intIdTipoListaMaterial;
-    private Long intIdListaPrecio;
-    private String strCodigoMaterial;
-    private String strCodigoComponente;
-    private Long intIdUnidadMedida;
 
 }

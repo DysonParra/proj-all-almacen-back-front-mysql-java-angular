@@ -42,6 +42,7 @@ public class MaterialesCostosPromedios implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMaterialCostoPromedio;
+    private String strCodigoMaterial;
     private BigDecimal decCostoPromedio;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaInicial;
@@ -51,6 +52,5 @@ public class MaterialesCostosPromedios implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdMaterial;
-    private String strCodigoMaterial;
 
 }

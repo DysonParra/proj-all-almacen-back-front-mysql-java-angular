@@ -45,7 +45,7 @@ public class RemisionesComprasMaterialesDTO {
     private BigDecimal decCostoPromedio;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdMaterial;
     private Long intIdRemisionCompra;
+    private Long intIdMaterial;
 
 }

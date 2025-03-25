@@ -35,12 +35,12 @@ import lombok.NoArgsConstructor;
 public class AgentesDTO {
 
     private Long intIdAgente;
+    private Long intIdTipoAgente;
     private Integer intIdEntidad;
     private Integer intIdAlmacen;
     private String strObservaciones;
     private String strUsuario;
     private Date dtFecha;
     private Long intIdSociedad;
-    private Long intIdTipoAgente;
 
 }

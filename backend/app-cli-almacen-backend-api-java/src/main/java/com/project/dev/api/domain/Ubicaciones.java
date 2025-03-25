@@ -45,6 +45,7 @@ public class Ubicaciones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private String strCodigoUbicacion;
+    private String strCodigoZona;
     private String strDescripcionUbicacion;
     private Boolean bitDedicado;
     private Boolean bitActivo;
@@ -53,6 +54,5 @@ public class Ubicaciones implements Serializable {
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private String strCodigoZona;
 
 }

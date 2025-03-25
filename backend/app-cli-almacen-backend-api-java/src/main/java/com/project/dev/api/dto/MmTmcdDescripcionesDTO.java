@@ -35,10 +35,10 @@ import lombok.NoArgsConstructor;
 public class MmTmcdDescripcionesDTO {
 
     private Long intIdMmTmcdDescripciones;
+    private Long intIdTipoMaterialCaracteristica;
     private String strCultura;
     private String strDescripcionMaterial;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdTipoMaterialCaracteristica;
 
 }

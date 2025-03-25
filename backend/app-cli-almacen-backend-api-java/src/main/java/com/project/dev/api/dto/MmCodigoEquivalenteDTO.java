@@ -35,11 +35,11 @@ import lombok.NoArgsConstructor;
 public class MmCodigoEquivalenteDTO {
 
     private Long intIdMmCodigoEquivalente;
+    private String strCodigoMaterial;
     private String strTipoCodigoEquivalente;
     private String strValorCodigoEquivalente;
     private String strUsuario;
     private Date dtFecha;
     private Long intIdMaterial;
-    private String strCodigoMaterial;
 
 }

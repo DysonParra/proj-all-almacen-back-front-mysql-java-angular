@@ -36,6 +36,7 @@ public class MaterialesDatosCompraDTO {
 
     private Long intIdMaterialDatoCompra;
     private String strCodigoMaterialCompra;
+    private String strCodigoMaterial;
     private Boolean bitAutomaticPurchase;
     private Boolean bitGestionLotes;
     private BigDecimal decToleranciaEntregaInferior;
@@ -44,10 +45,9 @@ public class MaterialesDatosCompraDTO {
     private Boolean bitRequiereInspeccion;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdMaterial;
-    private Long intIdInterlocutor;
-    private String strCodigoMaterial;
     private Long intIdUnidadMedidaBase;
     private Long intIdUnidadMedidaCompra;
+    private Long intIdMaterial;
+    private Long intIdInterlocutor;
 
 }

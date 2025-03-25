@@ -51,8 +51,8 @@ public class Remisiones implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdAgenteDestino;
     private Long intIdAgenteOrigen;
+    private Long intIdAgenteDestino;
     private Long intIdEstadoRemision;
 
 }

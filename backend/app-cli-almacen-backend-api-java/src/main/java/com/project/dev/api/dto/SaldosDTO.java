@@ -35,11 +35,11 @@ import lombok.NoArgsConstructor;
 public class SaldosDTO {
 
     private Long intIdSaldo;
+    private Long intIdEstadoSaldo;
+    private Long intIdUbicacion;
+    private String strCodigoProducto;
     private BigDecimal decCantidad;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdEstadoSaldo;
-    private String strCodigoProducto;
-    private Long intIdUbicacion;
 
 }

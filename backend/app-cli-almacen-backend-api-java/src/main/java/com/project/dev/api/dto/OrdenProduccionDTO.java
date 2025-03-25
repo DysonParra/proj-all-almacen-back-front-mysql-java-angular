@@ -36,8 +36,11 @@ public class OrdenProduccionDTO {
 
     private String strNumeroOrden;
     private String strReferencia;
+    private String strCodigoMaterial;
     private Long intIdEstadoProduccion;
     private Long intIdRutaOrdenTrabajo;
+    private Long intIdListaMateriales;
+    private Long intIdUnidadMedida;
     private Long intIdCentroTrabajo;
     private Date dtFechaEstimada;
     private Date dtFechaInicioEstimada;
@@ -46,8 +49,5 @@ public class OrdenProduccionDTO {
     private String strOrigenOrden;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdListaMateriales;
-    private String strCodigoMaterial;
-    private Long intIdUnidadMedida;
 
 }

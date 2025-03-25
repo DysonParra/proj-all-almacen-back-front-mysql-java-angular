@@ -42,11 +42,11 @@ public class MmTmcdDescripciones implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdMmTmcdDescripciones;
+    private Long intIdTipoMaterialCaracteristica;
     private String strCultura;
     private String strDescripcionMaterial;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdTipoMaterialCaracteristica;
 
 }

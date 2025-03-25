@@ -35,6 +35,7 @@ import lombok.NoArgsConstructor;
 public class RemisionesVentaMaterialesDTO {
 
     private Long intIdRemisionVentaMaterial;
+    private String strNumeroDocumento;
     private String strCodigoMaterial;
     private Date dtFechaNecesaria;
     private Date dtFechaSolicitud;
@@ -43,11 +44,10 @@ public class RemisionesVentaMaterialesDTO {
     private Float fltPorcentajeDescuento;
     private BigDecimal decCostoPromedio;
     private Long intIdRemisionCompra;
+    private Long intIdMaterial;
+    private Long intIdUnidadMedida;
     private BigDecimal decCantidadUnidadMedida;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdMaterial;
-    private String strNumeroDocumento;
-    private Long intIdUnidadMedida;
 
 }

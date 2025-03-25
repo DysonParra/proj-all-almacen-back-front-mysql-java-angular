@@ -42,6 +42,9 @@ public class Componentes implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdComponente;
+    private String strNumeroOrden;
+    private String strCodigoMaterial;
+    private Long intIdUnidadMedida;
     private Long intIdAlmacen;
     private BigDecimal decCantidadBase;
     private BigDecimal decCantidadRequerida;
@@ -59,8 +62,5 @@ public class Componentes implements Serializable {
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private String strCodigoMaterial;
-    private String strNumeroOrden;
-    private Long intIdUnidadMedida;
 
 }

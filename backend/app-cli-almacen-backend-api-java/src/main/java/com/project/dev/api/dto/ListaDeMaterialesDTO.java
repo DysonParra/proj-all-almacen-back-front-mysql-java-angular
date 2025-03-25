@@ -35,17 +35,17 @@ import lombok.NoArgsConstructor;
 public class ListaDeMaterialesDTO {
 
     private Long intIdListaMaterial;
+    private Long intIdUnidadMedida;
+    private Long intIdTipoListaMaterial;
+    private Long intIdBodega;
     private Date dtFechaInicio;
     private Date dtFechaFin;
     private Integer intCantidad;
+    private String strCodigoMaterial;
+    private String strCodigoComponente;
+    private Long intIdListaPrecio;
     private BigDecimal decPrecioUnitario;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdBodega;
-    private Long intIdTipoListaMaterial;
-    private Long intIdListaPrecio;
-    private String strCodigoMaterial;
-    private String strCodigoComponente;
-    private Long intIdUnidadMedida;
 
 }

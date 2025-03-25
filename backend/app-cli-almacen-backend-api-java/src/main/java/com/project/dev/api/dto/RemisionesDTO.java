@@ -41,8 +41,8 @@ public class RemisionesDTO {
     private Integer intConcecutivoInterno;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdAgenteDestino;
     private Long intIdAgenteOrigen;
+    private Long intIdAgenteDestino;
     private Long intIdEstadoRemision;
 
 }

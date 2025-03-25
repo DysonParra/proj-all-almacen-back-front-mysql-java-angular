@@ -47,9 +47,9 @@ public class RemisionesVentaDTO {
     private String strComentarios;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdInterlocutor;
-    private Long intIdRemision;
     private Long intIdTipoDocumento;
+    private Long intIdRemision;
+    private Long intIdInterlocutor;
     private Long intListaPrecio;
 
 }

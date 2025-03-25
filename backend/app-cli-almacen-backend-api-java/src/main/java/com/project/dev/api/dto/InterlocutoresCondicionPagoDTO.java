@@ -45,8 +45,8 @@ public class InterlocutoresCondicionPagoDTO {
     private Boolean bitEntregaParcial;
     private String strUsuario;
     private Date dtFecha;
-    private Long intIdCondicionPago;
-    private Long intIdInterlocutor;
     private Long intIdListaPrecio;
+    private Long intIdInterlocutor;
+    private Long intIdCondicionPago;
 
 }

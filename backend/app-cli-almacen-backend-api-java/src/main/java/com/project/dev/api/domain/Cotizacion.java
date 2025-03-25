@@ -43,6 +43,7 @@ public class Cotizacion implements Serializable {
     @Column(nullable = false)
     private Integer intIdCotizacion;
     private Integer intCabecera;
+    private Long intIdPlanCompra;
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer intIdProveedor;
@@ -67,6 +68,5 @@ public class Cotizacion implements Serializable {
     private Date dtFechaEntrega;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaCreacion;
-    private Long intIdPlanCompra;
 
 }

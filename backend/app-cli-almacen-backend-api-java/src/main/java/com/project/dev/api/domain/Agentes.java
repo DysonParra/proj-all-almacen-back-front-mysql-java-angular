@@ -42,6 +42,7 @@ public class Agentes implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdAgente;
+    private Long intIdTipoAgente;
     private Integer intIdEntidad;
     private Integer intIdAlmacen;
     private String strObservaciones;
@@ -51,6 +52,5 @@ public class Agentes implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
     private Long intIdSociedad;
-    private Long intIdTipoAgente;
 
 }

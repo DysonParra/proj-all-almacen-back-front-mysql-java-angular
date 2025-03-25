@@ -42,6 +42,7 @@ public class RemisionesVentaMateriales implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdRemisionVentaMaterial;
+    private String strNumeroDocumento;
     private String strCodigoMaterial;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaNecesaria;
@@ -52,12 +53,11 @@ public class RemisionesVentaMateriales implements Serializable {
     private Float fltPorcentajeDescuento;
     private BigDecimal decCostoPromedio;
     private Long intIdRemisionCompra;
+    private Long intIdMaterial;
+    private Long intIdUnidadMedida;
     private BigDecimal decCantidadUnidadMedida;
     private String strUsuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFecha;
-    private Long intIdMaterial;
-    private String strNumeroDocumento;
-    private Long intIdUnidadMedida;
 
 }
