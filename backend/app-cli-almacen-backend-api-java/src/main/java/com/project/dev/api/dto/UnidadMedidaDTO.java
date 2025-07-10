@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaDTO}
+ * @overview        {UnidadMedidaDTO}
  *
  * @version         2.0
  *

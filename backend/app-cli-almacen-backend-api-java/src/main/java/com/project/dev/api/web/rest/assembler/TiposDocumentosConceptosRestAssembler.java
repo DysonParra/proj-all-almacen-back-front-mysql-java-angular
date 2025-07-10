@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosConceptosRestAssembler}
+ * @overview        {TiposDocumentosConceptosRestAssembler}
  *
  * @version         2.0
  *

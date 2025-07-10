@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UbicacionesFacade}
+ * @overview        {UbicacionesFacade}
  *
  * @version         2.0
  *

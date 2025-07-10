@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MovimientosDetallesComponent}
+ * @overview        {MovimientosDetallesComponent}
  *
  * @version         2.0
  *

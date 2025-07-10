@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposAgentesRepository}
+ * @overview        {TiposAgentesRepository}
  *
  * @version         2.0
  *

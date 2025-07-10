@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasRestAssembler}
+ * @overview        {BodegasRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasViewComponent}
+ * @overview        {ZonasViewComponent}
  *
  * @version         2.0
  *

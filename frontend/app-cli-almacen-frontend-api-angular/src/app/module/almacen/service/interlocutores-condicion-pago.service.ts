@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoService}
+ * @overview        {InterlocutoresCondicionPagoService}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraRestAssembler}
+ * @overview        {PlanCompraRestAssembler}
  *
  * @version         2.0
  *

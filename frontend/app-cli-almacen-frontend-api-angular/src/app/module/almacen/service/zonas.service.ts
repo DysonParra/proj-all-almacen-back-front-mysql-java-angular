@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasService}
+ * @overview        {ZonasService}
  *
  * @version         2.0
  *

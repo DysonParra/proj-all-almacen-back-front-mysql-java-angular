@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesComprasViewComponent}
+ * @overview        {RemisionesComprasViewComponent}
  *
  * @version         2.0
  *

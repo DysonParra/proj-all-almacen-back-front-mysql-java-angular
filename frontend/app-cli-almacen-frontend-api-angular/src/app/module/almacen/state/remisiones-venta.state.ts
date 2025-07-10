@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaState}
+ * @overview        {RemisionesVentaState}
  *
  * @version         2.0
  *

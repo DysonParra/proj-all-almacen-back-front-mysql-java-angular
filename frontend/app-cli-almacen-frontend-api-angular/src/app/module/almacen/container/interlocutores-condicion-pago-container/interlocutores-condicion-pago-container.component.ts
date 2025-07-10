@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoContainerComponent}
+ * @overview        {InterlocutoresCondicionPagoContainerComponent}
  *
  * @version         2.0
  *

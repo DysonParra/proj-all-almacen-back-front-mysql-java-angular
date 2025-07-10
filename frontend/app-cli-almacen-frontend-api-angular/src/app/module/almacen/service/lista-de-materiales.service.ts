@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListaDeMaterialesService}
+ * @overview        {ListaDeMaterialesService}
  *
  * @version         2.0
  *

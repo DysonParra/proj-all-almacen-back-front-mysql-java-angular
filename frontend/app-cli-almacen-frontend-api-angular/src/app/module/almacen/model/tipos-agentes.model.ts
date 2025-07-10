@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposAgentesViewModel}
+ * @overview        {TiposAgentesViewModel}
  *
  * @version         2.0
  *

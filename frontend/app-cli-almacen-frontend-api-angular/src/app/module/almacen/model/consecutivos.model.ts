@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosViewModel}
+ * @overview        {ConsecutivosViewModel}
  *
  * @version         2.0
  *

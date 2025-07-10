@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionRestAssembler}
+ * @overview        {CotizacionRestAssembler}
  *
  * @version         2.0
  *

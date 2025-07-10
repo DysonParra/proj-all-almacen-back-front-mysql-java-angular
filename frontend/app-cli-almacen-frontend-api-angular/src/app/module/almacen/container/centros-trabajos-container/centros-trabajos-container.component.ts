@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosContainerComponent}
+ * @overview        {CentrosTrabajosContainerComponent}
  *
  * @version         2.0
  *

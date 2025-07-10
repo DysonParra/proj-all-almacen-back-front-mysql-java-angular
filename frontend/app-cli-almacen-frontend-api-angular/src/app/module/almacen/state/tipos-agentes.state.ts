@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposAgentesState}
+ * @overview        {TiposAgentesState}
  *
  * @version         2.0
  *

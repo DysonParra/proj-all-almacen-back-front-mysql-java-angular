@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionRestAssembler}
+ * @overview        {OrdenProduccionRestAssembler}
  *
  * @version         2.0
  *

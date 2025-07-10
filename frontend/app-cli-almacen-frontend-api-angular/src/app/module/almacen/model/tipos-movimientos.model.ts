@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMovimientosViewModel}
+ * @overview        {TiposMovimientosViewModel}
  *
  * @version         2.0
  *

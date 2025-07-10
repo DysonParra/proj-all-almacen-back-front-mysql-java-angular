@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraViewModel}
+ * @overview        {PlanCompraViewModel}
  *
  * @version         2.0
  *

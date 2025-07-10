@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresCondicionPagoRestAssembler}
+ * @overview        {InterlocutoresCondicionPagoRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasDTO}
+ * @overview        {ZonasDTO}
  *
  * @version         2.0
  *

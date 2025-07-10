@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosContainerComponent}
+ * @overview        {ConsecutivosContainerComponent}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaService}
+ * @overview        {TipoUnidadMedidaService}
  *
  * @version         2.0
  *

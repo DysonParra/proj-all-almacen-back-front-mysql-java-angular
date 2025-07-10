@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCostosPromediosRestAssembler}
+ * @overview        {MaterialesCostosPromediosRestAssembler}
  *
  * @version         2.0
  *

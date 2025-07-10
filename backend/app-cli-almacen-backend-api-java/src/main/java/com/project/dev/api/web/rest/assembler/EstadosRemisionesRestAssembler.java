@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosRemisionesRestAssembler}
+ * @overview        {EstadosRemisionesRestAssembler}
  *
  * @version         2.0
  *

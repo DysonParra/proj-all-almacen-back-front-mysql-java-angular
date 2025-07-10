@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConceptosViewComponent}
+ * @overview        {ConceptosViewComponent}
  *
  * @version         2.0
  *

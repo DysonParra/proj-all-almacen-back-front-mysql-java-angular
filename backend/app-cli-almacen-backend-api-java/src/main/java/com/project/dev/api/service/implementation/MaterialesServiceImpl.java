@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesServiceImpl}
+ * @overview        {MaterialesServiceImpl}
  *
  * @version         2.0
  *
@@ -55,7 +55,7 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
      * Obtiene todas las entidades existentes.
      *
      * @return lista de entidades almacenadas en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<MaterialesDTO> getAllEntities() throws Exception {
@@ -64,15 +64,15 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
     }
 
     /**
-     * Obtiene todas los registros según la paginación suministrada.
+     * Obtiene todos los registros según la paginación suministrada.
      *
      * @param pageable indica la manera en que se paginarán los registros obtenidos.
      * @return entidades almacenadas en base de datos de forma paginada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public Page<MaterialesDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
-        log.debug("Solicitud para listar todas las Entidades tipo Materiales con paginacion");
+        log.debug("Solicitud para listar todas las Entidades tipo Materiales con paginación");
         return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
@@ -81,26 +81,26 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
      *
      * @param entityDTO entidad que va a ser almacenada.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public MaterialesDTO saveUpdate(MaterialesDTO entityDTO) throws Exception {
         log.debug("Solicitud para guardar la entidad tipo Materiales: {}", entityDTO);
 
-        //TODO: agregar validacion especifica del servicio.
+        //TODO: agregar validación específica del servicio.
         Materiales entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MaterialesDTO currrentEntity = entityMapping.getDto(entity);
-        return currrentEntity;
+        MaterialesDTO dto = entityMapping.getDto(entity);
+        return dto;
     }
 
     /**
-     * Obtiene la entidad según el id suministrado.
+     * Obtiene la entidad usando el ID suministrado.
      *
      * @param id es el identificador de la entidad.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public MaterialesDTO getEntity(String id) throws Exception {
@@ -114,7 +114,7 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
      * Elimina los datos de una entidad.
      *
      * @param id identificador de la entidad que va a ser eliminada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public void deleteEntity(String id) throws Exception {
@@ -127,7 +127,7 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
      *
      * @param query indica la búsqueda que se hará en la base de datos.
      * @return entidades almacenadas en base de datos encontradas.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<MaterialesDTO> searchEntities(String query) throws Exception {
@@ -136,7 +136,7 @@ public class MaterialesServiceImpl implements GenericService<MaterialesDTO> {
     }
 
     /**
-     * Obtiene registros de la base de datos según la búsqueda y paginación suministradas.
+     * Obtiene registros de la base de datos según la búsqueda y la paginación que se indicaron.
      *
      * @param query    indica la búsqueda que se hará en la base de datos.
      * @param pageable indica la manera en que se paginarán los registros obtenidos.

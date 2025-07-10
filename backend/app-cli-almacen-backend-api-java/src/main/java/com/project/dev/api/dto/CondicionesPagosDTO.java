@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosDTO}
+ * @overview        {CondicionesPagosDTO}
  *
  * @version         2.0
  *

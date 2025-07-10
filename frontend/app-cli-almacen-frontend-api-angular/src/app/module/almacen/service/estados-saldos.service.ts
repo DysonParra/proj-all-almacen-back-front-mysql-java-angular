@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosService}
+ * @overview        {EstadosSaldosService}
  *
  * @version         2.0
  *

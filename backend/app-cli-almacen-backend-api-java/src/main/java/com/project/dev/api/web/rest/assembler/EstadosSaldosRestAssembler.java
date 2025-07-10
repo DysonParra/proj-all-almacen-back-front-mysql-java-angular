@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosRestAssembler}
+ * @overview        {EstadosSaldosRestAssembler}
  *
  * @version         2.0
  *

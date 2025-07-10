@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosState}
+ * @overview        {ConsecutivosState}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosFacade}
+ * @overview        {CondicionesPagosFacade}
  *
  * @version         2.0
  *

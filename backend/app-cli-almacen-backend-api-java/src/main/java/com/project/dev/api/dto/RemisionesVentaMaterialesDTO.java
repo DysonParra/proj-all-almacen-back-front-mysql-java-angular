@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaMaterialesDTO}
+ * @overview        {RemisionesVentaMaterialesDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SaldosRestAssembler}
+ * @overview        {SaldosRestAssembler}
  *
  * @version         2.0
  *

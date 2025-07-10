@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCostosPromediosViewComponent}
+ * @overview        {MaterialesCostosPromediosViewComponent}
  *
  * @version         2.0
  *

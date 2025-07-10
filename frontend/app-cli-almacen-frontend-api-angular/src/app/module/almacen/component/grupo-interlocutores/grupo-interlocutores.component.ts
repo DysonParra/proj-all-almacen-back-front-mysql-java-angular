@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresComponent}
+ * @overview        {GrupoInterlocutoresComponent}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesFacade}
+ * @overview        {MaterialesFacade}
  *
  * @version         2.0
  *

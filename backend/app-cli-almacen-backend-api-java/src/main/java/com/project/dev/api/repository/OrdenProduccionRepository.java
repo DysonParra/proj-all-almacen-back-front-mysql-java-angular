@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionRepository}
+ * @overview        {OrdenProduccionRepository}
  *
  * @version         2.0
  *

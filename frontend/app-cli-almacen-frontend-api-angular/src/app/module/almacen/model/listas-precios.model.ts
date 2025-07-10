@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosViewModel}
+ * @overview        {ListasPreciosViewModel}
  *
  * @version         2.0
  *

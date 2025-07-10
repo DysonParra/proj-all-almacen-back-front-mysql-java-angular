@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosRestAssembler}
+ * @overview        {ConsecutivosRestAssembler}
  *
  * @version         2.0
  *

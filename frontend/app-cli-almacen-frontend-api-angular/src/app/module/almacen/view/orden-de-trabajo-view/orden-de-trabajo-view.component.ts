@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoViewComponent}
+ * @overview        {OrdenDeTrabajoViewComponent}
  *
  * @version         2.0
  *

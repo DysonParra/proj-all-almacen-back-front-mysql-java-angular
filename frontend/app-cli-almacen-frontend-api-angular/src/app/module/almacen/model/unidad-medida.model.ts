@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaViewModel}
+ * @overview        {UnidadMedidaViewModel}
  *
  * @version         2.0
  *

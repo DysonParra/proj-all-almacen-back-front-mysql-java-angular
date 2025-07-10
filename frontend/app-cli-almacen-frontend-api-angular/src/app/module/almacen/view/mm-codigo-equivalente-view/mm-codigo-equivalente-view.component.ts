@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteViewComponent}
+ * @overview        {MmCodigoEquivalenteViewComponent}
  *
  * @version         2.0
  *

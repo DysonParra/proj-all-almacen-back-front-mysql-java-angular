@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaState}
+ * @overview        {UnidadMedidaState}
  *
  * @version         2.0
  *

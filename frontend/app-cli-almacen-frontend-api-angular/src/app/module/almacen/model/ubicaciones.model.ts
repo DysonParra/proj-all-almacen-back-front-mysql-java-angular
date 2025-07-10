@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UbicacionesViewModel}
+ * @overview        {UbicacionesViewModel}
  *
  * @version         2.0
  *

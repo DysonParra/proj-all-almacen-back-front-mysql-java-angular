@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraFacade}
+ * @overview        {PlanCompraFacade}
  *
  * @version         2.0
  *

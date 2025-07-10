@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaComponent}
+ * @overview        {TipoUnidadMedidaComponent}
  *
  * @version         2.0
  *

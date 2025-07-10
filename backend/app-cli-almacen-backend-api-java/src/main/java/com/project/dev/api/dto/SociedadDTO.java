@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadDTO}
+ * @overview        {SociedadDTO}
  *
  * @version         2.0
  *

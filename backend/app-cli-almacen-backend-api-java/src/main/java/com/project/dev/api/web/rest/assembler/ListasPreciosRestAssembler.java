@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosRestAssembler}
+ * @overview        {ListasPreciosRestAssembler}
  *
  * @version         2.0
  *

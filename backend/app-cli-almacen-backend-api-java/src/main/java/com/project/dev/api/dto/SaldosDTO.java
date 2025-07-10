@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SaldosDTO}
+ * @overview        {SaldosDTO}
  *
  * @version         2.0
  *

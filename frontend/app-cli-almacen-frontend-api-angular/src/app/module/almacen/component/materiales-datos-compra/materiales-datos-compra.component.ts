@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesDatosCompraComponent}
+ * @overview        {MaterialesDatosCompraComponent}
  *
  * @version         2.0
  *

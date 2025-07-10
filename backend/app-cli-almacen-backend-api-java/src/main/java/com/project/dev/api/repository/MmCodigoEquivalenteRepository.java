@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteRepository}
+ * @overview        {MmCodigoEquivalenteRepository}
  *
  * @version         2.0
  *

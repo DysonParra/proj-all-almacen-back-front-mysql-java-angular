@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosFacade}
+ * @overview        {ConsecutivosFacade}
  *
  * @version         2.0
  *

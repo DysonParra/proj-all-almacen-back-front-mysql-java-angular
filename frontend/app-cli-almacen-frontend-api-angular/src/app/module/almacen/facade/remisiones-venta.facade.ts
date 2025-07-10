@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaFacade}
+ * @overview        {RemisionesVentaFacade}
  *
  * @version         2.0
  *

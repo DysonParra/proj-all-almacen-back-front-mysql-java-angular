@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMovimientosDTO}
+ * @overview        {TiposMovimientosDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosComponent}
+ * @overview        {EstadosSaldosComponent}
  *
  * @version         2.0
  *

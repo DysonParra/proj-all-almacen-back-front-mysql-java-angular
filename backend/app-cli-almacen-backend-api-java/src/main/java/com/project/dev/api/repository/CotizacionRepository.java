@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionRepository}
+ * @overview        {CotizacionRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoRestAssembler}
+ * @overview        {OrdenDeTrabajoRestAssembler}
  *
  * @version         2.0
  *

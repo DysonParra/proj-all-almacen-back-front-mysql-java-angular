@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionViewComponent}
+ * @overview        {OrdenProduccionViewComponent}
  *
  * @version         2.0
  *

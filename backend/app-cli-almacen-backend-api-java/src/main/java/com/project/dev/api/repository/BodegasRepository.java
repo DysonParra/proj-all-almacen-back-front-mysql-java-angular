@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasRepository}
+ * @overview        {BodegasRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosRemisionesDTO}
+ * @overview        {EstadosRemisionesDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComponentesViewModel}
+ * @overview        {ComponentesViewModel}
  *
  * @version         2.0
  *

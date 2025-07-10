@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasFacade}
+ * @overview        {ZonasFacade}
  *
  * @version         2.0
  *

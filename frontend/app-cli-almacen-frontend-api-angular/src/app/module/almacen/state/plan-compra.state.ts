@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraState}
+ * @overview        {PlanCompraState}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasDTO}
+ * @overview        {BodegasDTO}
  *
  * @version         2.0
  *

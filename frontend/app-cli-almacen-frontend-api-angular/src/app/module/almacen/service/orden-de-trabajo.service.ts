@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoService}
+ * @overview        {OrdenDeTrabajoService}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConceptosRestAssembler}
+ * @overview        {ConceptosRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosViewComponent}
+ * @overview        {ConsecutivosViewComponent}
  *
  * @version         2.0
  *

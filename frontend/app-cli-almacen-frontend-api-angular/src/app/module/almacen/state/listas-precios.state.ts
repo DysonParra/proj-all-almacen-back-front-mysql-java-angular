@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosState}
+ * @overview        {ListasPreciosState}
  *
  * @version         2.0
  *

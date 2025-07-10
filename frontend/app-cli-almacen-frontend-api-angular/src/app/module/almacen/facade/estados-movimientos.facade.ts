@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosMovimientosFacade}
+ * @overview        {EstadosMovimientosFacade}
  *
  * @version         2.0
  *

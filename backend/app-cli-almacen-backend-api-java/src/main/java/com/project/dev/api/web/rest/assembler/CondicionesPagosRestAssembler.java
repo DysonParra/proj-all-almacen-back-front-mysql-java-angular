@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosRestAssembler}
+ * @overview        {CondicionesPagosRestAssembler}
  *
  * @version         2.0
  *

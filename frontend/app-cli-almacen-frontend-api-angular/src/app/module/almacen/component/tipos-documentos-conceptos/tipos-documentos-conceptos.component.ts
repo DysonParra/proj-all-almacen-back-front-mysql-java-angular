@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosConceptosComponent}
+ * @overview        {TiposDocumentosConceptosComponent}
  *
  * @version         2.0
  *

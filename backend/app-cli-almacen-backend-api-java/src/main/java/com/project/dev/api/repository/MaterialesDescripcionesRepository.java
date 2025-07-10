@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesDescripcionesRepository}
+ * @overview        {MaterialesDescripcionesRepository}
  *
  * @version         2.0
  *

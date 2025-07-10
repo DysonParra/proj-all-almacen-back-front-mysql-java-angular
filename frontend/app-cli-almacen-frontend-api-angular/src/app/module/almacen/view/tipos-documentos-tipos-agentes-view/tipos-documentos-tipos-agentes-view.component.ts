@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesViewComponent}
+ * @overview        {TiposDocumentosTiposAgentesViewComponent}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosRepository}
+ * @overview        {CondicionesPagosRepository}
  *
  * @version         2.0
  *

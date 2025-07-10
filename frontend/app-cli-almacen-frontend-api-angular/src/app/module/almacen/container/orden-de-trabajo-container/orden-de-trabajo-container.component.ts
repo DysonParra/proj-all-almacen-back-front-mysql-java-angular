@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoContainerComponent}
+ * @overview        {OrdenDeTrabajoContainerComponent}
  *
  * @version         2.0
  *

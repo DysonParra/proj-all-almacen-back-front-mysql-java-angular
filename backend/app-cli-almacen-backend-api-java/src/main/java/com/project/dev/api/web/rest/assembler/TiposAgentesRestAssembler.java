@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposAgentesRestAssembler}
+ * @overview        {TiposAgentesRestAssembler}
  *
  * @version         2.0
  *

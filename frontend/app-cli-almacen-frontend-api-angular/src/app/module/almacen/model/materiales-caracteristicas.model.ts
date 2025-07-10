@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCaracteristicasViewModel}
+ * @overview        {MaterialesCaracteristicasViewModel}
  *
  * @version         2.0
  *

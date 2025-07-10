@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutorFinanzasRestAssembler}
+ * @overview        {InterlocutorFinanzasRestAssembler}
  *
  * @version         2.0
  *

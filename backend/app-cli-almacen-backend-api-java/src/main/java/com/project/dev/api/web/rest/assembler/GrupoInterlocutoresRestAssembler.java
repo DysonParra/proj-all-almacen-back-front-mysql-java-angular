@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {GrupoInterlocutoresRestAssembler}
+ * @overview        {GrupoInterlocutoresRestAssembler}
  *
  * @version         2.0
  *

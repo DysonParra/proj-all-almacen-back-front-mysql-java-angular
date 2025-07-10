@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMaterialesState}
+ * @overview        {TiposMaterialesState}
  *
  * @version         2.0
  *

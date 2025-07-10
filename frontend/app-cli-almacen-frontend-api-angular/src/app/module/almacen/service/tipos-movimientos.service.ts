@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMovimientosService}
+ * @overview        {TiposMovimientosService}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SaldosViewModel}
+ * @overview        {SaldosViewModel}
  *
  * @version         2.0
  *

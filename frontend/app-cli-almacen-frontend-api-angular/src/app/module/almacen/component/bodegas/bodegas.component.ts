@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasComponent}
+ * @overview        {BodegasComponent}
  *
  * @version         2.0
  *

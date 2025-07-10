@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteRestAssembler}
+ * @overview        {MmCodigoEquivalenteRestAssembler}
  *
  * @version         2.0
  *

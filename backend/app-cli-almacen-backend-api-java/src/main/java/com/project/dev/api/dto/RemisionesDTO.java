@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesDTO}
+ * @overview        {RemisionesDTO}
  *
  * @version         2.0
  *

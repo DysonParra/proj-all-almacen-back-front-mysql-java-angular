@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesDTO}
+ * @overview        {MaterialesDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMovimientosState}
+ * @overview        {TiposMovimientosState}
  *
  * @version         2.0
  *

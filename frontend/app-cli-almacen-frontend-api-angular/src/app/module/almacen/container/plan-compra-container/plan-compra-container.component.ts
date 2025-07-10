@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PlanCompraContainerComponent}
+ * @overview        {PlanCompraContainerComponent}
  *
  * @version         2.0
  *

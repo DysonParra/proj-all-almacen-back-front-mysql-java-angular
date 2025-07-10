@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaRestAssembler}
+ * @overview        {UnidadMedidaRestAssembler}
  *
  * @version         2.0
  *

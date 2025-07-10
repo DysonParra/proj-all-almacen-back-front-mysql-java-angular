@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoListaMaterialRepository}
+ * @overview        {TipoListaMaterialRepository}
  *
  * @version         2.0
  *

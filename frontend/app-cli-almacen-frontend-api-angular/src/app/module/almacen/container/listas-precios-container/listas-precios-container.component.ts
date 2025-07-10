@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosContainerComponent}
+ * @overview        {ListasPreciosContainerComponent}
  *
  * @version         2.0
  *

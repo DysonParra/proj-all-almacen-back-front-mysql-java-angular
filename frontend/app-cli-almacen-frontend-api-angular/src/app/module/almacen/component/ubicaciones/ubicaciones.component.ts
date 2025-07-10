@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UbicacionesComponent}
+ * @overview        {UbicacionesComponent}
  *
  * @version         2.0
  *

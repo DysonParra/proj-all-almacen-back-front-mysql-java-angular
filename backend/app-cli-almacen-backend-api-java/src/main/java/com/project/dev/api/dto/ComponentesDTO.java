@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ComponentesDTO}
+ * @overview        {ComponentesDTO}
  *
  * @version         2.0
  *

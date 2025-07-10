@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesComponent}
+ * @overview        {MaterialesComponent}
  *
  * @version         2.0
  *

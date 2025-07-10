@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CentrosTrabajosRestAssembler}
+ * @overview        {CentrosTrabajosRestAssembler}
  *
  * @version         2.0
  *

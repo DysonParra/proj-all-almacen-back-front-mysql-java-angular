@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosTiposAgentesFacade}
+ * @overview        {TiposDocumentosTiposAgentesFacade}
  *
  * @version         2.0
  *

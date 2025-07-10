@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosDTO}
+ * @overview        {ListasPreciosDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosRemisionesFacade}
+ * @overview        {EstadosRemisionesFacade}
  *
  * @version         2.0
  *

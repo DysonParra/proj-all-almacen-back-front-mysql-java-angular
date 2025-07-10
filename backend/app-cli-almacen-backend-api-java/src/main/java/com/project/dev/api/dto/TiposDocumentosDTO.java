@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosDTO}
+ * @overview        {TiposDocumentosDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadState}
+ * @overview        {SociedadState}
  *
  * @version         2.0
  *

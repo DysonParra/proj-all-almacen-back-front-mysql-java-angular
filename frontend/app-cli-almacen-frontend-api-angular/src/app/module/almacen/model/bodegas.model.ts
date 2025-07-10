@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BodegasViewModel}
+ * @overview        {BodegasViewModel}
  *
  * @version         2.0
  *

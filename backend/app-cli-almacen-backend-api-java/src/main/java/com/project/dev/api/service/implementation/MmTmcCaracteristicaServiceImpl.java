@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaServiceImpl}
+ * @overview        {MmTmcCaracteristicaServiceImpl}
  *
  * @version         2.0
  *
@@ -55,7 +55,7 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
      * Obtiene todas las entidades existentes.
      *
      * @return lista de entidades almacenadas en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<MmTmcCaracteristicaDTO> getAllEntities() throws Exception {
@@ -64,15 +64,15 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
     }
 
     /**
-     * Obtiene todas los registros según la paginación suministrada.
+     * Obtiene todos los registros según la paginación suministrada.
      *
      * @param pageable indica la manera en que se paginarán los registros obtenidos.
      * @return entidades almacenadas en base de datos de forma paginada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public Page<MmTmcCaracteristicaDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
-        log.debug("Solicitud para listar todas las Entidades tipo MmTmcCaracteristica con paginacion");
+        log.debug("Solicitud para listar todas las Entidades tipo MmTmcCaracteristica con paginación");
         return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
@@ -81,26 +81,26 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
      *
      * @param entityDTO entidad que va a ser almacenada.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public MmTmcCaracteristicaDTO saveUpdate(MmTmcCaracteristicaDTO entityDTO) throws Exception {
         log.debug("Solicitud para guardar la entidad tipo MmTmcCaracteristica: {}", entityDTO);
 
-        //TODO: agregar validacion especifica del servicio.
+        //TODO: agregar validación específica del servicio.
         MmTmcCaracteristica entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        MmTmcCaracteristicaDTO currrentEntity = entityMapping.getDto(entity);
-        return currrentEntity;
+        MmTmcCaracteristicaDTO dto = entityMapping.getDto(entity);
+        return dto;
     }
 
     /**
-     * Obtiene la entidad según el id suministrado.
+     * Obtiene la entidad usando el ID suministrado.
      *
      * @param id es el identificador de la entidad.
      * @return entidad almacenada en la base de datos.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public MmTmcCaracteristicaDTO getEntity(String id) throws Exception {
@@ -114,7 +114,7 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
      * Elimina los datos de una entidad.
      *
      * @param id identificador de la entidad que va a ser eliminada.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public void deleteEntity(String id) throws Exception {
@@ -127,7 +127,7 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
      *
      * @param query indica la búsqueda que se hará en la base de datos.
      * @return entidades almacenadas en base de datos encontradas.
-     * @throws Exception si ocurre algún error.
+     * @throws Exception en caso de ocurrir algún error.
      */
     @Override
     public List<MmTmcCaracteristicaDTO> searchEntities(String query) throws Exception {
@@ -136,7 +136,7 @@ public class MmTmcCaracteristicaServiceImpl implements GenericService<MmTmcCarac
     }
 
     /**
-     * Obtiene registros de la base de datos según la búsqueda y paginación suministradas.
+     * Obtiene registros de la base de datos según la búsqueda y la paginación que se indicaron.
      *
      * @param query    indica la búsqueda que se hará en la base de datos.
      * @param pageable indica la manera en que se paginarán los registros obtenidos.

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposMovimientosFacade}
+ * @overview        {TiposMovimientosFacade}
  *
  * @version         2.0
  *

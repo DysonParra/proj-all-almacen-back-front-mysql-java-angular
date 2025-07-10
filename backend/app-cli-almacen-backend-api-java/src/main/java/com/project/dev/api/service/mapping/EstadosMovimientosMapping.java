@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosMovimientosMapping}
+ * @overview        {EstadosMovimientosMapping}
  *
  * @version         2.0
  *
@@ -25,11 +25,11 @@ import org.mapstruct.Mapping;
  * @author Dyson Parra
  * @since Java 17 (LTS), Gradle 7.3
  */
-@Mapper(componentModel = "spring") //, unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring")
 public interface EstadosMovimientosMapping extends GenericMapping<EstadosMovimientosDTO, EstadosMovimientos> {
 
     /**
-     * Obtiene una entidad en base a su DTO usando el campo clave de la base de datos.
+     * Obtiene una entidad con base en su DTO usando el campo clave de la base de datos.
      *
      * @param dto es el DTO a convertir en entidad.
      * @return la entidad equivalente al dto.
@@ -39,20 +39,20 @@ public interface EstadosMovimientosMapping extends GenericMapping<EstadosMovimie
     public EstadosMovimientos getEntity(EstadosMovimientosDTO dto);
 
     /**
-     * Obtiene un DTO en base a su entidad usando el campo clave de la base de datos.
+     * Obtiene un DTO con base en su entidad usando el campo clave de la base de datos.
      *
      * @param entity es la entidad a convertir en DTO.
-     * @return el dto equivalente a la entidad.
+     * @return el DTO equivalente a la entidad.
      */
     @Mapping(source = "intIdEstadoMovimiento", target = "intIdEstadoMovimiento")
     @Override
     public EstadosMovimientosDTO getDto(EstadosMovimientos entity);
 
     /**
-     * TODO: Description of method {@code withId}.
+     * Obtiene una entidad usando el ID suministrado.
      *
-     * @param strId
-     * @return
+     * @param strId es el id de la entidad.
+     * @return la entidad con el ID suministrado.
      */
     public default EstadosMovimientos withId(String strId) {
         if (strId == null) {

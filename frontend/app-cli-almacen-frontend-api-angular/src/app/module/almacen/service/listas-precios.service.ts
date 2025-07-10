@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosService}
+ * @overview        {ListasPreciosService}
  *
  * @version         2.0
  *

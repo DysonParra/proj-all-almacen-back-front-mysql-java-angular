@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenProduccionState}
+ * @overview        {OrdenProduccionState}
  *
  * @version         2.0
  *

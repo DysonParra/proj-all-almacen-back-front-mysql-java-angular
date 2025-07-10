@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmTmcCaracteristicaViewComponent}
+ * @overview        {MmTmcCaracteristicaViewComponent}
  *
  * @version         2.0
  *

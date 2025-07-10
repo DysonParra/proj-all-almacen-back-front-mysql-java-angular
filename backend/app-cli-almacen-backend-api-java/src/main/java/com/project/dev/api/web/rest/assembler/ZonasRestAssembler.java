@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasRestAssembler}
+ * @overview        {ZonasRestAssembler}
  *
  * @version         2.0
  *

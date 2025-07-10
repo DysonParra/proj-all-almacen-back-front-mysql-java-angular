@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposAgentesDTO}
+ * @overview        {TiposAgentesDTO}
  *
  * @version         2.0
  *

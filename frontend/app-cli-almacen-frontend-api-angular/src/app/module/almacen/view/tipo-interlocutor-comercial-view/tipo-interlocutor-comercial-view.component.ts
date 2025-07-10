@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoInterlocutorComercialViewComponent}
+ * @overview        {TipoInterlocutorComercialViewComponent}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesComprasRestAssembler}
+ * @overview        {RemisionesComprasRestAssembler}
  *
  * @version         2.0
  *

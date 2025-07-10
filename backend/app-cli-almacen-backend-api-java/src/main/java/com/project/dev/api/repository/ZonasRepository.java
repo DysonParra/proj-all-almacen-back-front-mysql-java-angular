@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasRepository}
+ * @overview        {ZonasRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionDTO}
+ * @overview        {CotizacionDTO}
  *
  * @version         2.0
  *

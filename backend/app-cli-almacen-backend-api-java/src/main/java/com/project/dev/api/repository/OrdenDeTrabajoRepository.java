@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {OrdenDeTrabajoRepository}
+ * @overview        {OrdenDeTrabajoRepository}
  *
  * @version         2.0
  *

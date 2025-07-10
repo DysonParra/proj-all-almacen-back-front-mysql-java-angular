@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosSaldosRepository}
+ * @overview        {EstadosSaldosRepository}
  *
  * @version         2.0
  *

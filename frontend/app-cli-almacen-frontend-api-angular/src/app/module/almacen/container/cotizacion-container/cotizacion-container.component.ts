@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CotizacionContainerComponent}
+ * @overview        {CotizacionContainerComponent}
  *
  * @version         2.0
  *

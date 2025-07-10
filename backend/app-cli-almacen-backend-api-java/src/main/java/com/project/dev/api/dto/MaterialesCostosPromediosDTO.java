@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MaterialesCostosPromediosDTO}
+ * @overview        {MaterialesCostosPromediosDTO}
  *
  * @version         2.0
  *

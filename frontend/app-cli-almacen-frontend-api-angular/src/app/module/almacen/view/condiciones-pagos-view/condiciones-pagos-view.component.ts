@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CondicionesPagosViewComponent}
+ * @overview        {CondicionesPagosViewComponent}
  *
  * @version         2.0
  *

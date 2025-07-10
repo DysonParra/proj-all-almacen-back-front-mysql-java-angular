@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoUnidadMedidaFacade}
+ * @overview        {TipoUnidadMedidaFacade}
  *
  * @version         2.0
  *

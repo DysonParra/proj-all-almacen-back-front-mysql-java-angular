@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MmCodigoEquivalenteDTO}
+ * @overview        {MmCodigoEquivalenteDTO}
  *
  * @version         2.0
  *

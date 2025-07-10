@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ConsecutivosService}
+ * @overview        {ConsecutivosService}
  *
  * @version         2.0
  *

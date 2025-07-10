@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ZonasViewModel}
+ * @overview        {ZonasViewModel}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadRestAssembler}
+ * @overview        {SociedadRestAssembler}
  *
  * @version         2.0
  *

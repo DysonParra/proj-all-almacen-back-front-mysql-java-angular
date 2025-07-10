@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {InterlocutoresComercialesFacade}
+ * @overview        {InterlocutoresComercialesFacade}
  *
  * @version         2.0
  *

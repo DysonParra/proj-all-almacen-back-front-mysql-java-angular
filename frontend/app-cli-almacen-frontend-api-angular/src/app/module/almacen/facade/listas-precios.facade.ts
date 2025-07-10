@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {ListasPreciosFacade}
+ * @overview        {ListasPreciosFacade}
  *
  * @version         2.0
  *

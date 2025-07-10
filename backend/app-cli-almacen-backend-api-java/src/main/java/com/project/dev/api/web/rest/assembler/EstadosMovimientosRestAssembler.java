@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosMovimientosRestAssembler}
+ * @overview        {EstadosMovimientosRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {UnidadMedidaViewComponent}
+ * @overview        {UnidadMedidaViewComponent}
  *
  * @version         2.0
  *

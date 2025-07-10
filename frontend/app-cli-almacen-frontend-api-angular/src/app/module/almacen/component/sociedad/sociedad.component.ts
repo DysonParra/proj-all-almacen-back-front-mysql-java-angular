@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {SociedadComponent}
+ * @overview        {SociedadComponent}
  *
  * @version         2.0
  *

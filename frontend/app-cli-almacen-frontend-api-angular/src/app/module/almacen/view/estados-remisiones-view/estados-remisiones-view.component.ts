@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {EstadosRemisionesViewComponent}
+ * @overview        {EstadosRemisionesViewComponent}
  *
  * @version         2.0
  *

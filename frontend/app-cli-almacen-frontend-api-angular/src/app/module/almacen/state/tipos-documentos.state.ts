@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TiposDocumentosState}
+ * @overview        {TiposDocumentosState}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {RemisionesVentaMaterialesViewModel}
+ * @overview        {RemisionesVentaMaterialesViewModel}
  *
  * @version         2.0
  *
